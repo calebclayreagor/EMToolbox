@@ -6,7 +6,7 @@ import scanpy as sc
 from scipy.sparse import csr_matrix
 
 pth = os.path.join('..', 'data')
-pth_in = os.path.join(pth, 'unzip', 'TCGA')
+pth_in = os.path.join(pth, 'unzip', 'TCGA', 'PANCAN')
 pth_out = os.path.join(pth, 'TCGA')
 
 # load dataset [log2(TPM + 1e-3) -> log1p(TPM)]
