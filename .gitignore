@@ -13,7 +13,6 @@ __pycache__/
 .ipynb_checkpoints/
 
 # === Data files ===
-data/igv/
 data/modeling/
 data/processed/
 data/raw/
