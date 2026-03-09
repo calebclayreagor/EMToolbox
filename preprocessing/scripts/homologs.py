@@ -3,58 +3,37 @@ import os, glob
 import numpy as np
 import pandas as pd
 from pybiomart import Server
+
+pth = os.path.join('..', '..', 'data', 'features')
+pth_out = os.path.join(pth, 'biomart')
 server = Server(host = 'http://www.ensembl.org')
 mart = server.marts['ENSEMBL_MART_ENSEMBL']
 
-pth = os.path.join('..', '..')
-pth_data = os.path.join(pth, 'data')
-outdir = os.path.join(pth_data, 'features', 'biomart')
-
-# datasets summary
-summary_df = pd.read_csv(os.path.join(pth_data, 'summary.csv'), index_col = 0)
-species_dict = summary_df.Species.to_dict()
-
 # dataset features
-feat_fn = sorted(glob.glob(os.path.join(pth_data, 'features', '*.txt')))
-feat_dict = {os.path.split(fn)[1].replace('.txt', '') : fn for fn in feat_fn}
+feat_fn = sorted(glob.glob(os.path.join(pth, '*.txt')))
+get_src = lambda fn: os.path.split(fn)[1].replace('.txt', '')
+feat_dict = {get_src(fn) : fn for fn in feat_fn}
 
-mart_dict = {
-    'mmusculus' : 'mmusculus_gene_ensembl',
-    'hsapiens' : 'hsapiens_gene_ensembl'}
+# homologs (1-to-1 deterministic map)
+attr = ['external_gene_name', 'hsapiens_homolog_associated_gene_name']
+df = mart.datasets['mmusculus_gene_ensembl'].query(attributes = attr)
+df.columns = ['mmusculus', 'hsapiens']
+df = (df.dropna().sort_values(['mmusculus', 'hsapiens'])
+      .drop_duplicates(subset = ['mmusculus'], keep = 'first')
+      .drop_duplicates(subset = ['hsapiens'], keep = 'first')
+      .sort_values('mmusculus'))
 
-attr_dict = {
-    'mmusculus' : {
-        'external_gene_name'                     : 'mmusculus',
-        'hsapiens_homolog_associated_gene_name'  : 'hsapiens'},
-    'hsapiens' : {
-        'external_gene_name'                     : 'hsapiens',
-        'mmusculus_homolog_associated_gene_name' : 'mmusculus'}}
+# feature homologs
+for src, fn in feat_dict.items():
+    features = np.loadtxt(fn, dtype = str)
+    msk = df.mmusculus.isin(features)
+    feat_dict[src] = df.loc[msk].copy()
+    fn_out = os.path.join(pth_out, f'{src}.csv')
+    feat_dict[src].to_csv(fn_out, index = False)
 
-for species in mart_dict:
-    mart_dict[species] = mart.datasets[mart_dict[species]]
-    mart_dict[species] = mart_dict[species].query(attributes = attr_dict[species].keys())
-    mart_dict[species] = mart_dict[species].dropna().drop_duplicates()
-    mart_dict[species].columns = attr_dict[species].values()
-    # print(species, mart_dict[species])
-
-for i, key in enumerate(feat_dict):
-    features = np.loadtxt(feat_dict[key], dtype = str)
-    species = species_dict[key]
-    df = mart_dict[species].copy()
-    df = df.loc[df[species].isin(features)].reset_index(drop = True)
-    df = df.sort_values(['mmusculus', 'hsapiens']).reset_index(drop = True)
-    df = df.drop_duplicates(subset = ['mmusculus'], keep = 'first')
-    df = df.drop_duplicates(subset = ['hsapiens'], keep = 'first')
-    df = df.sort_values('mmusculus').reset_index(drop = True)
-    df.to_csv(os.path.join(outdir, f'{key}.csv'), index = False)
-    feat_dict[key] = df
-    # print(key, df)
-
-df = pd.concat(feat_dict.values(), ignore_index = True).dropna()
-df = df.sort_values(['mmusculus', 'hsapiens']).reset_index(drop = True)
-df = df.drop_duplicates(subset = ['mmusculus'], keep = 'first')
-df = df.drop_duplicates(subset = ['hsapiens'], keep = 'first')
-df = df.sort_values('mmusculus').reset_index(drop = True)
-df.to_csv(os.path.join(outdir, 'union.csv'), index = False)
+# features union
+df_out = (pd.concat(feat_dict.values(), ignore_index = True)
+          .drop_duplicates().sort_values(['mmusculus', 'hsapiens']))
+df_out.to_csv(os.path.join(pth_out, 'union.csv'), index = False)
 
 #%%
