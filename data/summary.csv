@@ -4,7 +4,7 @@ GSE229103,Neuromesodermal Progenitor,"Jin et al., 2025",mmusculus,True,True,True
 GSE136689,Splanchnic Mesoderm,"Han et al., 2020",mmusculus,True,True,True,X_umap,E8.5-9.5,Foregut organogenesis dataset showing interactions between splanchnic mesoderm and definitive endoderm
 HCAEmbryonicHindlimb,Embryonic Hindlimb,"Zhang et al., 2024",hsapiens,True,True,True,X_draw_graph_fa,PCW5-9,Embryonic hindlimb atlas focusing on spatial and temporal gene expression programs
 rRNAModifications,Cranial Neural Crest,"Poverennaya et al.",mmusculus,True,True,True,X_umap,E8.5-10.5,Neural crest cell dataset showing the bifurcation between cranial mesenchyme and neuroglia
-GSE201257,Schwann Cell Precursor,"Kastriti et al, 2022",mmusculus,True,True,False,X_umap,E9.5-Adult,Neural crest cell atlas describing diversification of glial cell lineages from neurulation to adulthood
+GSE201257,Schwann Cell Precursor,"Kastriti et al., 2022",mmusculus,True,True,False,X_umap,E9.5-Adult,Neural crest cell atlas describing diversification of glial cell lineages from neurulation to adulthood
 EMTHallmark,EMT Hallmark,"Liberzon et al., 2015",hsapiens,False,True,NA,NA,NA,"Genes defining epithelial-mesenchymal transition as in wound healing, fibrosis, and metastasis (v2025.1.Hs)"
 CCCA,Curated Cancer Cell Atlas,"Tyler et al., 2025",hsapiens,False,False,NA,NA,NA,Cancer cell atlas containing 70+ curated single-cell datasets spanning >100 cancer subtypes
 TCGA,The Cancer Genome Atlas,"TCGA Network, 2013",hsapiens,False,False,NA,NA,NA,The Cancer Genome Atlas dataset of >40 cancer types with bulk sequencing for >10000 tumors
