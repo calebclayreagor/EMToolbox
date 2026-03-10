@@ -31,9 +31,4 @@ for src, fn in feat_dict.items():
     fn_out = os.path.join(pth_out, f'{src}.csv')
     feat_dict[src].to_csv(fn_out, index = False)
 
-# features union
-df_out = (pd.concat(feat_dict.values(), ignore_index = True)
-          .drop_duplicates().sort_values(['mmusculus', 'hsapiens']))
-df_out.to_csv(os.path.join(pth_out, 'union.csv'), index = False)
-
 #%%
