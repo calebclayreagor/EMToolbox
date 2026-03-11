@@ -21,10 +21,5 @@ data/TCGA/
 data/trajectories/
 data/unzip/
 
-# === MesenCoder files =======
-modeling/checkpoints/
-modeling/lightning_logs/
-modeling/wandb/
-
-#
+# === local backups =======
 old-files
