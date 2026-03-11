@@ -6,7 +6,7 @@ import anndata as ad
 pth = os.path.join('..', '..', 'data')
 pth_in = os.path.join(pth, 'processed')
 pth_traj = os.path.join(pth, 'trajectories')
-pth_out = os.path.join(pth, 'modeling')
+pth_out = os.path.join(pth, 'modeling', 'inputs')
 
 # load datasets, trajectories
 adata_fn = sorted(glob.glob(os.path.join(pth_in, '*.h5ad')))
