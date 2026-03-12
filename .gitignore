@@ -13,12 +13,10 @@ __pycache__/
 .ipynb_checkpoints/
 
 # === Data files ===
-data/modeling/
-data/processed/
+data/development/
 data/raw/
 data/refs/
 data/TCGA/
-data/trajectories/
 data/unzip/
 
 # === local backups =======

@@ -3,10 +3,10 @@ import os, glob
 import scanpy as sc
 import anndata as ad
 
-pth = os.path.join('..', '..', 'data')
+pth = os.path.join('..', '..', 'data', 'development')
 pth_in = os.path.join(pth, 'processed')
 pth_traj = os.path.join(pth, 'trajectories')
-pth_out = os.path.join(pth, 'modeling', 'inputs')
+pth_out = os.path.join(pth, 'modeling')
 
 # load datasets, trajectories
 adata_fn = sorted(glob.glob(os.path.join(pth_in, '*.h5ad')))
@@ -37,6 +37,6 @@ adata.obs_names_make_unique()
 adata.obs = adata.obs.astype(str)
 
 # save dataset
-adata.write(os.path.join(pth_out, 'development.h5ad'))
+adata.write(os.path.join(pth_out, 'trajectories.h5ad'))
 
 #%%
