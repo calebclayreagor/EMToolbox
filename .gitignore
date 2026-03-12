@@ -15,7 +15,7 @@ __pycache__/
 # === Data files ===
 data/development/
 data/raw/
-data/refs/
+data/ref/
 data/TCGA/
 data/unzip/
 
