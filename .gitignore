@@ -13,10 +13,10 @@ __pycache__/
 .ipynb_checkpoints/
 
 # === Data files ===
+data/cancer/
 data/development/
 data/raw/
 data/ref/
-data/TCGA/
 data/unzip/
 
 # === local backups =======
