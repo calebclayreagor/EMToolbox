@@ -17,6 +17,8 @@ summary_df['Name'] = 'Data_' + title + '_' + cat
 
 # dataset features
 g = pd.read_csv(os.path.join(pth_feat, 'union.csv')).hsapiens
+g = pd.concat((g, pd.Series(['TWIST2', 'ZEB1', 'ZEB2'])))
+g = g.sort_values().reset_index(drop = True)
 
 # preprocessing
 def preprocess(adata: ad.AnnData) -> ad.AnnData:
