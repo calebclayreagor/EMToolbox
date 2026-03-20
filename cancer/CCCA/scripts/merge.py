@@ -15,7 +15,7 @@ title = summary_df.Title.str.replace(' et al. ', '')
 cat = summary_df.Category.str.replace(r'[ /]', '-', regex = True)
 summary_df['Name'] = 'Data_' + title + '_' + cat
 
-# dataset features
+# dataset features (+ others)
 g = pd.read_csv(os.path.join(pth_feat, 'union.csv')).hsapiens
 g = pd.concat((g, pd.Series(['TWIST2', 'ZEB1', 'ZEB2'])))
 g = g.sort_values().reset_index(drop = True)
