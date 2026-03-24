@@ -31,8 +31,7 @@ if __name__ == '__main__':
 
     # training/validation datasets
     g = pd.read_csv(args.feat_pth)[args.species]
-    adata = ad.read_h5ad(args.adata_pth)#[:, g]
-    adata
+    adata = ad.read_h5ad(args.adata_pth)[:, g]
     print(adata)
 
     # adata_train = adata[adata.obs.training == 'True'].copy()
