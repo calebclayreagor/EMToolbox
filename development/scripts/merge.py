@@ -31,6 +31,7 @@ for src in adata_dict:
 
 # merge datasets
 adata = ad.concat(adata_dict,
+                  join = 'outer',
                   merge = 'same',
                   label = 'source')
 adata.obs_names_make_unique()
