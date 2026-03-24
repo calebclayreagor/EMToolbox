@@ -118,17 +118,18 @@ class MesenchymalStates(L.LightningModule):
             
             if (self.current_epoch + 1) % self.hparams.val_log_freq == 0:
                 adata = self.trainer.val_dataloaders.dataset.adata
-                adata.obs['latent_z'] = self.val_latent_z.copy()
-                data = adata[adata.obs.celltype != 'nan'].obs.copy()
+                adata.obs['z'] = self.val_latent_z.copy()
+                remove = ['nan', 'Neuromesodermal Progenitor']
+                df = adata[~adata.obs.celltype.isin(remove)].obs.copy()
 
-                x, y, hue = 'latent_z', 'celltype', 'source'
-                order = (data.groupby(y)
-                         .agg({x : 'median', hue : 'first'})
+                x, y, hue = 'z', 'celltype', 'source'
+                order = (df.groupby(y, observed = True)
+                         .agg({x : 'mean', hue : 'first'})
                          .sort_values([hue, x]).index)
                 
-                fig, ax = plt.subplots(1, 1, figsize = (8, 6))
+                fig, ax = plt.subplots(1, 1, figsize = (5, 5))
                 sns.violinplot(
-                    data = data,
+                    data = df,
                     x = x,
                     y = y,
                     hue = hue,
@@ -136,7 +137,9 @@ class MesenchymalStates(L.LightningModule):
                     order = order,
                     density_norm = 'width',
                     inner = 'quart',
+                    cut = 0,
                     ax = ax)
+                ax.set_xlim(-.025, 1.025)
                 ax.get_legend().set_visible(False)
                 fig.tight_layout()
 
@@ -147,7 +150,7 @@ class MesenchymalStates(L.LightningModule):
 
     def on_predict_epoch_end(self) -> None:
         adata = self.trainer.predict_dataloaders.dataset.adata
-        adata.obs['latent_z'] = self.pred_latent_z.copy()
+        adata.obs['z'] = self.pred_latent_z.copy()
         adata.write(self.out_pth)
 
     def configure_optimizers(self) -> Optimizer:

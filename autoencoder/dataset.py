@@ -19,7 +19,7 @@ class MesenchymeDataset(Dataset):
             self.src = torch.tensor(self.src, dtype = torch.int64)
 
     def __len__(self) -> int:
-        return self.adata.shape[0]
+        return self.adata.n_obs
 
     def __getitem__(self, i: int
                     ) -> tuple[torch.Tensor,

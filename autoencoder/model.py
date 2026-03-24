@@ -45,8 +45,7 @@ class MesenCoder(nn.Module):
                           torch.Tensor]:
 
         # encoder
-        scale_01 = lambda s: 2 * F.sigmoid(s) - 1
-        z = scale_01(torch.abs(self.encoder(x)))
+        z = F.sigmoid(self.encoder(x))
 
         if src is not None:
             # source embedding

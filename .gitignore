@@ -19,5 +19,9 @@ data/raw/
 data/ref/
 data/unzip/
 
+# === Autoencoder files ===
+autoencoder/checkpoints
+autoencoder/wandb
+
 # === local backups =======
 old-files
