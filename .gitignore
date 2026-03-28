@@ -21,6 +21,7 @@ data/unzip/
 
 # === Autoencoder files ===
 autoencoder/checkpoints
+autoencoder/lightning_logs
 autoencoder/wandb
 
 # === local backups =======

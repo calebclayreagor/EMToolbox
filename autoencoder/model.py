@@ -1,35 +1,34 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 
 class MesenCoder(nn.Module):
     def __init__(self,
                  n_feature: int,
                  n_source: int,
                  hidden_dim: int,
-                 latent_dim_src: int,
                  latent_dim: int = 1,
+                 source_dim: int = 1,
+                 t_dim: int = 1,
                  activation: type[nn.Module] = nn.ReLU
                  ) -> None:
         super().__init__()
         self.activation = activation
 
-        # vanilla encoder (+ BN, tied input)
+        # vanilla encoder
         self.encoder = nn.Sequential(
             nn.Linear(n_feature, hidden_dim), activation(),
-            nn.Linear(hidden_dim, latent_dim),
-            nn.BatchNorm1d(latent_dim, affine = False))
+            nn.Linear(hidden_dim, latent_dim))
         
-        # conditional decoder (+ tied output)
-        in_dim_dec = latent_dim + latent_dim_src
+        # conditional decoder
+        in_dim_dec = latent_dim + source_dim + t_dim
         self.decoder = nn.Sequential(
             nn.Linear(in_dim_dec, hidden_dim), activation(),
-            TiedLinear(self.encoder[0]))
+            nn.Linear(hidden_dim, n_feature))
 
         # source embedding
         self.embed_src = nn.Embedding(
             num_embeddings = n_source,
-            embedding_dim = latent_dim_src)
+            embedding_dim = source_dim)
         
         # init weights
         self._initialize_weights()
@@ -39,20 +38,22 @@ class MesenCoder(nn.Module):
 
     def forward(self,
                 x: torch.Tensor,
-                src: torch.Tensor | None
+                src: torch.Tensor | None,
+                t: torch.Tensor | None
                 ) -> torch.Tensor | \
-                    tuple[torch.Tensor,
-                          torch.Tensor]:
+                     tuple[torch.Tensor,
+                           torch.Tensor]:
 
         # encoder
-        z = F.sigmoid(self.encoder(x))
+        z = self.encoder(x)
 
         if src is not None:
             # source embedding
             v = self.embed_src(src)
 
             # decoder
-            h = torch.cat((z, v), dim = -1)
+            t = torch.unsqueeze(t, dim = -1)
+            h = torch.cat((z, v, t), dim = -1)
             x_hat = self.decoder(h)
             return x_hat, z
 
@@ -68,16 +69,3 @@ class MesenCoder(nn.Module):
                     m.weight,
                     nonlinearity = nonlinearity)
                 nn.init.zeros_(m.bias)
-
-class TiedLinear(nn.Module):
-    def __init__(self,
-                 tied_to: nn.Linear
-                 ) -> None:
-        super().__init__()
-        self.tied_to = tied_to
-        self.bias = nn.Parameter(torch.zeros(tied_to.in_features))
-
-    def forward(self,
-                x: torch.Tensor
-                ) -> torch.Tensor:
-        return F.linear(x, self.tied_to.weight.t(), self.bias)

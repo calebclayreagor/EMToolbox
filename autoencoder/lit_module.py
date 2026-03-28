@@ -1,8 +1,8 @@
 import argparse
-import numpy as np
 import torch, wandb
 import lightning as L
-import seaborn as sns
+import numpy as np
+import scanpy as sc
 import torch.nn.functional as F
 from torch.optim import Adam
 from torch.optim import Optimizer
@@ -18,36 +18,38 @@ class MesenchymalStates(L.LightningModule):
         self.model = MesenCoder(
             n_feature = self.hparams.n_feature,
             n_source = self.hparams.n_source,
-            hidden_dim = self.hparams.hidden_dim,
-            latent_dim_src = self.hparams.latent_dim_src)
+            hidden_dim = self.hparams.hidden_dim)
         self.out_pth = out_pth
 
     def forward(self,
                 x: torch.Tensor,
-                src: torch.Tensor | None
+                src: torch.Tensor | None,
+                t: torch.Tensor | None
                 ) -> torch.Tensor | \
                      tuple[torch.Tensor,
                            torch.Tensor]:
-        return self.model(x, src)
+        return self.model(x, src, t)
 
-    def custom_step(self, 
+    def custom_step(self,
                     batch: tuple[torch.Tensor,
+                                 torch.Tensor | None,
                                  torch.Tensor | None,
                                  torch.Tensor]
                     ) -> torch.Tensor | \
                          tuple[torch.Tensor,
                                torch.Tensor]:
-        X, src, _ = batch
+        X, src, t, _ = batch
         if src is not None:
-            X_hat, z = self.forward(X, src)
+            X_hat, z = self.forward(X, src, t)
             loss = F.mse_loss(X_hat, X)
             return loss, z
         else:
-            z = self.forward(X, src)
+            z = self.forward(X, src, t)
             return z
 
     def training_step(self,
                       batch: tuple[torch.Tensor,
+                                   torch.Tensor,
                                    torch.Tensor,
                                    torch.Tensor],
                       _) -> torch.Tensor:
@@ -65,9 +67,10 @@ class MesenchymalStates(L.LightningModule):
     def validation_step(self,
                         batch: tuple[torch.Tensor,
                                      torch.Tensor,
+                                     torch.Tensor,
                                      torch.Tensor],
                         _) -> None:
-        _, _, ix = batch
+        _, _, _, ix = batch
         loss, z = self.custom_step(batch)
         batch_size = batch[0].size(0)
         self.log(
@@ -85,8 +88,8 @@ class MesenchymalStates(L.LightningModule):
                      batch: tuple[torch.Tensor,
                                   torch.Tensor],
                         _) -> None:
-        batch = (batch[0], None, batch[1])
-        _, _, ix = batch
+        batch = (batch[0], None, None, batch[1])
+        _, _, _, ix = batch
         z = self.custom_step(batch)
         ix = ix.detach().cpu().numpy().squeeze()
         z = z.detach().cpu().numpy().squeeze()
@@ -119,38 +122,41 @@ class MesenchymalStates(L.LightningModule):
             if (self.current_epoch + 1) % self.hparams.val_log_freq == 0:
                 adata = self.trainer.val_dataloaders.dataset.adata
                 adata.obs['z'] = self.val_latent_z.copy()
-                remove = ['nan', 'Neuromesodermal Progenitor']
-                df = adata[~adata.obs.celltype.isin(remove)].obs.copy()
-
-                x, y, hue = 'z', 'celltype', 'source'
-                order = (df.groupby(y, observed = True)
-                         .agg({x : 'mean', hue : 'first'})
-                         .sort_values([hue, x]).index)
+                adata.obsm['X_mesencoder'] = adata.obs[['z', 't']].values
                 
                 fig, ax = plt.subplots(1, 1, figsize = (5, 5))
-                sns.violinplot(
-                    data = df,
-                    x = x,
-                    y = y,
-                    hue = hue,
-                    dodge = False,
-                    order = order,
-                    density_norm = 'width',
-                    inner = 'quart',
-                    cut = 0,
-                    ax = ax)
-                ax.set_xlim(-.025, 1.025)
-                ax.get_legend().set_visible(False)
-                fig.tight_layout()
+                sc.pl.embedding(adata, 'X_mesencoder', color = 'celltype',
+                                size = 140, alpha = .7, legend_loc = 'on data',
+                                legend_fontoutline = 1, show = False, ax = ax)
 
+                label_dict = {
+                    'Lateral Plate Mesoderm'     : 'LPM',
+                    'nan'                        : '',
+                    'Nascent Endothelium'        : 'NE',
+                    'Neuromesodermal Progenitor' : '',
+                    'Presomitic Mesoderm'        : 'PSM',
+                    'Cranial Mesenchyme'         : 'CM',
+                    'Migratory Neural Crest'     : 'mNC',
+                    'Neuroglial Progenitors'     : 'NGP',
+                    'Premigratory Neural Crest'  : 'pmNC'}
+
+                for label in ax.texts:
+                    _label_ = label.get_text()
+                    if _label_ in label_dict:
+                        label.set_text(label_dict[_label_])
+
+                ax.invert_xaxis()
+                ax.invert_yaxis()
+                fig.tight_layout()
                 self.logger.experiment.log({
-                    'val_latent_z' : wandb.Image(fig),
+                    'val_embedding' : wandb.Image(fig),
                     'epoch'        : self.current_epoch})
                 plt.close(fig)
 
     def on_predict_epoch_end(self) -> None:
         adata = self.trainer.predict_dataloaders.dataset.adata
         adata.obs['z'] = self.pred_latent_z.copy()
+        adata.obsm['X_mesencoder'] = adata.obs[['z', 't']].values
         adata.write(self.out_pth)
 
     def configure_optimizers(self) -> Optimizer:
