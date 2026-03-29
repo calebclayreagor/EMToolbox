@@ -1,8 +1,8 @@
 import argparse
 import torch, wandb
-import lightning as L
 import numpy as np
 import scanpy as sc
+import lightning as L
 import torch.nn.functional as F
 from torch.optim import Adam
 from torch.optim import Optimizer

@@ -53,7 +53,7 @@ class MesenCoder(nn.Module):
 
             # decoder
             t = torch.unsqueeze(t, dim = -1)
-            h = torch.cat((z, v, t), dim = -1)
+            h = torch.cat((z + t, v, t), dim = -1)
             x_hat = self.decoder(h)
             return x_hat, z
 
