@@ -20,9 +20,9 @@ data/ref/
 data/unzip/
 
 # === Autoencoder files ===
-autoencoder/checkpoints
-autoencoder/lightning_logs
-autoencoder/wandb
+mesencoder/checkpoints
+mesencoder/lightning_logs
+mesencoder/wandb
 
 # === local backups =======
 old-files

@@ -18,10 +18,11 @@ if __name__ == '__main__':
     parser.add_argument('--species', type = str)
     parser.add_argument('--save_ckpt', action = 'store_true')
     parser.add_argument('--train_frac', type = float, default = .8)
-    parser.add_argument('--hidden_dim', type = int, default = 16)
+    parser.add_argument('--hidden_dim', type = int, default = 32)
+    parser.add_argument('--latent_dim', type = int, default = 2)
     parser.add_argument('--batch_size', type = int, default = 32)
     parser.add_argument('--learning_rate', type = float, default = 1e-3)
-    parser.add_argument('--max_epochs', type = int, default = 2000)
+    parser.add_argument('--max_epochs', type = int, default = 1000)
     parser.add_argument('--val_log_freq', type = int, default = 100)
     parser.add_argument('--num_workers', type = int, default = 32)
     args = parser.parse_args()
@@ -69,7 +70,7 @@ if __name__ == '__main__':
 
     # custom autoencoder
     args.n_feature = adata.n_vars
-    args.n_source = adata.obs.source.nunique()
+    args.n_source = len(grp)
     model = MesenchymalStates(args)
 
     # wandb logger

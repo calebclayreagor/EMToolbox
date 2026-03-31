@@ -6,9 +6,8 @@ class MesenCoder(nn.Module):
                  n_feature: int,
                  n_source: int,
                  hidden_dim: int,
-                 latent_dim: int = 1,
+                 latent_dim: int,
                  source_dim: int = 1,
-                 t_dim: int = 1,
                  activation: type[nn.Module] = nn.ReLU
                  ) -> None:
         super().__init__()
@@ -20,7 +19,7 @@ class MesenCoder(nn.Module):
             nn.Linear(hidden_dim, latent_dim))
         
         # conditional decoder
-        in_dim_dec = latent_dim + source_dim + t_dim
+        in_dim_dec = latent_dim + source_dim
         self.decoder = nn.Sequential(
             nn.Linear(in_dim_dec, hidden_dim), activation(),
             nn.Linear(hidden_dim, n_feature))
@@ -38,8 +37,7 @@ class MesenCoder(nn.Module):
 
     def forward(self,
                 x: torch.Tensor,
-                src: torch.Tensor | None,
-                t: torch.Tensor | None
+                src: torch.Tensor | None
                 ) -> torch.Tensor | \
                      tuple[torch.Tensor,
                            torch.Tensor]:
@@ -52,8 +50,7 @@ class MesenCoder(nn.Module):
             v = self.embed_src(src)
 
             # decoder
-            t = torch.unsqueeze(t, dim = -1)
-            h = torch.cat((z + t, v, t), dim = -1)
+            h = torch.cat((z, v), dim = -1)
             x_hat = self.decoder(h)
             return x_hat, z
 
