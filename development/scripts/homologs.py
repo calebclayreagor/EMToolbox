@@ -6,7 +6,7 @@ from pybiomart import Server
 
 pth = os.path.join('..', '..', 'data', 'features')
 pth_out = os.path.join(pth, 'biomart')
-server = Server(host = 'http://www.ensembl.org')
+server = Server(host = 'http://www.ensembl.org', use_cache = False)
 mart = server.marts['ENSEMBL_MART_ENSEMBL']
 
 # dataset features
@@ -14,11 +14,13 @@ feat_fn = sorted(glob.glob(os.path.join(pth, '*.txt')))
 get_src = lambda fn: os.path.split(fn)[1].replace('.txt', '')
 feat_dict = {get_src(fn) : fn for fn in feat_fn}
 
-# homologs (1-to-1 deterministic map)
-attr = ['external_gene_name', 'hsapiens_homolog_associated_gene_name']
+# homologs (1-to-1 mouse/human deterministic map)
+attr = ['external_gene_name', 'hsapiens_homolog_associated_gene_name',
+        'dmelanogaster_homolog_associated_gene_name']
 df = mart.datasets['mmusculus_gene_ensembl'].query(attributes = attr)
-df.columns = ['mmusculus', 'hsapiens']
-df = (df.dropna().sort_values(['mmusculus', 'hsapiens'])
+df.columns = ['mmusculus', 'hsapiens', 'dmelanogaster']
+df = (df.dropna(subset = ['mmusculus', 'hsapiens'])
+      .sort_values(['mmusculus', 'hsapiens'])
       .drop_duplicates(subset = ['mmusculus'], keep = 'first')
       .drop_duplicates(subset = ['hsapiens'], keep = 'first')
       .sort_values('mmusculus'))
