@@ -20,7 +20,7 @@ attr = ['external_gene_name', 'hsapiens_homolog_associated_gene_name',
 df = mart.datasets['mmusculus_gene_ensembl'].query(attributes = attr)
 df.columns = ['mmusculus', 'hsapiens', 'dmelanogaster']
 df = (df.dropna(subset = ['mmusculus', 'hsapiens'])
-      .sort_values(['mmusculus', 'hsapiens'])
+      .sort_values(['mmusculus', 'hsapiens', 'dmelanogaster'])
       .drop_duplicates(subset = ['mmusculus'], keep = 'first')
       .drop_duplicates(subset = ['hsapiens'], keep = 'first')
       .sort_values('mmusculus'))
