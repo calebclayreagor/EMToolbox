@@ -133,13 +133,17 @@ class MesenchymalStates(L.LightningModule):
                                 legend_fontoutline = 1, show = False, ax = ax)
 
                 label_dict = {
+                    'Axial Mesendoderm'          : '',
                     'Cranial Mesenchyme'         : 'CM',
+                    'Definitive Endoderm'        : '',
+                    'Epiblast'                   : 'Epi',
                     'Lateral Plate Mesoderm'     : 'LPM',
                     'Migratory Neural Crest'     : 'mNC',
                     'nan'                        : '',
                     'Nascent Endothelium'        : 'NE',
                     'Neuroglial Progenitors'     : 'NGP',
-                    'Neuromesodermal Progenitor' : '',
+                    'Neuromesodermal Progenitor' : 'NMP',
+                    'Posterior Epiblast'         : 'pEpi',
                     'Premigratory Neural Crest'  : 'pmNC',
                     'Presomitic Mesoderm'        : 'PSM'}
 

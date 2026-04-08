@@ -3,4 +3,5 @@ GSE162534,Gastrulation (1),Mes1,"Scheibner et al., 2021",mmusculus,True,E6-7,Str
 GSE229103,Axis Elongation (2),Mes2,"Jin et al., 2025",mmusculus,True,E8.5,Somitogenesis dataset describing bipotent neuromesodermal progenitors in the elongating caudal trunk
 rRNAModifications,Craniofacial Development (3),Mes3,"Poverennaya et al., 2026",mmusculus,True,E8.5-10.5,Cranial NCC dataset showing bifurcation between mesenchyme and neuroglia
 CCCA,Curated Cancer Cell Atlas,NA,"Tyler et al., 2025",hsapiens,False,NA,Curated meta-atlas containing 70+ single-cell datasets spanning >100 cancer subtypes
+GSE175435,Drosophila Tumorigenesis,NA,"Chatterjee et al., 2022",dmelanogaster,False,NA,Single-cell study of early tumorigenesis in polarity-disrupted Drosophila follicle cells
 TCGA,The Cancer Genome Atlas,NA,"TCGA Network, 2013",hsapiens,False,NA,Cancer genome atlas containing bulk sequencing for >10000 tumors across >40 disease types

@@ -8,22 +8,21 @@ pth = os.path.join('..', '..', 'data', 'features')
 pth_out = os.path.join(pth, 'biomart')
 server = Server(host = 'http://www.ensembl.org', use_cache = False)
 mart = server.marts['ENSEMBL_MART_ENSEMBL']
+attr = {
+    'external_gene_name'                         : 'mmusculus',
+    'hsapiens_homolog_associated_gene_name'      : 'hsapiens',
+    'dmelanogaster_homolog_associated_gene_name' : 'dmelanogaster'}
 
 # dataset features
 feat_fn = sorted(glob.glob(os.path.join(pth, '*.txt')))
 get_src = lambda fn: os.path.split(fn)[1].replace('.txt', '')
 feat_dict = {get_src(fn) : fn for fn in feat_fn}
 
-# homologs (1-to-1 mouse/human deterministic map)
-attr = ['external_gene_name', 'hsapiens_homolog_associated_gene_name',
-        'dmelanogaster_homolog_associated_gene_name']
-df = mart.datasets['mmusculus_gene_ensembl'].query(attributes = attr)
-df.columns = ['mmusculus', 'hsapiens', 'dmelanogaster']
-df = (df.dropna(subset = ['mmusculus', 'hsapiens'])
-      .sort_values(['mmusculus', 'hsapiens', 'dmelanogaster'])
-      .drop_duplicates(subset = ['mmusculus'], keep = 'first')
-      .drop_duplicates(subset = ['hsapiens'], keep = 'first')
-      .sort_values('mmusculus'))
+# homologs map (many-to-many)
+df = (mart.datasets['mmusculus_gene_ensembl']
+      .query(attributes = list(attr.keys())))
+df.columns = list(attr.values())
+df = df.dropna().sort_values(list(attr.values()))
 
 # feature homologs
 for src, fn in feat_dict.items():
@@ -35,7 +34,7 @@ for src, fn in feat_dict.items():
 
 # features union
 df_out = (pd.concat(feat_dict.values(), ignore_index = True)
-          .drop_duplicates().sort_values(['mmusculus', 'hsapiens']))
+          .drop_duplicates().sort_values(list(attr.values())))
 df_out.to_csv(os.path.join(pth_out, 'union.csv'), index = False)
 
 #%%

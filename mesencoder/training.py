@@ -18,7 +18,7 @@ if __name__ == '__main__':
     parser.add_argument('--species', type = str)
     parser.add_argument('--save_ckpt', action = 'store_true')
     parser.add_argument('--train_frac', type = float, default = .8)
-    parser.add_argument('--hidden_dim', type = int, default = 32)
+    parser.add_argument('--hidden_dim', type = int, default = 64)
     parser.add_argument('--latent_dim', type = int, default = 2)
     parser.add_argument('--batch_size', type = int, default = 32)
     parser.add_argument('--learning_rate', type = float, default = 1e-3)
