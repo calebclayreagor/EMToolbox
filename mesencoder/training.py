@@ -18,19 +18,20 @@ if __name__ == '__main__':
     parser.add_argument('--species', type = str)
     parser.add_argument('--save_ckpt', action = 'store_true')
     parser.add_argument('--train_frac', type = float, default = .8)
-    parser.add_argument('--hidden_dim', type = int, default = 64)
+    parser.add_argument('--hidden_dim', type = int, default = 32)
     parser.add_argument('--latent_dim', type = int, default = 2)
     parser.add_argument('--batch_size', type = int, default = 32)
     parser.add_argument('--learning_rate', type = float, default = 1e-3)
-    parser.add_argument('--max_epochs', type = int, default = 5000)
-    parser.add_argument('--val_log_freq', type = int, default = 100)
+    parser.add_argument('--max_epochs', type = int, default = 50)
+    parser.add_argument('--val_log_freq', type = int, default = 5)
     parser.add_argument('--num_workers', type = int, default = 32)
     args = parser.parse_args()
     L.seed_everything(1)
 
     # load adata & select features
+    adata = ad.read_h5ad(args.adata_pth)
     g = pd.read_csv(args.feat_pth)[args.species]
-    adata = ad.read_h5ad(args.adata_pth)[:, g]
+    adata.obsm['X_feat'] = adata[:, g].X.toarray()
 
     # compute weights (1/n)
     grp = adata.obs.groupby('source', observed = True)
@@ -50,7 +51,7 @@ if __name__ == '__main__':
 
     # training sampler
     sampler = WeightedRandomSampler(
-        weights = adata_train.obs.w,
+        weights = adata_train.obs.w.values,
         num_samples = len(train_ds),
         replacement = True)
 
@@ -69,7 +70,7 @@ if __name__ == '__main__':
         pin_memory = True)
 
     # custom autoencoder
-    args.n_feature = adata.n_vars
+    args.n_feature = g.size
     args.n_source = len(grp)
     model = MesenchymalStates(args)
 

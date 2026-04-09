@@ -21,8 +21,9 @@ if __name__ == '__main__':
     L.seed_everything(1)
 
     # prediction dataset
+    adata = ad.read_h5ad(args.adata_pth)
     g = pd.read_csv(args.feat_pth)[args.species]
-    adata = ad.read_h5ad(args.adata_pth)[:, g]
+    adata.obsm['X_feat'] = adata[:, g].X.toarray()
     pred_ds = MesenchymeDataset(adata, False)
 
     # dataloader

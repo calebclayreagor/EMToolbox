@@ -7,7 +7,7 @@ class MesenchymeDataset(Dataset):
     def __init__(self, adata: ad.AnnData, decode: bool) -> None:
         self.adata = adata
         self.decode = decode
-        self.X = adata.X.toarray().astype(np.float32)
+        self.X = adata.obsm['X_feat'].astype(np.float32)
         self.ix = np.arange(adata.n_obs).astype(np.int64)
         if self.decode:
             self.src = adata.obs.source.cat.codes.astype(np.int64).values
