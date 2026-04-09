@@ -129,7 +129,7 @@ class MesenchymalStates(L.LightningModule):
                 
                 fig, ax = plt.subplots(1, 1, figsize = (5, 5))
                 sc.pl.embedding(adata, 'X_mesencoder', color = 'celltype',
-                                size = 200, alpha = .7, legend_loc = 'on data',
+                                size = 100, alpha = .7, legend_loc = 'on data',
                                 legend_fontoutline = 1, show = False, ax = ax)
 
                 label_dict = {

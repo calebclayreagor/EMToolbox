@@ -22,7 +22,7 @@ if __name__ == '__main__':
     parser.add_argument('--latent_dim', type = int, default = 2)
     parser.add_argument('--batch_size', type = int, default = 32)
     parser.add_argument('--learning_rate', type = float, default = 1e-3)
-    parser.add_argument('--max_epochs', type = int, default = 1000)
+    parser.add_argument('--max_epochs', type = int, default = 5000)
     parser.add_argument('--val_log_freq', type = int, default = 100)
     parser.add_argument('--num_workers', type = int, default = 32)
     args = parser.parse_args()
