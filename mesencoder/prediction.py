@@ -1,4 +1,5 @@
 import argparse
+import torch
 import pandas as pd
 import anndata as ad
 import lightning as L
@@ -32,12 +33,13 @@ if __name__ == '__main__':
         batch_size = args.batch_size,
         shuffle = False,
         num_workers = args.num_workers,
-        pin_memory = True)
+        pin_memory = False)
 
     # trained autoencoder
     lit_model = MesenchymalStates.load_from_checkpoint(
-        args.ckpt_pth, out_pth = args.out_pth)
+        args.ckpt_pth, out_pth = args.out_pth,
+        map_location = torch.device('cpu'))
 
     # predict
-    trainer = L.Trainer()
+    trainer = L.Trainer(accelerator = 'cpu')
     trainer.predict(lit_model, pred_dl)
