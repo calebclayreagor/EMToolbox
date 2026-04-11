@@ -28,15 +28,16 @@ if __name__ == '__main__':
     args = parser.parse_args()
     L.seed_everything(1)
 
-    # load adata & select features
+    # load adata & select cells/features
     adata = ad.read_h5ad(args.adata_pth)
+    adata = adata[adata.obs.mesencoder == 'True'].copy()
     g = pd.read_csv(args.feat_pth)[args.species]
     adata.obsm['X_feat'] = adata[:, g].X.toarray()
 
     # compute weights (1/n)
     grp = adata.obs.groupby('source', observed = True)
     w_dict = (1 / grp.size()).to_dict()
-    adata.obs['w'] = adata.obs.source.map(w_dict)
+    adata.obs['w'] = adata.obs.source.map(w_dict).astype(float)
 
     # select training examples
     ix_train = grp.sample(frac = args.train_frac).index
