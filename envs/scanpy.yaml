@@ -61,6 +61,7 @@ dependencies:
   - mamba=2.3.2=h56e88d8_1
   - matplotlib-base=3.10.8=py313h8a257da_0
   - matplotlib-inline=0.1.7=pyhd8ed1ab_1
+  - matplotlib-venn=1.1.2=pyhd8ed1ab_0
   - narwhals=2.15.0=pyhcf101f3_0
   - ncurses=6.4=h6a678d5_0
   - nest-asyncio=1.6.0=pyhd8ed1ab_1
