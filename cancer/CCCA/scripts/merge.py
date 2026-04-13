@@ -16,8 +16,8 @@ cat = summary_df.Category.str.replace(r'[ /]', '-', regex = True)
 summary_df['Name'] = 'Data_' + title + '_' + cat
 
 # dataset features (+ others)
-g = pd.read_csv(os.path.join(pth_feat, 'union.csv')).hsapiens
-g = pd.concat((g, pd.Series(['TWIST2', 'ZEB1', 'ZEB2'])))
+g = pd.read_csv(os.path.join(pth_feat, 'union.csv')).hsapiens.drop_duplicates()
+g = pd.concat((g, pd.Series(['SNAI1', 'TWIST2', 'FOXC1', 'ZEB1', 'ZEB2', 'PRRX2'])))
 g = g.sort_values().reset_index(drop = True)
 
 # preprocessing
