@@ -4,3 +4,4 @@ GSE229103,Axis Elongation (2),Mes2,"Jin et al., 2025",mmusculus,True,E8.5,Somito
 rRNAModifications,Craniofacial Development (3),Mes3,"Poverennaya et al., 2026",mmusculus,True,E8.5-10.5,Cranial NCC dataset showing bifurcation between mesenchyme and neuroglia
 CCCA,Curated Cancer Cell Atlas,NA,"Tyler et al., 2025",hsapiens,False,NA,Curated meta-atlas containing 70+ single-cell datasets spanning >100 cancer subtypes
 GSE175435,Follicle Cell Tumorigenesis,NA,"Chatterjee et al., 2022",dmelanogaster,False,NA,Single-cell study of early tumorigenesis in polarity-disrupted Drosophila follicle cells
+MarBTN,
