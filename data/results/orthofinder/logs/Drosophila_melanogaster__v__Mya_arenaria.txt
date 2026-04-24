@@ -1,0 +1,12 @@
+2026-04-22 15:15:39 : Started OrthoFinder version 3.0.1b1
+Command Line: /home/caleb/miniconda3/envs/orthofinder/bin/orthofinder -f primary_transcripts/
+
+WorkingDirectory_Base: /home/caleb/MesenCoder/data/ref/ensembl/primary_transcripts/OrthoFinder/Results_Apr22/WorkingDirectory/
+
+Species used: 
+0: Drosophila_melanogaster.fa
+1: Mya_arenaria.fa
+
+FN_Orthogroups: /home/caleb/MesenCoder/data/ref/ensembl/primary_transcripts/OrthoFinder/Results_Apr22/WorkingDirectory/clusters_OrthoFinder_I1.2.txt_id_pairs.txt
+WorkingDirectory_Trees: /home/caleb/MesenCoder/data/ref/ensembl/primary_transcripts/OrthoFinder/Results_Apr22/WorkingDirectory/
+2026-04-22 16:41:10 : OrthoFinder run completed
