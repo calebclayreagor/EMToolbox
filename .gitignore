@@ -23,6 +23,3 @@ data/unzip/
 mesencoder/checkpoints
 mesencoder/lightning_logs
 mesencoder/wandb
-
-# === local backups =======
-old-files
