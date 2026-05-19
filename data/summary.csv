@@ -4,5 +4,5 @@ GSE229103,Posterior Somitogenesis,pSom,"Jin et al., 2025",mmusculus,True,E8.5,Ax
 rRNAModifications,Neural Crest Migration,Crest,"Poverennaya et al., 2026",mmusculus,True,E8.5-10.5,Cranial NC dataset describing the bifurcation between mesenchymal and neuroglial fates
 CCCA,Curated Cancer Cell Atlas,NA,"Tyler et al., 2025",hsapiens,False,NA,Curated meta-atlas containing 70+ single-cell datasets spanning >100 cancer subtypes
 GSE175435,Follicle Cell Tumorigenesis,NA,"Chatterjee et al., 2022",dmelanogaster,False,NA,Single-cell study of early tumorigenesis in polarity-disrupted Drosophila follicle cells
-MarBTN,Bivalve Transmissible Neoplasia,NA,"Hart et al., 2025",marenaria,False,NA,Bulk RNA-seq dataset of soft-shell clam transmissible neoplasia following artificial seawater transfer
+MarBTN,Transmissible Neoplasia,NA,"Hart et al., 2025",marenaria,False,NA,Bulk RNA-seq dataset of soft-shell clam transmissible neoplasia following artificial seawater transfer
 GSE56287,Female Germline Tumors,NA,"Domazet-Loso et al., 2014",holigactis,False,NA,Microarray gene-expression dataset of naturally occurring tumors in the Hydra female germline
