@@ -7,7 +7,7 @@ from load import load_CCCA_adata
 pth = os.path.join('..', '..', '..', '..', 'data')
 pth_in = os.path.join(pth, 'unzip', 'CCCA')
 pth_feat = os.path.join(pth, 'features', 'biomart')
-pth_out = os.path.join(pth, 'cancer', 'human', 'CCCA')
+pth_out = os.path.join(pth, 'cancer', 'vertebrate', 'CCCA')
 
 # datasets summary (CCCA)
 summary_df = pd.read_csv(os.path.join(pth, 'CCCA_summary.csv'), sep = '\t')
@@ -56,8 +56,10 @@ adata = ad.concat(adata_dict,
 adata.obs_names_make_unique()
 adata.obs = adata.obs.astype(str)
 
-# save malignant cells
-adata = adata[adata.obs.celltype == 'Malignant'].copy()
-adata.write(os.path.join(pth_out, 'malignant.h5ad'))
+# save malignant, normal cells
+adata_cancer = adata[adata.obs.celltype == 'Malignant'].copy()
+adata_normal = adata[adata.obs.celltype != 'Malignant'].copy()
+adata_cancer.write(os.path.join(pth_out, 'malignant.h5ad'))
+adata_normal.write(os.path.join(pth_out, 'normal.h5ad'))
 
 #%%

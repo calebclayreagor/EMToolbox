@@ -15,9 +15,9 @@ __pycache__/
 # === Data files ===
 data/cancer/
 data/development/
-data/drug/
 data/raw/
 data/ref/
+data/therapeutic/
 data/unzip/
 
 # === Autoencoder files ===
