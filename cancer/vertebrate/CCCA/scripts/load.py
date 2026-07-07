@@ -59,6 +59,13 @@ def load_CCCA_adata(datadir: str, verbose: bool = True) -> ad.AnnData:
         raise ValueError('Expression values in .mtx are not normalized or counts.')
     sc.pp.log1p(adata)
 
+    # save celltype annotation
+    if 'cell_type' not in adata.obs.columns:
+        adata.obs['cell_type'] = 'Malignant'
+    if 'celltype' in adata.obs.columns:
+        adata.obs['celltype_orig'] = adata.obs.celltype.copy()
+    adata.obs['celltype'] = adata.obs.cell_type.copy()
+
     if verbose:
         print('Done.')
 
