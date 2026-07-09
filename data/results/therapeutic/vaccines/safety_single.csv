@@ -1,0 +1,239 @@
+,Expression,Tissue,Cell Type
+A2M,3.611548287527902,pancreas,mesenchymal cell
+ACTN1,3.215266141024503,heart,megakaryocyte
+ADORA2B,3.131390333175659,blood,erythroid lineage cell
+AGTRAP,2.965862989425659,large intestine,paneth cell of colon
+AIMP2,2.7176222801208496,gallbladder,endothelial cell
+AK2,2.7813034057617188,lung,myoepithelial cell of bronchus submucosal gland
+ALDH1A2,3.707762956619263,tongue,salivary gland cell
+ALPL,3.09443736076355,gallbladder,endothelial cell
+ANXA5,3.1844920496786795,pancreas,mesenchymal cell
+ANXA7,2.649719662136502,adrenal gland,Schwann cell
+AP3S1,2.851992925008138,intestine,chromaffin cell
+APP,3.088297308447527,ovary,endothelial cell of lymphatic vessel
+ARG1,3.6734540462493896,forelimb,leukocyte
+ARL6IP1,3.206935034857856,eye,stromal cell
+ATAD3A,2.827210187911988,scalp,basal cell of epidermis
+ATIC,2.933722813924154,vasculature,natural killer cell
+BCAT1,2.8450597763061523,eye,stromal cell
+BCAT2,2.9135239124298096,vasculature,stromal cell
+BMPR1B,3.652181386947632,stomach,enteric neuron
+CA14,3.389857769012451,bone marrow,monocyte
+CACHD1,2.9516680240631104,mucosa,Schwann cell
+CADM1,3.966104945995785,skin of body,helper T cell
+CALM1,3.3983530680338543,musculature,mature NK T cell
+CCND1,3.1638622283935547,skin of body,granulocyte
+CCND2,2.9652352333068848,lung,bone marrow cell
+CCND3,3.931286811828613,eye,stromal cell
+CCNJL,3.3410210609436035,liver,inflammatory macrophage
+CD63,3.730849609375,mucosa,melanocyte
+CHCHD10,3.566602266751803,adrenal gland,inflammatory cell
+CHST7,2.8591887950897217,esophagus,neuron
+CNN2,2.8367300033569336,eye,stromal cell
+CRABP1,4.08542551892869,colon,inhibitory motor neuron
+CRABP2,3.2714130878448486,testis,stromal cell
+CRYM,2.9099106788635254,endocrine gland,"CD8-positive, alpha-beta thymocyte"
+CSRP2,3.1430046558380127,eye,ganglion interneuron
+CYTH3,2.8811092376708984,esophagus,mature NK T cell
+DDIT4,3.1620448479049155,musculature,skeletal muscle fibroblast
+DDX31,2.9055278301239014,bladder organ,neutrophil
+DDX56,2.740846633911133,heart,megakaryocyte
+DESI1,3.056988477706909,endocrine gland,stromal cell
+DIXDC1,2.856093168258667,intestine,dendritic cell
+DLL1,2.919031778971354,vasculature,stromal cell
+EBF3,3.841188669204712,lymph node,erythrocyte
+EEF1D,3.0840746148622697,stomach,IgA plasma cell
+EFNA1,3.0506003931949013,prostate gland,endocrine cell
+EFNA3,2.9621620178222656,lung,bronchial smooth muscle cell
+EFNB2,3.0454752445220947,stomach,erythroid lineage cell
+EIF4EBP1,2.9513814449310303,kidney,macula densa epithelial cell
+EMB,3.4134085178375244,pancreas,enteric neuron
+EMG1,2.7595603466033936,pancreas,contractile cell
+EOMES,3.462230682373047,skin of body,mast cell
+EPB41L3,3.434955358505249,uterus,mast cell
+ETV4,2.89074969291687,small intestine,antibody secreting cell
+FABP5,4.282021016824752,esophagus,keratinocyte
+FAM43A,2.807000160217285,esophagus,epithelial cell of lung
+FDPS,3.1601173877716064,breast,neutrophil
+FOXB1,3.169386148452759,small intestine,enterocyte of epithelium of small intestine
+FOXC2,2.939734776814779,adrenal gland,endothelial cell of vascular tree
+FPGS,2.7663414478302,small intestine,endothelial cell of arteriole
+FRMD6,2.9169180393218994,lung,"lung resident memory CD4-positive, alpha-beta T cell"
+FRZB,4.588112831115723,spleen,classical monocyte
+FZD10,3.1261680126190186,uterus,mast cell
+FZD2,3.20213270187378,liver,megakaryocyte
+GATA4,3.6217737197875977,uterus,macrophage
+GATA6,3.331866979598999,bladder organ,secretory cell
+GBX2,2.718944311141968,eye,retinal ganglion cell
+GCAT,3.123883008956909,spleen,plasmacytoid dendritic cell
+GCLM,3.10965347290039,lung,bronchial goblet cell
+GLDC,3.7759060859680176,spleen,erythrocyte
+GNAI2,2.9816469441783737,pancreas,endothelial cell of vascular tree
+GPC3,3.465477297040517,kidney,mesangial cell
+GRB7,2.837742567062378,blood,megakaryocyte
+GRSF1,2.817460378011068,adrenal gland,Schwann cell
+GUSB,3.2714130878448486,eye,stromal cell
+HAND1,2.9968502521514893,lung,mesothelial cell
+HES1,3.5624136788504464,bladder organ,stromal cell
+HES3,2.245463562011719,brain,astrocyte
+HES7,3.01066255569458,pancreas,contractile cell
+HMCES,2.735282182693481,heart,megakaryocyte
+HMGCS1,3.749669313430786,small intestine,"plasmacytoid dendritic cell, human"
+HSPA9,2.803983211517334,adrenal gland,Schwann cell
+ID1,3.515286203158104,lymph node,endothelial cell of artery
+ID2,3.32182070232943,endocrine gland,glandular epithelial cell
+ID3,3.55698117956651,skin of body,epithelial cell of nephron
+IDI1,2.993860244750977,spinal cord,connective tissue cell
+IFRD2,2.9935972690582275,spleen,tissue-resident macrophage
+IMPDH1,2.888741373014049,skin of body,plasmacytoid dendritic cell
+ITGA8,4.103036880493164,prostate gland,B cell
+ITGA9,2.975786307893426,intestine,myeloid cell
+ITM2C,3.4205358028411865,liver,inflammatory macrophage
+JUND,4.245987665085566,lamina propria,group 3 innate lymphoid cell
+KCNK1,3.2453320821126304,gallbladder,endothelial cell
+KCTD1,2.748544692993164,spleen,mesothelial cell
+LAMP5,3.115811586380005,pancreas,mesothelial cell
+LAPTM4A,3.1011240308170653,skin of body,stromal cell
+LAPTM4B,2.668811559677124,musculature,erythrocyte
+LFNG,3.0725693702697754,lung,serous secreting cell of bronchus submucosal gland
+LHPP,3.1292977333068848,heart,dermis microvascular lymphatic vessel endothelial cell
+LIN28A,3.225673198699951,blood,cytotoxic T cell
+LIN28B,2.88594388961792,prostate gland,granulocyte
+LIX1,4.082188606262207,adrenal gland,chromaffin cell
+LRIG3,4.703526496887207,blood,cytotoxic T cell
+LRP1,2.7770303090413413,adrenal gland,blood vessel endothelial cell
+LRRC58,3.410186529159546,colon,erythroid lineage cell
+MAGED1,2.8101421356201173,pancreas,contractile cell
+MEIS1,3.628887414932251,lung,"naive thymus-derived CD8-positive, alpha-beta T cell"
+MEIS2,3.536116600036621,gallbladder,leukocyte
+MEOX1,3.687279939651489,eye,acinar cell
+MESP1,2.8362302780151367,kidney,endo-epithelial cell
+MESP2,3.307309627532959,endocrine gland,monocyte
+MEST,3.1720837579257246,skin of body,stromal cell
+MGST1,3.165843118450599,heart,subcutaneous adipocyte
+MKRN1,2.771496534347534,gallbladder,endothelial cell
+MLLT3,2.9757120609283447,heart,megakaryocyte
+MOGAT2,2.789149284362793,esophagus,endothelial cell of lymphatic vessel
+MPC2,3.156980276107788,adrenal gland,Schwann cell
+MRPL12,2.982542991638184,heart,megakaryocyte
+MRPS34,2.6905458623712715,spleen,endothelial cell of vascular tree
+MSGN1,2.2239773273468018,heart,leukocyte
+MSX1,4.432177543640137,stomach,gastrointestinal tract (lamina propria) macrophage
+MSX2,2.797788619995117,vasculature,blood vessel endothelial cell
+MTHFD2,3.4291608333587646,spinal cord,columnar/cuboidal epithelial cell
+NANOG,4.2498779296875,blood,granulocyte
+NANOGP8,2.869324207305908,skin of body,"CD8-positive, alpha-beta T cell"
+NET1,2.8158878188535392,esophagus,vascular associated smooth muscle cell
+NHP2,3.09149169921875,lung,visceromotor neuron
+NIN,3.1808853149414062,stomach,erythroid lineage cell
+NIPSNAP1,5.80855131149292,bladder organ,neutrophil
+NKD1,3.1199400424957275,adrenal gland,dendritic cell
+NKD2,3.384052276611328,heart,dermis microvascular lymphatic vessel endothelial cell
+NKX1-2,2.960848808288574,brain,Bergmann glial cell
+NOL9,2.8767714500427246,heart,megakaryocyte
+NTN1,2.9287261962890625,lung,lung megakaryocyte
+OBSL1,2.8844563961029053,spleen,classical monocyte
+ODC1,3.258483132970412,blood,platelet
+OSR1,3.34189772605896,eye,stromal cell
+PACSIN2,3.088421106338501,small intestine,primary sensory neuron (sensu Teleostei)
+PBX1,3.162197510708253,adipose tissue,stromal cell of endometrium
+PDE4A,2.9201388359069824,adrenal gland,Schwann cell
+PDGFA,4.0056657791137695,intestine,innate lymphoid cell
+PDLIM7,2.930361611502512,adrenal gland,Schwann cell
+PDZD4,2.8087074756622314,lung,lung megakaryocyte
+PEG3,5.036468982696533,pancreas,endothelial cell of lymphatic vessel
+PGM2,3.3904964923858643,prostate gland,dendritic cell
+PHC1,2.9158061345418296,large intestine,enterocyte of epithelium of large intestine
+PHGDH,3.330566644668579,vasculature,stromal cell
+PHLDB2,2.917898085335113,esophagus,enteric smooth muscle cell
+PITRM1,3.079470634460449,lamina propria,regulatory T cell
+PLCB1,3.5247114531847896,liver,mesothelial cell
+POLG,3.1962640285491943,large intestine,colon endothelial cell
+POLR2E,2.7065913677215576,liver,myeloid dendritic cell
+POU3F1,3.282452344894409,pancreas,enteric neuron
+POU5F1,2.8257157802581787,testis,contractile cell
+POU5F1B,2.985712766647339,spleen,classical monocyte
+PPAN,2.958281755447388,intestine,chromaffin cell
+PPFIBP1,3.4378662109375,intestine,intestine goblet cell
+PPFIBP2,3.4291608333587646,omentum,monocyte
+PPIB,3.370240596302769,stomach,plasmablast
+PPIC,2.8087074756622314,nose,monocyte
+PRDX6,3.0818961890968115,adrenal gland,inflammatory cell
+PRICKLE1,3.142208080380127,kidney,mesangial cell
+PRRX1,3.54997181892395,musculature,"CD16-positive, CD56-dim natural killer cell, human"
+PTK7,2.885373751322428,musculature,secondary lymphoid organ macrophage
+PUS7,3.7122721672058105,bladder organ,stromal cell
+PWP2,2.9828569889068604,bone marrow,macrophage
+PYCR1,3.2665483951568604,intestine,chromaffin cell
+RARB,3.146514238630022,colon,"BEST4+ intestinal epithelial cell, human"
+RARG,3.2817718982696533,small intestine,enterocyte of epithelium of small intestine
+RBP1,3.504291966546324,ovary,granulosa cell
+REEP5,2.6877549489339194,heart,megakaryocyte
+RIN2,2.901836501109878,lung,alveolar capillary type 2 endothelial cell
+RRAGD,3.3036699295043945,adrenal gland,blood vessel endothelial cell
+RRM2,3.621337652206421,exocrine gland,mature NK T cell
+RRP8,3.9612508109861593,skin of body,helper T cell
+RUVBL1,3.2374942302703857,eye,platelet
+RUVBL2,2.797743797302246,exocrine gland,endothelial cell of lymphatic vessel
+SDC1,3.07749342918396,pancreas,innate lymphoid cell
+SERTAD4,3.8897347450256334,exocrine gland,adventitial cell
+SFRP2,5.067111968994141,stomach,fibroblast of gingiva
+SH2D3C,2.837131977081299,pancreas,enteric neuron
+SH3BP5,3.356436583681564,adrenal gland,cortical cell of adrenal gland
+SIX1,2.913519382476806,heart,stromal cell
+SIX2,3.009950876235962,brain,meningeal macrophage
+SLC16A3,3.451077461242676,brain,endocrine cell
+SLC2A1,5.358462810516357,small intestine,granulocyte
+SLC38A4,3.1753745079040527,prostate gland,granulocyte
+SLC7A3,3.5632007122039795,brain,Schwann cell
+SLC7A5,3.036214590072632,spleen,stromal cell
+SMAD7,3.547489881515503,uterus,B cell
+SMC6,2.9428298473358154,scalp,basal cell of epidermis
+SMOC1,3.022567749023437,intestine,chromaffin cell
+SMPDL3B,4.058488845825195,adipose tissue,"CD8-positive, alpha-beta T cell"
+SMS,2.739057813371931,spleen,stromal cell
+SNAI2,2.846928834915161,spleen,innate lymphoid cell
+SOX2,3.074535846710205,milk,T cell
+SOX3,4.137802600860596,endocrine gland,medullary thymic epithelial cell
+SOX4,4.014894008636475,omentum,"CD8-positive, alpha-beta memory T cell"
+SP5,2.8079755306243896,vasculature,leukocyte
+SPARC,5.681171179525222,bone marrow,osteoblast
+SPINT1,2.921799898147583,heart,endothelial cell of lymphatic vessel
+SPINT2,2.9609772496002327,intestine,colon epithelial cell
+SPRED2,2.897640546162924,musculature,mature NK T cell
+SPRY4,3.0686490535736084,stomach,enteric neuron
+SRM,2.80003309249878,lung,visceromotor neuron
+SSBP3,2.989514923095703,stomach,enteric neuron
+STAMBPL1,3.00720477104187,brain,endocrine cell
+STMN2,4.29999303817749,endocrine gland,double negative thymocyte
+SULF2,2.8951778411865234,colon,interstitial cell of Cajal
+TAX1BP3,3.2219844728644724,musculature,myelinating Schwann cell
+TBX2,3.1908888816833496,intestine,chromaffin cell
+TBX3,3.2204132080078125,intestine,endothelial cell of lymphatic vessel
+TBX6,3.241617679595948,exocrine gland,"CD4-positive, alpha-beta T cell"
+TBXT,2.7032103538513184,prostate gland,endothelial cell
+TCF15,3.1199400424957275,kidney,innate lymphoid cell
+TENM4,3.458498239517212,stomach,enteric neuron
+TMEM200B,3.532886028289795,mucosa,macrophage
+TMEM47,3.7240357398986816,heart,megakaryocyte
+TPD52,3.189771890640259,vasculature,stromal cell
+TPM1,4.324508974591478,heart,ventricular cardiac muscle cell
+TPM4,3.415123668688509,blood,platelet
+TRAF4,3.1797804832458496,bone marrow,megakaryocyte
+TRIL,3.25809645652771,esophagus,enteric smooth muscle cell
+TUBA1A,4.991617838541667,colon,primary sensory neuron (sensu Teleostei)
+TUBB2B,3.9636467721394975,brain,hypothalamus cell
+TWIST1,4.175963878631592,uterus,"CD4-positive, alpha-beta memory T cell"
+UBE2C,3.559046745300293,endocrine gland,medullary thymic epithelial cell type 3
+UCHL1,3.408250782587757,small intestine,primary sensory neuron (sensu Teleostei)
+UPP1,2.828599691390991,tongue,contractile cell
+VASN,3.341869354248047,skin of body,Langerhans cell
+WDR74,3.012955904006958,bladder organ,endothelial cell of lymphatic vessel
+WLS,3.464477300643921,lung,visceromotor neuron
+WNT2,3.325383186340332,lung,regulatory T cell
+WNT3A,2.857364018758138,heart,endothelial cell of lymphatic vessel
+WNT5A,4.673367977142334,large intestine,colon endothelial cell
+WNT5B,3.516570806503296,heart,megakaryocyte
+XPO5,4.169612407684326,endocrine gland,cell of skeletal muscle
+ZNF503,3.039457321166992,stomach,erythroid lineage cell
+ZNHIT6,2.727097272872925,eye,stromal cell
