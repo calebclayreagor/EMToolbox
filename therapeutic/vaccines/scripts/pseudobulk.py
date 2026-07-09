@@ -59,7 +59,13 @@ celltype_blacklist = [
     'oligodendrocyte precursor cell',
     'neural progenitor cell',
     'retinal progenitor cell',
-    'glial cell']
+    'glial cell',
+    'blood cell',
+    'CL:4047053',
+    'hematopoietic stem cell',
+    'hematopoietic cell',
+    'mesenchymal stem cell',
+    'skeletal muscle satellite cell']
 
 # load CZ CELLxGENE gene expression (dset features)
 pth = os.path.join('..', '..', '..', 'data', 'therapeutic', 'vaccines')
