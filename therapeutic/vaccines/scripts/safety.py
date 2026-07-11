@@ -7,7 +7,7 @@ from itertools import combinations
 fn = 'CELLxGENE_pbulk.csv'
 pth = os.path.join('..', '..', '..', 'data')
 pth_in = os.path.join(pth, 'therapeutic', 'vaccines')
-pth_out = os.path.join(pth, 'results', 'therapeutic', 'vaccines')
+pth_out = os.path.join(pth, 'results', 'therapeutic', 'vaccines', 'safety')
 
 # load CZ CELLxGENE pseudobulk -> cell type max expression
 df = pd.read_csv(os.path.join(pth_in, fn), index_col = [0, 1])
@@ -26,7 +26,7 @@ df_pair = df_pair.iloc[ix].reset_index(names = 'Gene')
 df_pair.index = pd.MultiIndex.from_tuples(g)
 
 # save results
-df_single.to_csv(os.path.join(pth_out, 'safety_single.csv'))
-df_pair.to_csv(os.path.join(pth_out, 'safety_pair.csv'))
+df_single.to_csv(os.path.join(pth_out, 'single.csv'))
+df_pair.to_csv(os.path.join(pth_out, 'pair.csv'))
 
 #%%
