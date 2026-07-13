@@ -1,0 +1,240 @@
+"id","UniProt","Symbol","Name","Target Development Level","IDG Family","Novelty"
+15605,"P01023","A2M","Alpha-2-macroglobulin","Tbio","Other",0.00070446
+15710,"P12814","ACTN1","Alpha-actinin-1","Tbio","Other",0.00654004
+15560,"P29275","ADORA2B","Adenosine receptor A2b","Tclin","GPCR",0.00096284
+13979,"Q6RW13","AGTRAP","Type-1 angiotensin II receptor-associated protein","Tbio","Other",0.02295361
+16056,"Q13155","AIMP2","Aminoacyl tRNA synthase complex-interacting multifunctional protein 2","Tchem","Enzyme",0.03283387
+6913,"P54819","AK2","Adenylate kinase 2, mitochondrial","Tbio","Kinase",0.00581034
+15881,"O94788","ALDH1A2","Retinal dehydrogenase 2","Tchem","Enzyme",0.00461371
+18907,"P05186","ALPL","Alkaline phosphatase, tissue-nonspecific isozyme","Tchem","Enzyme",0.00152281
+15432,"P08758","ANXA5","Annexin A5","Tbio","Other",0.00007584
+15999,"P20073","ANXA7","Annexin A7","Tbio","Other",0.00365221
+15516,"Q92572","AP3S1","AP-3 complex subunit sigma-1","Tbio","Other",0.12425009
+16142,"P05067","APP","Amyloid-beta A4 protein","Tclin","Other",0.00008964
+17275,"P05089","ARG1","Arginase-1","Tchem","Enzyme",0.00063728
+15489,"Q15041","ARL6IP1","ADP-ribosylation factor-like protein 6-interacting protein 1","Tbio","Other",0.07644032
+17115,"Q9NVI7","ATAD3A","ATPase family AAA domain-containing protein 3A","Tbio","Enzyme",0.03978057
+18255,"P31939","ATIC","Bifunctional purine biosynthesis protein PURH","Tchem","Other",0.00466845
+13526,"P54687","BCAT1","Branched-chain-amino-acid aminotransferase, cytosolic","Tchem","Enzyme",0.00616446
+13590,"O15382","BCAT2","Branched-chain-amino-acid aminotransferase, mitochondrial","Tchem","Enzyme",0.00885158
+13281,"O00238","BMPR1B","Bone morphogenetic protein receptor type-1B","Tchem","Kinase",0.00698763
+13404,"Q9ULX7","CA14","Carbonic anhydrase 14","Tclin","Enzyme",0.00864764
+13002,"Q5VU97","CACHD1","VWFA and cache domain-containing protein 1","Tdark","Other",0.56021668
+13452,"Q9BY67","CADM1","Cell adhesion molecule 1","Tbio","Other",0.00103391
+13458,"P0DP23","CALM1","Calmodulin-1","Tclin","Other",0.00308267
+2540,"P24385","CCND1","G1/S-specific cyclin-D1","Tchem","Other",0.0001186
+2372,"P30279","CCND2","G1/S-specific cyclin-D2","Tbio","Other",0.00157305
+2471,"P30281","CCND3","G1/S-specific cyclin-D3","Tchem","Other",0.00223085
+2315,"Q8IV13","CCNJL","Cyclin-J-like protein","Tdark","Other",2.86306774
+2928,"P08962","CD63","CD63 antigen","Tchem","Other",0.00072515
+363,"Q8WYQ3","CHCHD10","Coiled-coil-helix-coiled-coil-helix domain-containing protein 10, mitochondrial","Tbio","Other",0.01659548
+17345,"Q9NS84","CHST7","Carbohydrate sulfotransferase 7","Tbio","Enzyme",0.18769086
+374,"Q99439","CNN2","Calponin-2","Tbio","Other",0.02486182
+10814,"P29762","CRABP1","Cellular retinoic acid-binding protein 1","Tbio","Other",0.00284292
+10464,"P29373","CRABP2","Cellular retinoic acid-binding protein 2","Tchem","Other",0.0050363
+3045,"Q14894","CRYM","Ketimine reductase mu-crystallin","Tbio","Enzyme",0.02044871
+2004,"Q16527","CSRP2","Cysteine and glycine-rich protein 2","Tbio","Other",0.04408353
+1976,"O43739","CYTH3","Cytohesin-3","Tbio","Other",0.00940752
+3189,"Q9NX09","DDIT4","DNA damage-inducible transcript 4 protein","Tbio","Other",0.00464348
+3142,"Q9H8H2","DDX31","Probable ATP-dependent RNA helicase DDX31","Tbio","Enzyme",2.84646195
+3224,"Q9NY93","DDX56","Probable ATP-dependent RNA helicase DDX56","Tbio","Enzyme",0.03330582
+3209,"Q6ICB0","DESI1","Desumoylating isopeptidase 1","Tdark","Enzyme",0.27035255
+2604,"Q155Q3","DIXDC1","Dixin","Tbio","Other",0.05901474
+1360,"O00548","DLL1","Delta-like protein 1","Tbio","Other",0.00150384
+13705,"Q9H4W6","EBF3","Transcription factor COE3","Tbio","Transcription Factor",0.00311905
+3312,"P29692","EEF1D","Elongation factor 1-delta","Tbio","Other",0.02480745
+17516,"P20827","EFNA1","Ephrin-A1","Tbio","Kinase",0.00732252
+17518,"P52797","EFNA3","Ephrin-A3","Tbio","Other",0.01819539
+855,"P52799","EFNB2","Ephrin-B2","Tbio","Other",0.00255095
+15638,"Q13541","EIF4EBP1","Eukaryotic translation initiation factor 4E-binding protein 1","Tbio","Other",0.00098313
+2879,"Q6PCB8","EMB","Embigin","Tbio","Other",0.00135577
+20106,"Q92979","EMG1","Ribosomal RNA small subunit methyltransferase NEP1","Tbio","Enzyme",0.00462566
+910,"O95936","EOMES","Eomesodermin homolog","Tbio","Transcription Factor",0.00288125
+1148,"Q9Y2J2","EPB41L3","Band 4.1-like protein 3","Tbio","Other",0.00915217
+1609,"P43268","ETV4","ETS translocation variant 4","Tbio","Transcription Factor",0.00317361
+6626,"Q01469","FABP5","Fatty acid-binding protein 5","Tchem","Other",0.00570755
+1739,"Q8N2R8","FAM43A","Protein FAM43A","Tdark","Other",1.17401589
+5814,"P14324","FDPS","Farnesyl pyrophosphate synthase","Tclin","Enzyme",0.00164195
+6386,"Q99853","FOXB1","Forkhead box protein B1","Tbio","Transcription Factor",0.04489092
+5936,"Q99958","FOXC2","Forkhead box protein C2","Tbio","Transcription Factor",0.00438844
+5760,"Q05932","FPGS","Folylpolyglutamate synthase, mitochondrial","Tchem","Enzyme",0.0108601
+5842,"Q96NE9","FRMD6","FERM domain-containing protein 6","Tbio","Other",0.0034642
+9439,"Q92765","FRZB","Secreted frizzled-related protein 3","Tbio","Other",0.00201307
+17813,"Q9ULW2","FZD10","Frizzled-10","Tbio","GPCR",0.02786933
+5736,"Q14332","FZD2","Frizzled-2","Tchem","GPCR",0.00774893
+5501,"P43694","GATA4","Transcription factor GATA-4","Tbio","Transcription Factor",0.00094282
+5808,"Q92908","GATA6","Transcription factor GATA-6","Tbio","Transcription Factor",0.00267511
+1325,"P52951","GBX2","Homeobox protein GBX-2","Tbio","Transcription Factor",0.01248026
+6927,"O75600","GCAT","2-amino-3-ketobutyrate coenzyme A ligase, mitochondrial","Tbio","Enzyme",0.00503538
+17525,"P48507","GCLM","Glutamate--cysteine ligase regulatory subunit","Tbio","Enzyme",0.00395815
+3301,"P23378","GLDC","Glycine dehydrogenase (decarboxylating), mitochondrial","Tbio","Enzyme",0.00900467
+18084,"P04899","GNAI2","Guanine nucleotide-binding protein G(i) subunit alpha-2","Tchem","Other",0.03014729
+17990,"P51654","GPC3","Glypican-3","Tbio","Other",0.00151823
+782,"Q14451","GRB7","Growth factor receptor-bound protein 7","Tchem","Other",0.0091833
+1791,"Q12849","GRSF1","G-rich sequence factor 1","Tbio","Other",0.05905648
+13609,"P08236","GUSB","Beta-glucuronidase","Tchem","Enzyme",0.00053974
+6274,"O96004","HAND1","Heart- and neural crest derivatives-expressed protein 1","Tbio","Transcription Factor",0.00556481
+6655,"Q14469","HES1","Transcription factor HES-1","Tbio","Transcription Factor",0.00974115
+6524,"Q5TGS1","HES3","Transcription factor HES-3","Tbio","Transcription Factor",0.01708686
+5916,"Q9BYE0","HES7","Transcription factor HES-7","Tbio","Transcription Factor",0.02014919
+6218,"Q96FZ2","HMCES","Embryonic stem cell-specific 5-hydroxymethylcytosine-binding protein","Tbio","Enzyme",0.01229889
+5961,"Q01581","HMGCS1","Hydroxymethylglutaryl-CoA synthase, cytoplasmic","Tchem","Enzyme",0.01089288
+925,"P38646","HSPA9","Stress-70 protein, mitochondrial","Tchem","Other",0.00235171
+5511,"P41134","ID1","DNA-binding protein inhibitor ID-1","Tbio","Transcription Factor",0.00151069
+5513,"Q02363","ID2","DNA-binding protein inhibitor ID-2","Tbio","Transcription Factor",0.00256364
+5514,"Q02535","ID3","DNA-binding protein inhibitor ID-3","Tbio","Transcription Factor",0.00222897
+6824,"Q13907","IDI1","Isopentenyl-diphosphate Delta-isomerase 1","Tbio","Enzyme",0.01145181
+19353,"Q12894","IFRD2","Interferon-related developmental regulator 2","Tbio","Other",0.03050513
+18080,"P20839","IMPDH1","Inosine-5'-monophosphate dehydrogenase 1","Tclin","Enzyme",0.00758575
+6896,"P53708","ITGA8","Integrin alpha-8","Tbio","Other",0.0220023
+6897,"Q13797","ITGA9","Integrin alpha-9","Tbio","Other",0.01488635
+6893,"Q9NQX7","ITM2C","Integral membrane protein 2C","Tbio","Other",0.10829732
+12757,"P17535","JUND","Transcription factor jun-D","Tbio","Transcription Factor",0.00277701
+5944,"O00180","KCNK1","Potassium channel subfamily K member 1","Tbio","Ion Channel",0.01124588
+5947,"Q719H9","KCTD1","BTB/POZ domain-containing protein KCTD1","Tbio","Other",0.09964774
+11886,"Q9UJQ1","LAMP5","Lysosome-associated membrane glycoprotein 5","Tbio","Other",0.07177667
+12277,"Q15012","LAPTM4A","Lysosomal-associated transmembrane protein 4A","Tbio","Other",0.00467804
+11885,"Q86VI4","LAPTM4B","Lysosomal-associated transmembrane protein 4B","Tbio","Other",0.01162533
+12128,"Q8NES3","LFNG","Beta-1,3-N-acetylglucosaminyltransferase lunatic fringe","Tbio","Enzyme",0.02660238
+11854,"Q9H008","LHPP","Phospholysine phosphohistidine inorganic pyrophosphate phosphatase","Tbio","Enzyme",0.0356879
+12488,"Q9H9Z2","LIN28A","Protein lin-28 homolog A","Tbio","Transcription Factor",0.00199524
+12047,"Q6ZN17","LIN28B","Protein lin-28 homolog B","Tbio","Transcription Factor",0.00564546
+12005,"Q8N485","LIX1","Protein limb expression 1 homolog","Tbio","Other",0.03028158
+12139,"Q6UXM1","LRIG3","Leucine-rich repeats and immunoglobulin-like domains protein 3","Tbio","Other",0.04502029
+12214,"Q07954","LRP1","Prolow-density lipoprotein receptor-related protein 1","Tbio","Other",0.00200788
+12207,"Q96CX6","LRRC58","Leucine-rich repeat-containing protein 58","Tdark","Other",2.4415805
+12239,"Q9Y5V3","MAGED1","Melanoma-associated antigen D1","Tbio","Other",0.02143963
+19329,"O00470","MEIS1","Homeobox protein Meis1","Tbio","Transcription Factor",0.00480433
+6880,"O14770","MEIS2","Homeobox protein Meis2","Tbio","Transcription Factor",0.01393828
+19412,"P50221","MEOX1","Homeobox protein MOX-1","Tbio","Transcription Factor",0.02978667
+6901,"Q9BRJ9","MESP1","Mesoderm posterior protein 1","Tbio","Transcription Factor",0.03965223
+6902,"Q0VG99","MESP2","Mesoderm posterior protein 2","Tbio","Transcription Factor",0.02601024
+6903,"Q5EB52","MEST","Mesoderm-specific transcript homolog protein","Tbio","Enzyme",0.00226252
+19342,"Q8N6R0","METTL13","Methyltransferase-like protein 13","Tbio","Enzyme",0.15986409
+19669,"P10620","MGST1","Microsomal glutathione S-transferase 1","Tbio","Enzyme",0.00681882
+11690,"Q9UHC7","MKRN1","E3 ubiquitin-protein ligase makorin-1","Tbio","Enzyme",0.04485183
+15830,"P42568","MLLT3","Protein AF-9","Tchem","Other",0.00361056
+11609,"Q3SYC2","MOGAT2","2-acylglycerol O-acyltransferase 2","Tchem","Enzyme",0.06314447
+11626,"O95563","MPC2","Mitochondrial pyruvate carrier 2","Tbio","Other",0.02948696
+4738,"P52815","MRPL12","39S ribosomal protein L12, mitochondrial","Tbio","Other",0.10646542
+4053,"P82930","MRPS34","28S ribosomal protein S34, mitochondrial","Tbio","Other",0.29355603
+19600,"A6NI15","MSGN1","Mesogenin-1","Tbio","Transcription Factor",0.10117512
+12826,"P28360","MSX1","Homeobox protein MSX-1","Tbio","Transcription Factor",0.00176212
+12827,"P35548","MSX2","Homeobox protein MSX-2","Tbio","Transcription Factor",0.00273602
+19861,"P13995","MTHFD2","Bifunctional methylenetetrahydrofolate dehydrogenase/cyclohydrolase, mitochondrial","Tchem","Enzyme",0.01776594
+20216,"Q9H9S0","NANOG","Homeobox protein NANOG","Tbio","Transcription Factor",0.00054893
+19880,"Q6NSW7","NANOGP8","Homeobox protein NANOGP8","Tdark","Other",
+17373,"Q7Z628","NET1","Neuroepithelial cell-transforming gene 1 protein","Tbio","Other",0.13349529
+20144,"Q9NX24","NHP2","H/ACA ribonucleoprotein complex subunit 2","Tbio","Other",0.01414024
+20110,"Q8N4C6","NIN","Ninein","Tbio","Other",0.01312714
+19949,"Q9BPW8","NIPSNAP1","Protein NipSnap homolog 1","Tbio","Other",0.11810998
+20114,"Q969G9","NKD1","Protein naked cuticle homolog 1","Tbio","Other",0.01491231
+20027,"Q969F2","NKD2","Protein naked cuticle homolog 2","Tbio","Other",0.04042015
+18912,"Q9UD57","NKX1-2","NK1 transcription factor-related protein 2","Tdark","Other",0.27475369
+20124,"Q5SY16","NOL9","Polynucleotide 5'-hydroxyl-kinase NOL9","Tdark","Enzyme",0.05830272
+19036,"O95631","NTN1","Netrin-1","Tbio","Other",0.00183678
+19678,"O75147","OBSL1","Obscurin-like protein 1","Tbio","Other",0.0325947
+3236,"P11926","ODC1","Ornithine decarboxylase","Tclin","Enzyme",0.00037968
+3570,"Q8TAX0","OSR1","Protein odd-skipped-related 1","Tchem","Transcription Factor",0.07900455
+18339,"Q9UNF0","PACSIN2","Protein kinase C and casein kinase substrate in neurons protein 2","Tbio","Enzyme",0.0250489
+10387,"P40424","PBX1","Pre-B-cell leukemia transcription factor 1","Tbio","Transcription Factor",0.00329442
+10540,"P27815","PDE4A","cAMP-specific 3',5'-cyclic phosphodiesterase 4A","Tclin","Enzyme",0.00067574
+10539,"P04085","PDGFA","Platelet-derived growth factor subunit A","Tchem","Other",0.00155768
+20398,"Q9NR12","PDLIM7","PDZ and LIM domain protein 7","Tbio","Other",0.00544518
+10802,"Q76G19","PDZD4","PDZ domain-containing protein 4","Tbio","Other",0.00603543
+10546,"Q9GZU2","PEG3","Paternally-expressed gene 3 protein","Tbio","Transcription Factor",0.00367006
+9834,"Q96G03","PGM2","Phosphoglucomutase-2","Tbio","Enzyme",0.00922421
+10483,"P78364","PHC1","Polyhomeotic-like protein 1","Tbio","Other",0.01530622
+9481,"O43175","PHGDH","D-3-phosphoglycerate dehydrogenase","Tchem","Enzyme",0.00047542
+10232,"Q86SQ0","PHLDB2","Pleckstrin homology-like domain family B member 2","Tbio","Other",0.0739326
+3853,"Q5JRX3","PITRM1","Presequence protease, mitochondrial","Tchem","Enzyme",0.08067518
+10115,"Q9NQ66","PLCB1","1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-1","Tbio","Enzyme",0.00269771
+1026,"P54098","POLG","DNA polymerase subunit gamma-1","Tchem","Enzyme",0.00172189
+4758,"P19388","POLR2E","DNA-directed RNA polymerases I, II, and III subunit RPABC1","Tbio","Enzyme",0.01817288
+3842,"Q03052","POU3F1","POU domain, class 3, transcription factor 1","Tbio","Transcription Factor",0.00290081
+3763,"Q01860","POU5F1","POU domain, class 5, transcription factor 1","Tbio","Transcription Factor",0.00033974
+18319,"Q06416","POU5F1B","Putative POU domain, class 5, transcription factor 1B","Tbio","Transcription Factor",0.04634646
+5051,"Q9NQ55","PPAN","Suppressor of SWI4 1 homolog","Tbio","Other",0.01063709
+12013,"Q86W92","PPFIBP1","Liprin-beta-1","Tbio","Other",0.09685089
+12014,"Q8ND30","PPFIBP2","Liprin-beta-2","Tbio","Other",0.05704511
+9968,"P23284","PPIB","Peptidyl-prolyl cis-trans isomerase B","Tchem","Enzyme",0.00309224
+9969,"P45877","PPIC","Peptidyl-prolyl cis-trans isomerase C","Tbio","Enzyme",0.01295205
+3538,"P30041","PRDX6","Peroxiredoxin-6","Tbio","Other",0.00180564
+3942,"Q96MT3","PRICKLE1","Prickle-like protein 1","Tbio","Other",0.03175916
+3734,"P54821","PRRX1","Paired mesoderm homeobox protein 1","Tbio","Transcription Factor",0.01218272
+3671,"Q13308","PTK7","Inactive tyrosine-protein kinase 7","Tbio","Kinase",0.00251552
+3345,"Q96PZ0","PUS7","Pseudouridylate synthase 7 homolog","Tbio","Enzyme",0.04867669
+3893,"Q15269","PWP2","Periodic tryptophan protein 2 homolog","Tbio","Other",0.04910741
+18336,"P32322","PYCR1","Pyrroline-5-carboxylate reductase 1, mitochondrial","Tbio","Enzyme",0.00220832
+10648,"P10826","RARB","Retinoic acid receptor beta","Tclin","Nuclear Receptor",0.00257427
+3504,"P13631","RARG","Retinoic acid receptor gamma","Tclin","Nuclear Receptor",0.00667159
+10026,"P09455","RBP1","Retinol-binding protein 1","Tbio","Other",0.00199929
+10358,"Q00765","REEP5","Receptor expression-enhancing protein 5","Tbio","Other",0.00160455
+10353,"Q8WYP3","RIN2","Ras and Rab interactor 2","Tbio","Other",0.0527887
+4373,"Q9NQL2","RRAGD","Ras-related GTP-binding protein D","Tbio","Other",0.04742375
+11173,"P31350","RRM2","Ribonucleoside-diphosphate reductase subunit M2","Tclin","Enzyme",0.00112948
+10285,"O43159","RRP8","Ribosomal RNA-processing protein 8","Tbio","Enzyme",0.04922797
+4150,"Q9Y265","RUVBL1","RuvB-like 1","Tbio","Other",0.0089115
+4592,"Q9Y230","RUVBL2","RuvB-like 2","Tbio","Other",0.01129017
+8488,"P18827","SDC1","Syndecan-1","Tbio","Other",0.00044792
+5158,"Q9NUC0","SERTAD4","SERTA domain-containing protein 4","Tdark","Other",0.70786986
+9334,"Q96HF1","SFRP2","Secreted frizzled-related protein 2","Tbio","Other",0.00454703
+9379,"Q8N5H7","SH2D3C","SH2 domain-containing protein 3C","Tbio","Other",0.00356605
+15601,"O60239","SH3BP5","SH3 domain-binding protein 5","Tbio","Other",0.00597871
+9570,"Q15475","SIX1","Homeobox protein SIX1","Tbio","Transcription Factor",0.00415613
+9262,"Q9NPC8","SIX2","Homeobox protein SIX2","Tbio","Transcription Factor",0.01046481
+19792,"O15427","SLC16A3","Monocarboxylate transporter 4","Tchem","Transporter",0.00369058
+17752,"P11166","SLC2A1","Solute carrier family 2, facilitated glucose transporter member 1","Tchem","Transporter",0.00027583
+8498,"Q969I6","SLC38A4","Sodium-coupled neutral amino acid transporter 4","Tbio","Transporter",0.015839
+308,"Q8WY07","SLC7A3","Cationic amino acid transporter 3","Tbio","Transporter",0.00779949
+11884,"Q01650","SLC7A5","Large neutral amino acids transporter small subunit 1","Tchem","Transporter",0.00365806
+8050,"O15105","SMAD7","Mothers against decapentaplegic homolog 7","Tbio","Transcription Factor",0.00116343
+8035,"Q96SB8","SMC6","Structural maintenance of chromosomes protein 6","Tbio","Other",0.02450073
+7930,"Q9H4F8","SMOC1","SPARC-related modular calcium-binding protein 1","Tbio","Other",0.03819681
+17164,"Q92485","SMPDL3B","Acid sphingomyelinase-like phosphodiesterase 3b","Tbio","Enzyme",0.06579624
+4895,"P52788","SMS","Spermine synthase","Tchem","Enzyme",0.02447112
+7704,"O43623","SNAI2","Zinc finger protein SNAI2","Tbio","Transcription Factor",0.00096495
+7771,"P48431","SOX2","Transcription factor SOX-2","Tbio","Transcription Factor",0.00037089
+7944,"P41225","SOX3","Transcription factor SOX-3","Tbio","Transcription Factor",0.00280653
+8057,"Q06945","SOX4","Transcription factor SOX-4","Tbio","Transcription Factor",0.00348137
+8060,"Q6BEB4","SP5","Transcription factor Sp5","Tdark","Transcription Factor",0.16814294
+5115,"P09486","SPARC","SPARC","Tbio","Other",0.00063267
+4320,"O43278","SPINT1","Kunitz-type protease inhibitor 1","Tbio","Enzyme",0.00930324
+4321,"O43291","SPINT2","Kunitz-type protease inhibitor 2","Tbio","Enzyme",0.0046602
+16552,"Q7Z698","SPRED2","Sprouty-related, EVH1 domain-containing protein 2","Tbio","Other",0.04447225
+4289,"Q9C004","SPRY4","Protein sprouty homolog 4","Tbio","Other",0.01578378
+7906,"P19623","SRM","Spermidine synthase","Tchem","Enzyme",0.01583759
+16357,"Q9BWW4","SSBP3","Single-stranded DNA-binding protein 3","Tbio","Other",0.01955714
+4920,"Q96FJ0","STAMBPL1","AMSH-like protease","Tbio","Enzyme",0.08532786
+5166,"Q93045","STMN2","Stathmin-2","Tbio","Other",0.00854367
+5130,"Q8IWU5","SULF2","Extracellular sulfatase Sulf-2","Tbio","Enzyme",0.01536228
+9698,"O14907","TAX1BP3","Tax1-binding protein 3","Tbio","Other",0.01605171
+8202,"Q13207","TBX2","T-box transcription factor TBX2","Tbio","Transcription Factor",0.00684877
+8353,"O15119","TBX3","T-box transcription factor TBX3","Tbio","Transcription Factor",0.00515507
+8470,"O95947","TBX6","T-box transcription factor TBX6","Tbio","Transcription Factor",0.01060902
+8591,"O15178","TBXT","T-box transcription factor T","Tbio","Transcription Factor",0.00660122
+8762,"Q12870","TCF15","Transcription factor 15","Tbio","Transcription Factor",0.00110253
+8956,"Q6N022","TENM4","Teneurin-4","Tbio","Other",0.02082032
+16407,"Q69YZ2","TMEM200B","Transmembrane protein 200B","Tdark","Other",0.18113379
+7761,"Q9BQJ4","TMEM47","Transmembrane protein 47","Tbio","Other",0.1571161
+14631,"P55327","TPD52","Tumor protein D52","Tbio","Other",0.01337606
+14410,"P09493","TPM1","Tropomyosin alpha-1 chain","Tbio","Other",0.00261206
+7668,"P67936","TPM4","Tropomyosin alpha-4 chain","Tbio","Other",0.00557194
+5078,"Q9BUZ4","TRAF4","TNF receptor-associated factor 4","Tbio","Other",0.01317133
+16336,"Q7L0X0","TRIL","TLR4 interactor with leucine rich repeats","Tbio","Other",0.0179925
+8916,"Q71U36","TUBA1A","Tubulin alpha-1A chain","Tchem","Other",0.01030145
+8602,"Q9BVA1","TUBB2B","Tubulin beta-2B chain","Tclin","Other",0.02905844
+9697,"Q15672","TWIST1","Twist-related protein 1","Tbio","Transcription Factor",0.0013639
+5438,"O00762","UBE2C","Ubiquitin-conjugating enzyme E2 C","Tbio","Other",0.00731185
+15199,"P09936","UCHL1","Ubiquitin carboxyl-terminal hydrolase isozyme L1","Tchem","Enzyme",0.00056075
+16444,"Q16831","UPP1","Uridine phosphorylase 1","Tchem","Enzyme",0.01384975
+5343,"Q6EMK4","VASN","Vasorin","Tbio","Other",0.05424159
+14528,"Q6RFH5","WDR74","WD repeat-containing protein 74","Tbio","Other",0.07119796
+14328,"Q5T9L3","WLS","Protein wntless homolog","Tbio","Other",0.01459149
+15114,"P09544","WNT2","Protein Wnt-2","Tbio","Other",0.00313614
+15116,"P56704","WNT3A","Protein Wnt-3a","Tchem","Other",0.00119275
+15115,"P41221","WNT5A","Protein Wnt-5a","Tbio","Other",0.00125563
+14299,"Q9H1J7","WNT5B","Protein Wnt-5b","Tbio","Other",0.00919779
+15118,"Q9HAV4","XPO5","Exportin-5","Tbio","Other",0.0040002
+14981,"Q96F45","ZNF503","Zinc finger protein 503","Tbio","Other",0.07234099
+13620,"Q9NWK9","ZNHIT6","Box C/D snoRNA protein 1","Tbio","Other",1.1021845
