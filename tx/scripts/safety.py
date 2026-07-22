@@ -4,13 +4,13 @@ import numpy as np
 import pandas as pd
 from itertools import combinations
 
-fn = 'CELLxGENE_pbulk.csv'
-pth = os.path.join('..', '..', '..', 'data')
-pth_in = os.path.join(pth, 'therapeutic', 'vaccines')
-pth_out = os.path.join(pth, 'results', 'therapeutic', 'vaccines', 'safety')
+pth = os.path.join('..', '..', 'data')
+pth_in = os.path.join(pth, 'ref', 'CELLxGENE')
+pth_out = os.path.join(pth, 'results', 'tx', 'discovery', 'safety')
 
 # load CZ CELLxGENE pseudobulk -> cell type max expression
-df = pd.read_csv(os.path.join(pth_in, fn), index_col = [0, 1])
+fn = os.path.join(pth_in, 'pbulk.csv')
+df = pd.read_csv(fn, index_col = [0, 1])
 df_max = df.max(axis = 0).rename('Expression').to_frame()
 df_idxmax = pd.DataFrame(
     data = df.idxmax(axis = 0).to_frame()[0].tolist(),

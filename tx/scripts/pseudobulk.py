@@ -68,8 +68,8 @@ celltype_blacklist = [
     'skeletal muscle satellite cell']
 
 # load CZ CELLxGENE gene expression (dset features)
-pth = os.path.join('..', '..', '..', 'data', 'therapeutic', 'vaccines')
-df = pd.read_csv(os.path.join(pth, 'CELLxGENE_070526.csv'), skiprows = 9)
+pth = os.path.join('..', '..', 'data', 'ref', 'CELLxGENE')
+df = pd.read_csv(os.path.join(pth, '070526.csv'), skiprows = 9)
 
 # filter embryonic/fetal tissues+cell types
 msk_tissue = ~df['Tissue'].isin(tissue_blacklist)
@@ -81,6 +81,6 @@ df = df.loc[msk_tissue & msk_celltype & msk_ncell].copy()
 df = df.pivot(index = ('Tissue', 'Cell Type'),
               columns = 'Gene Symbol',
               values = 'Expression').fillna(0.)
-df.to_csv(os.path.join(pth, 'CELLxGENE_pbulk.csv'))
+df.to_csv(os.path.join(pth, 'pbulk.csv'))
 
 #%%
