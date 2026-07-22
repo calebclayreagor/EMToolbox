@@ -7,7 +7,7 @@ from load import load_CCCA_adata
 pth = os.path.join('..', '..', '..', '..', 'data')
 pth_in = os.path.join(pth, 'unzip', 'CCCA')
 pth_feat = os.path.join(pth, 'features', 'biomart')
-pth_out = os.path.join(pth, 'cancer', 'vertebrate', 'CCCA')
+pth_out = os.path.join(pth, 'cancer', 'vertebrate', 'CCCA', 'pancan')
 
 blacklist = [
     'nan',
