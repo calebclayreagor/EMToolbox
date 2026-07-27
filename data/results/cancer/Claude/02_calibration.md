@@ -1,7 +1,7 @@
 # CCCA Calibration Audit — Puram 2017 HNSCC
 
 The autonomous analyst re-ran the six-step protocol on **Puram 2017**, the dataset it was hand-built on.
-Reached step 06, **all three gates PASS**. Same data, known answer — so the real question is not *did it pass*
+Reached step 06, **all three gates GO**. Same data, known answer — so the real question is not *did it pass*
 but *which passes reflect a decision that will survive contact with data the agent has never seen*.
 
 **Verdict.** The pattern reproduces: Mixed hub confirmed, cross-repression **r = −0.47** (anchor −0.49),
@@ -10,16 +10,16 @@ hub-and-spoke geometry intact. Cleared to scale, with the graded watch-list belo
 ## Automation criteria — the bar a decision must clear to run unattended
 
 Every dataset-dependent choice must be *automated* for the 60+ dataset run. A choice is safely automated only when
-it clears four tests; anything short is a liability that a passing gate on the training data will hide:
+it clears four tests; anything short is a liability that a passing gate on the training data (*i.e.*, Puram2017) will hide:
 
 - **C1 — Derived, not inherited.** Computed from the dataset in hand, not copied from the anchor run.
-- **C2 — Shown, not asserted.** The derivation is demonstrated in the notebook, not just claimed in a comment.
+- **C2 — Shown, not asserted.** The derivation is demonstrated in the notebook, not just claimed in a comment (importance = **HIGH**).
 - **C3 — Assumptions stated and met.** The rule's structural premises (one hub, one leftover cluster, a clean count
-  gap, a clean bifurcation) are made explicit and hold on the target data.
+  gap, a clean bifurcation) are made explicit and hold on the target data. Circularity avoided.
 - **C4 — Portable across scope.** Generalizes over the atlas's actual range: cancer types, platforms (10x vs
   SmartSeq2), and cell counts spanning ~2k to ~90k.
 
-The fixed skeleton is out of scope here: where the protocol prescribes a value, the agent simply reused it
+The fixed `Puram2017` skeleton is out of scope here: where the protocol prescribes a value, the agent simply reused it
 (malignant load 2,539/17 pt, threshold ≥100 → 2,472, overdispersion 4,804, Harmony/neighbors/UMAP, PPT params,
 union-pool scoring — down to gene recovery 78/92/103). The criteria apply only to the *tunable* choices below.
 
@@ -40,13 +40,13 @@ assessment.
    real second lineage reads as a component and is deleted (C4). Biggest numerical gap (**+52 cells**).
 3. **Subtype annotation** (Basal/Classical/Atypical/Mixed). *Method:* Leiden at resolution 0.15, then assign each label
    to the cluster with the highest mean marker-program score (Basal COL17A1/KRT14/TP63; Classical NRF2 program; Atypical
-   XAGE1 family), greedily, remainder = Mixed. *Assessment:* immune to Leiden renumbering — no per-dataset re-mapping —
+   XAGE1 family), greedily, remainder = Mixed. *Assessment:* robust to Leiden renumbering — no per-dataset re-mapping —
    but the panels are HNSCC-specific and won't transfer across cancer types (C4), "remainder = Mixed" assumes exactly
    one leftover cluster (C3), and resolution 0.15 is hardcoded.
 4. **Root node** (node 85 vs manual 185; same biology). *Method:* fit the PPT tree, sum the soft-assignment
    responsibility of Mixed-hub cells over principal nodes, root at the argmax. *Assessment:* removes the last human
    step — the change that makes unattended scale-up viable — but it inherits every upstream error and assumes exactly
-   one convergence point (C3).
+   one convergence point (C3). Most fragile step for unseen datasets.
 5. **EMT-TF readout** (ZEB1 + PRRX1 vs hand-picked SNAI1 + ZEB1). *Method:* from an 8-TF candidate panel, score each by
    arm-specificity (top-arm mean / total arm expression) among expressed factors, take the best TF for two *different*
    arms. *Assessment:* the procedure generalizes and correctly rejects the high-but-nonspecific SNAI2, but it shows
@@ -63,8 +63,8 @@ fitted here — the gate certifies nothing about generalization. This is what C1
 
 ## Gates & ledger
 
-G1 (mixing/continuity) PASS. G2 (module geography) PASS — Crest peaks at Basal tip (0.43 vs 0.27 ≈ 0.24), Gast highest
-in Classical, pSom flat. G3 (hub cross-repression) PASS — **r = −0.47**, within 0.02 of the anchor.
+G1 (mixing/continuity) GO. G2 (module geography) GO — Crest peaks at Basal tip (0.43 vs 0.27 ≈ 0.24), Gast highest
+in Classical, pSom flat. G3 (hub cross-repression) GO — **r = −0.47**, within 0.02 of the anchor.
 
 | Step | Reference | Agent | Divergence |
 |---|---|---|---|

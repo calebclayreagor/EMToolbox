@@ -1,80 +1,74 @@
-# CCCA Evaluation Audit — Kürten 2021 HNSCC · Gate 1 / continuity
+# CCCA Evaluation Audit — Kürten 2021 HNSCC (first unseen dataset)
 
-First unseen dataset. Same HNSCC cancer type as the anchor, but 10x (not SmartSeq2) and ~11k malignant cells
-(≈4.6× Puram). The agent reached step 06; log reads **G1 PASS, G2 PASS, G3 NO-GO**. This audit ignores the
-downstream gates and asks one thing: **was the Gate 1 GO defensible on the *continuity* leg?** It was not.
+The analyst ran the six-step protocol on **Kürten 2021**, the first dataset whose answer was not known
+in advance. Reached the expression step, **G1 GO / G2 GO / G3 NA** — the non-branching case (§1). An
+expert steered step-by-step and a fresh-context reviewer checked claims. The question is not *did it
+pass* but *which passes came from the agent's own reasoning* — the gap a fully-autonomous run must close.
 
-**Verdict.** Gate 1 should have been **NO-GO**. The manifold is not one continuum — it is a set of per-patient
-territories with one near-detached lobe (HN01, 22% of cells). The GO stands on a connectivity test that *cannot
-fail* on dense droplet data, and on a mixing delta that clears the PASS rule while still leaving donor
-segregation ~3.4× above the mixed-null floor. The agent later retracted the *mixing* leg under questioning but
-never revisited *continuity*, which is the leg an expert reads off the embedding directly.
+**Verdict.** The pattern reproduces: single embryonic axis, root Gast/pSom-high → terminus Crest-high,
+EMT-TFs **FOXC1 → SNAI2** — a strict linear subset of Puram. But at nearly every gate the agent's first
+call was wrong, corrected by the expert or reviewer. Cleared as a *supervised* run; not as evidence of
+autonomy.
 
-## Why Gate 1 was a GO
+## Six forks
 
-Gate 1 bundles two claims — **mixing** (are donors blended?) and **continuity** (one connected manifold, no
-private island?). The coded verdict (NB01 cell 14) is `PASS if harm < raw − 0.1`: the entire boolean rides on the
-mixing delta. Continuity enters only as a side print — "one dominant component" from the island-removal graph.
+1. **Gate 1.** The agent passed G1 on a mixing scalar and a
+   connected-components test; the expert had to redirect attention to the embedding itself, which showed
+   a per-patient archipelago the metrics had scored as integrated. *Rule:* judge G1 on the regenerated
+   embedding across an integration-strength sweep, with a per-neighborhood metric (iLISI); never on a
+   scalar alone.
 
-- **Mixing.** Same-sample kNN fraction 0.888 (raw PCA) → **0.543** (Harmony); Δ = 0.345 > 0.1 → PASS. The summary
-  calls 0.543 "near the mixed-null floor." It is not: the same-group floor is ≈0.16, so 0.543 sits **~3.4× above**
-  it. Harmony *reduced* segregation without removing it.
-- **Continuity.** NB01 cell 10 builds a radius graph at **6× the median NN distance**, takes connected
-  components, prints "removed 3 cells in 2 detached islands." One dominant component → continuity asserted.
+2. **Lobe identity.** The integrated manifold resolved into two lobes and the
+   agent moved to fit one curve across both; the expert required each lobe's biological identity first.
+   Only one lobe reproduced the embryonic signature relationships (Gast/pSom co-vary, both oppose Crest);
+   the other was a cycling compartment with Gast confounded by proliferation. *Rule:* a manifold resolves
+   into sub-regions — settle their biology (signatures and cell cycle) before the G1 GO, and scope the
+   trajectory to the region that reproduces the reference relationships.
 
-The continuity instrument is **degenerate by construction**. Re-running it across radii on the saved manifold:
-the graph collapses to a single component *only* at the agent's 6× setting; the same test shatters into **31
-components at 3×** and **167 at 2×** (largest holds just 50% of cells). A radius that admits every cell into one
-blob cannot distinguish a continuous gradient from discrete patient clouds joined by a handful of edges — it
-answers "is the kNN graph connected?", which on 11k dense droplets is always yes, not "is there a transcriptional
-continuum across donors?", which is the biological question. This is a **C3 failure** (the "noise detaches
-cleanly" premise, flagged as a scale risk in calibration, breaks exactly as predicted on the first dense 10x set)
-compounded by a **C1/C2 failure** (the 6× radius is an inherited constant, never re-derived or shown to
-discriminate here).
+3. **Root & topology.** The agent rooted at the Crest tip,
+   treating neural crest as the progenitor state; developmentally Crest is *late*, so the root belongs at
+   the Gast/pSom tip. A non-branching topology is fit with scFates `curve`, not `tree`. *Rule:* root from
+   the signatures' developmental order; match the scFates method to the topology.
 
-## What the evidence actually shows
+4. **Continuity.** The agent certified the
+   curve as continuous using a metric built from UMAP neighbors, blind by construction to a fold in that
+   same UMAP; the reviewer caught the fold. It arose from re-embedding a linear compartment — an elongated
+   strip a fresh UMAP folds into a U. *Rule:* do not re-embed a linear compartment, and do not measure
+   continuity with a metric that reads its neighbors off the embedding being tested.
 
-Gap-sensitive diagnostics on the delivered manifold (`X_pca_harmony`, n_pcs=20 — the agent's own graph):
+5. **EMT-TF readout.** The canonical Snail/Zeb/Twist panel yielded only a terminus factor; FOXC1, the
+   root-end factor, surfaced only once the panel was widened. *Rule:* score EMT-TFs on this dataset gated on
+   detectable expression, and include other mesenchymal families such as FOXC and PRRX, not only Snail/Zeb/Twist.
 
-- **Territorial, not continuous.** Cross-patient kNN edge fraction = **0.38** vs **0.84** expected under full
-  mixing (ratio 0.45). Patients occupy distinct lobes; 46% of the UMAP bounding box is empty space.
-- **A near-detached lobe.** PAGA inter-patient connectivity puts **HN01 (2,457 cells, 22% of the data)** at
-  0.01–0.17 to every donor except HN07 — effectively its own island — while HN12/HN13/HN16/HN18 sit at 1.0. A
-  radius-graph "one component" hides this because a thin bridge of edges is enough to connect it.
-- **The hub is not shared.** The Mixed hub (6,615 cells) draws from an effective 4.8 of 8 patients; HN01
-  contributes **1.8%**. The convergence point the trajectory assumes is a few donors' territory, not a meeting of
-  all.
-- **The bifurcation is a batch axis.** The Basal↔Classical arms co-segregate with HPV (Basal 98.8% HPV−,
-  Classical 68% HPV+) — a patient-level covariate never entered into Harmony (`vars_use=['sample']` only).
+6. **Deliverables.** With G3 = NA, the agent began the branching-only
+   `04_correlation` / `05_modules` notebooks, which assert structure not found. *Rule:* gate outcomes decide
+   which notebooks exist; an NA or NO-GO means the corresponding deliverables are not produced (§6).
 
-## Did the agent question it?
+## Three lessons for an autonomous run
 
-**Not the continuity leg.** NB01 pre-commits to the conclusion in prose ("residual patient identity is
-biological, not a batch island"; "the debris stays graph-attached, so this step is near-trivial") and the
-continuity print is treated as confirmation. The agent's scrutiny turned to Gate 1 only *after* the user pressed
-— first on single-patient neighborhoods, then on HN17, then on a "batch correction that is necessary" beyond the
-sample key. It then withdrew the mixing PASS. But its stated reasoning — that because `sample` ≈ `patient`,
-Harmony "never mixed" the tumors — restates the original agent's framing rather than a fresh measurement, and
-overstates the case: Harmony *did* mix donors, just incompletely (same-sample kNN 0.888 → 0.543, still ~3.4× the
-floor; cross-patient edges present at 0.45× the mixed-null). Either way the retraction was argued as *integration*
-only. Continuity was never named, re-measured, or withdrawn, even though the same lobular structure is what makes
-both legs fail. Absent the user's prompts, Gate 1 would have shipped as a clean GO.
+1. **Biology before geometry.** The scientifically decisive forks were the same failure — a geometric
+   result read as biology without the biological check. That check must run and appear in the notebook
+   before the GO: G1 against the regenerated embedding, each sub-region's identity before the curve,
+   continuity off an independent embedding. The gate stays binary — the agent proposed "Conditional GO"
+   twice, and it is not an outcome.
 
-## Most defensible decision
+2. **Check against the spec, not memory.** The run's deliverable errors were caught by re-reading the
+   binding spec against the notebooks rather than trusting recall — the renumbering rule, the deliverable
+   set, and the summary format were each re-verified against the spec text before finalizing. An autonomous
+   run should re-read the relevant spec section at each gate and before shipping, and check its outputs
+   against the binding text.
 
-**Gate 1 = NO-GO**, on continuity alone, on the evidence in hand:
+3. **Deliverables must be reproducible and consistent.** Each notebook must run end-to-end from raw and
+   reach the reviewed result, and the values it produces must match the summary and log that report them.
+   Where a step is stochastic (Harmony's KMeans is not seed-deterministic), state the tolerance so a benign
+   shift is not read as a changed decision.
 
-1. Replace the connectivity boolean with a **gap-sensitive continuity metric** — cross-donor kNN edge fraction
-   vs. the mixed-null, and PAGA inter-donor connectivity. Both fail here (0.45× expected; HN01 detached).
-2. Re-integrate on the **correct batch model** — patient (not sample-as-proxy) with the HPV covariate — and
-   re-certify with a **per-patient** metric, not per-sample.
-3. Treat HN01 explicitly: a 22%-of-data donor that will not integrate is either dropped with justification or
-   the manifold is declared donor-structured and the trajectory withheld.
+## Bottom line
 
-This is the same conclusion the agent reached for *mixing* under pressure — extended to the leg it left standing.
-
-**Bottom line.** The continuity leg of Gate 1 was **asserted, not demonstrated** — certified by a test structurally
-incapable of failing on dense 10x data, exactly the C3/C4 scale risk calibration named. The manifold is
-donor-territorial with a detached 22% lobe; the defensible call is NO-GO pending re-integration on a patient+HPV
-model and re-certification with a gap-sensitive metric. The agent could reach this only when steered, and even then
-only for mixing — the continuity failure it never independently saw is the one an expert sees first.
+The protocol transferred; the judgment did not. The derivation machinery ran correctly on unseen data
+(threshold by gap-finding, `n_pcs` off the scree, detection-gated signatures), but the decisive calls —
+which lobe is the manifold, where the trajectory roots, which transcription factors to read — the agent
+got wrong on first pass, and the expert corrected each by putting biology ahead of geometry. A fully
+autonomous run makes those calls without the expert; the three lessons above are what that takes. The
+verifier is the readiest to automate — the reviewer here was already a fresh-context agent — and is the
+safeguard that caught the two claims the agent made after asserting the rule against them.
