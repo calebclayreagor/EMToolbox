@@ -24,3 +24,7 @@ data/unzip/
 mesencoder/checkpoints
 mesencoder/lightning_logs
 mesencoder/wandb
+
+# === Claude Science ===
+cancer/vertebrate/CCCA/Claude
+figures/cancer/vertebrate/CCCA/Claude
