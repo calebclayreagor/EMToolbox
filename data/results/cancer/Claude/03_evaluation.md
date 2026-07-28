@@ -56,7 +56,8 @@ autonomy.
    binding spec against the notebooks rather than trusting recall — the renumbering rule, the deliverable
    set, and the summary format were each re-verified against the spec text before finalizing. An autonomous
    run should re-read the relevant spec section at each gate and before shipping, and check its outputs
-   against the binding text.
+   against the binding text (importance = **HIGH**). An agent must ALWAYS re-read the full spec + context
+   before passing gates — this is now **BINDING**.
 
 3. **Deliverables must be reproducible and consistent.** Each notebook must run end-to-end from raw and
    reach the reviewed result, and the values it produces must match the summary and log that report them.
@@ -72,3 +73,12 @@ got wrong on first pass, and the expert corrected each by putting biology ahead 
 autonomous run makes those calls without the expert; the three lessons above are what that takes. The
 verifier is the readiest to automate — the reviewer here was already a fresh-context agent — and is the
 safeguard that caught the two claims the agent made after asserting the rule against them.
+
+## Action items
+
+To safeguard the scientific accuracy of autonomous analyses and maintain FULL compliance with the task
+definition and calibration/evaluation audits, agents must **ALWAYS** re-read the **FULL** spec before
+passing a gate, planning an analysis, or writing any deliverable — **THIS IS BINDING**.
+
+- **FAILURE TO REGULARLY REVISIT THE FULL SPEC FILES WILL RESULT IN COMPOUNDING ERRORS AND INCORRECT
+TASK COMPLETION**
