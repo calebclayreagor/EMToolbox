@@ -51,3 +51,40 @@ One entry per attempt below — decisive points only. Read alongside the three s
 - **Fail — no certification, immediate drift.** Never certified the binding re-read (it had slipped behind a
   context fold); drifted into building notebook-execution infrastructure and ran code before any gate.
   Stopped pre-analysis, then cleaned up correctly.
+
+## Attempt 5 · Gate 1 GO / Gate 2 NO-GO / Gate 3 NA
+
+- **Fail — linear curve fit to a visibly tree-shaped manifold.** Called the clearly Y-shaped manifold
+  "robustly non-branching" on a PPT metric (0 branch nodes across 12 param combos) and fit one curve through
+  it. The inverse of attempt 3's tree-on-a-strip; same cause — topology read from the metric, not the embedding.
+- **Fail — figure deliverables still diverge from the reference layouts, despite the spec re-read.** Re-reading
+  the spec prose did not become a check of the outputs against the binding reference figures themselves.
+- **Fail — Gate 2 built toward GO, then reversed to NO-GO on a scalar comparison.** The module geography was
+  legible in the signature embeddings; the call was driven by the scalar comparison instead.
+- **Held.** Binding re-read certified at start and at the gate (attempt-4 lesson landed); deliverables in the
+  correct locations; no `sc.pp.scale`; `n_pcs≈19`, theta swept.
+
+## Attempt 6 · Gate 1 GO / Gate 2 GO (non-branching) / Gate 3 NA
+
+- **Fail — folded curve, never caught by any post-hoc visualization.** The committed curve W-folds back
+  through the cloud; `manifold.pdf` draws pseudotime color but not the curve edges, so topology was judged on
+  signature↔pseudotime correlations, blind to the fold (the Kürten §4 failure mode). Surfaced only when the
+  expert asked for a curve render in the debrief.
+- **Fail — figure deliverables again diverge; format, content, and tidiness are BINDING.** manifold/samples
+  retitled with milestone and legend labels overlaid on the cloud, not the reference's single panel + external
+  colorbar; an extra `gate2_diagnostics.pdf` left in the figures dir, outside the §6 set (scratch, as in attempt 2).
+- **Held.** Certified the binding re-read; reached Gate 2 GO (non-branching) matching Kürten; overturned its
+  provisional tree→curve on biology (Gast/pSom co-vary, Crest inverse), not geometry.
+
+## Attempt 7 · Gate 1 GO / Gate 2 GO (non-branching) / Gate 3 NA
+
+- **Held — science lands (first fully-autonomous success).** Correct non-branching read: a fold-free curve
+  rooted at the Gast/pSom-high developmental origin, Gate 2 GO on biology, Gate 3 NA. The Kürten lessons
+  landed — curve not tree, root at origin, fold checked, no re-embedding.
+- **Fail — figure style diverges from the binding reference.** Panels square, not the house `(3.5,1.5)`
+  linear-trajectory aspect; signature UMAPs plot graph-smoothed scores where the reference shows raw (smoothing
+  aids the analysis but misleads as a deliverable); EMT-TF marker size doesn't match the other panels.
+- **Fail — `summary.pdf` clips text; tidiness not fully observed.** Verdict and Geometry lines run past the
+  page box, cut off mid-sentence.
+- **Watch — one residual island.** A P03-dominated detached lobe survives island removal (39-cell speck
+  stripped, not this); not fatal to the continuous-manifold call.
