@@ -1,12 +1,18 @@
-# CCCA Autonomous-Run Testing Log — Chen 2020 (NPC, 10x)
+# CCCA Autonomous-Run Testing Log
 
-Repeated fully-autonomous attempts on the **Chen 2020** dataset (nasopharyngeal carcinoma, 10x, ~3.7k
-malignant cells). Each attempt runs without expert steering and is reviewed by a fresh-context auditor.
-One entry per attempt below — decisive points only. Read alongside the three spec files.
+Each attempt on the **testing** datasets is a fully-autonomous run — the analysis is driven by the
+spec files alone, with no expert steering. A fresh-context auditor then reviews the run, guided by the
+expert. One entry per attempt below records the decisive points only; read alongside the three spec
+files. Datasets are sectioned below, attempts ordered within each.
 
 ---
 
-## Attempt 1 · Gate 1 NO-GO
+## Chen 2020 (NPC, 10x)
+
+Nasopharyngeal carcinoma, 10x, ~3.7k malignant cells — head-and-neck, same tissue family as the
+Puram/Kürten ground-truth runs.
+
+### Attempt 1 · Gate 1 NO-GO
 
 - **Fail — `n_pcs=6` under-powers the manifold.** Chord-elbow over-cut the inherited 40; too few PCs force
   a patient-segregated read, so the NO-GO is likely an embedding artifact. (Elbow biases low here; the
@@ -16,7 +22,7 @@ One entry per attempt below — decisive points only. Read alongside the three s
 - **Held.** Spec re-read at each gate/deliverable; threshold, theta sweep, EMT-TF panel, renumbering all sound.
 - **Watch.** Gate call stayed metric-led — embedding read as corroboration, not lead.
 
-## Attempt 2 · Gate 1 NO-GO
+### Attempt 2 · Gate 1 NO-GO
 
 - **Fail — integration strength too low.** Settled `theta=2` and swept only `theta 0→3`, dismissing
   `theta=3` as over-integration without a null test to justify the cutoff. The 10x precedent (Kürten)
@@ -29,7 +35,7 @@ One entry per attempt below — decisive points only. Read alongside the three s
 - **Held.** Both attempt-1 defects fixed: `n_pcs=20` (matches the Kürten/Puram scale) and the `summary.pdf`
   layout now follows the reference. Gate 1 led with the embedding. Spec re-read/certified throughout.
 
-## Attempt 3 · Gate 1 GO / Gate 2 NO-GO / Gate 3 NA
+### Attempt 3 · Gate 1 GO / Gate 2 NO-GO / Gate 3 NA
 
 - **Fail — trajectory mis-specified.** Fit a branching `tree` on a manifold it had itself called
   non-branching (should be a `curve`), and rooted at a proliferation state rather than the developmental
@@ -46,13 +52,13 @@ One entry per attempt below — decisive points only. Read alongside the three s
   `sc.pp.scale` step before PCA absent from the reference protocol — a correct diagnosis, and why the chain
   finally ran past Gate 1. Spec re-read/certified throughout.
 
-## Attempt 4 · Stopped pre-analysis (no certification)
+### Attempt 4 · Stopped pre-analysis (no certification)
 
 - **Fail — no certification, immediate drift.** Never certified the binding re-read (it had slipped behind a
   context fold); drifted into building notebook-execution infrastructure and ran code before any gate.
   Stopped pre-analysis, then cleaned up correctly.
 
-## Attempt 5 · Gate 1 GO / Gate 2 NO-GO / Gate 3 NA
+### Attempt 5 · Gate 1 GO / Gate 2 NO-GO / Gate 3 NA
 
 - **Fail — linear curve fit to a visibly tree-shaped manifold.** Called the clearly Y-shaped manifold
   "robustly non-branching" on a PPT metric (0 branch nodes across 12 param combos) and fit one curve through
@@ -64,7 +70,7 @@ One entry per attempt below — decisive points only. Read alongside the three s
 - **Held.** Binding re-read certified at start and at the gate (attempt-4 lesson landed); deliverables in the
   correct locations; no `sc.pp.scale`; `n_pcs≈19`, theta swept.
 
-## Attempt 6 · Gate 1 GO / Gate 2 GO (non-branching) / Gate 3 NA
+### Attempt 6 · Gate 1 GO / Gate 2 GO (non-branching) / Gate 3 NA
 
 - **Fail — folded curve, never caught by any post-hoc visualization.** The committed curve W-folds back
   through the cloud; `manifold.pdf` draws pseudotime color but not the curve edges, so topology was judged on
@@ -76,7 +82,7 @@ One entry per attempt below — decisive points only. Read alongside the three s
 - **Held.** Certified the binding re-read; reached Gate 2 GO (non-branching) matching Kürten; overturned its
   provisional tree→curve on biology (Gast/pSom co-vary, Crest inverse), not geometry.
 
-## Attempt 7 · Gate 1 GO / Gate 2 GO (non-branching) / Gate 3 NA
+### Attempt 7 · Gate 1 GO / Gate 2 GO (non-branching) / Gate 3 NA
 
 - **Held — science lands (first fully-autonomous success).** Correct non-branching read: a fold-free curve
   rooted at the Gast/pSom-high developmental origin, Gate 2 GO on biology, Gate 3 NA. The Kürten lessons
@@ -88,3 +94,42 @@ One entry per attempt below — decisive points only. Read alongside the three s
   page box, cut off mid-sentence.
 - **Watch — one residual island.** A P03-dominated detached lobe survives island removal (39-cell speck
   stripped, not this); not fatal to the continuous-manifold call.
+
+---
+
+## Bischoff 2021 (LUAD, 10x)
+
+Lung adenocarcinoma, 10x, ~13.4k malignant cells — new biology versus the Puram/Kürten/Chen
+head-and-neck runs.
+
+### Attempt 1 · Gate 1 GO (contested) / Gate 2 GO (non-branching) / Gate 3 NA
+
+- **Fail — pre-Gate-1 error: two-blob manifold passed as continuous.** The manifold splits into two
+  blobs. The agent saw the gap but dismissed it as a UMAP artifact because the kNN graph is one
+  component — deciding a visual gate on a connectivity scalar. The real cause was never settled: either
+  under-integration (a higher θ, rejected for smoothing the gap, may merge the blobs) or a scoping
+  failure (identify each lobe's biology and fit the trajectory only on the lobe reproducing the
+  reference — the Kürten evaluation's lobe-identity fork).
+- **Fail — `summary.pdf` rule strikes through the title.** The header underline crosses the title
+  descenders (and the Gate-3 "exclusivity" line); otherwise the deliverable matches the reference exactly.
+- **Held — deliverables land.** Correct §6 set in the correct locations, no scratch, house `(3.5,1.5)`
+  manifold aspect, raw signature scores shown. Binding re-read certified at start and each gate.
+
+### Attempt 2 · Gate 1 NO-GO / Gate 2 NA / Gate 3 NA
+
+- **Fail — un-integratable call unsupported by its own sweep.** Gate 1 NO-GO ("not continuous") rests on a
+  plateauing diff-sample kNN scalar, yet the sweep's own 16 PC / θ=10 panel shows the gap closing into one
+  continuous mass. The mirror of attempt 1 — scalar over embedding — on the opposite gate.
+- **Fail — sweep mis-centered.** PCs swept only 12/16/20, and <20 is not robust (precedents ran 20/40), so
+  the grid sits below the robust range. The one panel that did converge is its highest PC × highest θ corner,
+  so a properly-centered sweep was never run to confirm it.
+- **Fail — `summary.pdf` layout regressed from the reference.** Attempt 1 matched the reference one-pager;
+  this run redesigned it into a bespoke layout (colored gate chips, new title, an extra lobe-fork block).
+
+### Attempt 3 · Gate 1 GO / Gate 2 GO (non-branching) / Gate 3 NA
+
+- **Held — science lands (first Bischoff success).** Correct non-branching call, and it settles the Gate-1
+  question both prior attempts got wrong: the two density lobes are poles of one continuous manifold, shown on
+  both the embedding and the sweep. Deliverables land — correct §6 set, no scratch, reference layout restored.
+- **Fail — `summary.pdf` step figures low-resolution.** The six embedded panels were saved at low DPI, so
+  their in-panel text blurs against the sharp vector text of the summary itself.
