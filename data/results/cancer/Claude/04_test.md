@@ -133,3 +133,24 @@ head-and-neck runs.
   both the embedding and the sweep. Deliverables land — correct §6 set, no scratch, reference layout restored.
 - **Fail — `summary.pdf` step figures low-resolution.** The six embedded panels were saved at low DPI, so
   their in-panel text blurs against the sharp vector text of the summary itself.
+
+---
+
+## Sun 2021 (HCC, 10x)
+
+Hepatocellular carcinoma, 10x, ~2.3k malignant cells — new biology versus the Puram/Kürten/Chen/Bischoff
+head-and-neck and lung runs.
+
+### Attempt 1 · Gate 1 GO / Gate 2 GO (non-branching) / Gate 3 NA
+
+- **Held — science lands (first liver success).** Correct non-branching read on new biology: one continuous
+  gastrulation→neural-crest axis rooted at the Gast-high pole. Checked each lobe's biology before certifying
+  (the Kürten fork), kept the full manifold, and self-caught three reviewer findings before re-running.
+- **Fail — EMT-TF panel in the wrong plotting style.** A continuous single-gene colormap, not the reference
+  categorical overlay of thresholded expressers on a grey manifold; the overlay branch was coded but bypassed.
+- **Fail — `summary.pdf` redesigned, not the reference layout.** Bespoke one-pager,
+  not the certified "GO/NO-GO GATES → STEP FIGURES → Parameter choices" format. Build
+  scratch also left in the notebook dir.
+- **BINDING — verify deliverables against the reference visually.** Compare every deliverable to the
+  reference output directly, not spec prose alone: each panel must match the reference plotting style, and
+  `summary.pdf` its exact layout. Correct science with divergent panels or layout is not a pass.
