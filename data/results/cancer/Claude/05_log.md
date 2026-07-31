@@ -19,6 +19,8 @@ params, subtypes, gate mechanics) lives in `analysis_log.csv`, joined on `JoinKe
 | Lee et al. 2020 | Colorectal | Colorectal Carcinoma | Data_Lee2020_Colorectal | test | 2026-07-30 20:15 | 2026-07-30 21:51 | Success | Success | Reviewer | Linear-pSom/Crest | −0.025 | +0.091 | −0.021 | GO | GO | — | — | 1 |
 | Wang et al. 2019 | Brain | Glioblastoma | Data_Wang2019_Brain | test | 2026-07-30 21:57 | 2026-07-31 00:26 | Failure | Failure | Reviewer | — | −0.002 | +0.008 | −0.007 | — | — | — | — | 1 |
 | Wu et al. 2021 ‡ | Breast | Breast Cancer | Data_Wu2021_Breast | test | 2026-07-31 00:32 | 2026-07-31 03:03 | Success | Failure | Reviewer | Linear-pSom/Crest | −0.025 | +0.029 | −0.034 | GO | GO | — | — | 1 |
+| Zhang et al. 2022 | Ovarian | High-Grade Serous Ovarian Carcinoma | Data_Zhang2022_Ovarian | test | 2026-07-31 03:15 | 2026-07-31 13:56 | Success | Failure | Reviewer | Linear-pSom/Crest | −0.006 | +0.051 | −0.012 | GO | GO | — | — | 1 |
+| Zhou et al. 2020 † | Sarcoma | Osteosarcoma | Data_Zhou2020_Sarcoma | test | 2026-07-31 14:00 | 2026-07-31 16:14 | Success | Success | Reviewer | Linear-pSom/Crest | −0.039 | +0.083 | −0.046 | GO | GO | — | — | 1 |
 
 **Legend.**
 - **Set** — train (calibration, HNSCC) · eval (supervised, HNSCC) · test (autonomous, other).
@@ -41,3 +43,5 @@ params, subtypes, gate mechanics) lives in `analysis_log.csv`, joined on `JoinKe
   updated the definition (`01_task.md` §1–2) to include the cross-repression case — organized
   cross-repression with a terminal Crest gradient counts as non-branching. Agent-identified,
   expert-ratified.
+- **† Zhou et al. 2020** — both this run and Zhang 2022 struggled to keep orientation consistent across
+  UMAPs, so the expert made it a binding criterion (`04_test.md`), which this run then met.

@@ -113,7 +113,7 @@ head-and-neck runs.
 - **Fail — `summary.pdf` rule strikes through the title.** The header underline crosses the title
   descenders (and the Gate-3 "exclusivity" line); otherwise the deliverable matches the reference exactly.
 - **Held — deliverables land.** Correct §6 set in the correct locations, no scratch, house `(3.5,1.5)`
-  manifold aspect, raw signature scores shown. Binding re-read certified at start and each gate.
+  manifold aspect, orientation consistent across UMAPs, raw signature scores shown. Binding re-read certified at start and each gate.
 
 ### Attempt 2 · Gate 1 NO-GO / Gate 2 NA / Gate 3 NA
 
