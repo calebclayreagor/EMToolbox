@@ -36,8 +36,9 @@ read it off the scores, not off subtype names.
 
 **Not every dataset bifurcates.** In the **non-branching case**, Gast and pSom **partially or fully overlap**,
 with Crest as an inverse/terminal gradient — the programs are present but not resolved into two
-competing arms. This is a real outcome, not a failure: it **passes Gate 2** (*i.e.*, GO), has no bifurcation for
-Gate 3 (*i.e.*, NA), and is reported as such — distinct from a NO-GO where the pattern is absent.
+competing arms, though Gast and pSom may still display some cross-repression. This is a real outcome,
+not a failure: it **passes Gate 2** (*i.e.*, GO), has no bifurcation for Gate 3 (*i.e.*, NA), and is
+reported as such — distinct from a NO-GO where the pattern is absent.
 
 ## 2. The three GO/NO-GO gates (the crux)
 
