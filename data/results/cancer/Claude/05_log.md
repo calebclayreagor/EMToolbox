@@ -11,16 +11,24 @@ params, subtypes, gate mechanics) lives in `analysis_log.csv`, joined on `JoinKe
 | Chen et al. 2020 | Head and Neck | Nasopharyngeal Carcinoma | Data_Chen2020_Head-and-Neck | test | 2026-07-29 13:19 | 2026-07-29 14:47 | Success | Failure | Reviewer | Linear-pSom/Crest | −0.015 | +0.002 | −0.007 | GO | GO | — | — | 7 |
 | Bischoff et al. 2021 | Lung | Lung Adenocarcinoma | Data_Bischoff2021_Lung | test | 2026-07-29 22:24 | 2026-07-29 23:47 | Success | Failure | Reviewer | Linear-pSom/Crest | −0.037 | +0.057 | −0.032 | GO | GO | — | — | 3 |
 | Sun et al. 2021 | Liver/Biliary | Hepatocellular Carcinoma | Data_Sun2021_Liver-Biliary | test | 2026-07-30 00:05 | 2026-07-30 01:23 | Success | Failure | Reviewer | Linear-pSom/Crest | −0.012 | +0.059 | −0.032 | GO | GO | — | — | 1 |
-| Bi et al. 2021 | Kidney | Renal Cell Carcinoma | Data_Bi2021_Kidney | test | 2026-07-30 05:04 | 2026-07-30 05:48 | Success | Failure | Reviewer | Linear-pSom/Crest | −0.012 | +0.030 | −0.029 | GO | GO | — | — | 1 |
-| Jansky et al. 2021 | Neuroendocrine | Neuroblastoma | Data_Jansky2021_Neuroendocrine | test | 2026-07-30 13:07 | 2026-07-30 15:08 | Success | Failure | Reviewer | Linear-pSom/Crest | +0.004 | +0.017 | −0.013 | GO | GO | — | — | 1 |
-| Tirosh et al. 2016 | Skin | Melanoma | Data_Tirosh2016_Skin | test | 2026-07-30 15:40 | 2026-07-30 17:04 | Failure | Failure | Reviewer | — | −0.507 | −0.068 | +0.149 | — | — | — | — | 1 |
-| Peng et al. 2019 | Pancreas | Pancreatic Ductal Adenocarcinoma | Data_Peng2019_Pancreas | test | 2026-07-30 17:06 | 2026-07-30 18:33 | Failure | Failure | Reviewer | — | −0.047 | +0.097 | −0.055 | — | — | — | — | 1 |
-| Chen et al. 2021 | Prostate | Prostate Cancer | Data_Chen2021_Prostate | test | 2026-07-30 18:48 | 2026-07-30 19:37 | Failure | Failure | Reviewer | — | +0.004 | +0.036 | −0.069 | — | — | — | — | 1 |
-| Lee et al. 2020 | Colorectal | Colorectal Carcinoma | Data_Lee2020_Colorectal | test | 2026-07-30 20:15 | 2026-07-30 21:51 | Success | Success | Reviewer | Linear-pSom/Crest | −0.025 | +0.091 | −0.021 | GO | GO | — | — | 1 |
-| Wang et al. 2019 | Brain | Glioblastoma | Data_Wang2019_Brain | test | 2026-07-30 21:57 | 2026-07-31 00:26 | Failure | Failure | Reviewer | — | −0.002 | +0.008 | −0.007 | — | — | — | — | 1 |
-| Wu et al. 2021 ‡ | Breast | Breast Cancer | Data_Wu2021_Breast | test | 2026-07-31 00:32 | 2026-07-31 03:03 | Success | Failure | Reviewer | Linear-pSom/Crest | −0.025 | +0.029 | −0.034 | GO | GO | — | — | 1 |
-| Zhang et al. 2022 | Ovarian | High-Grade Serous Ovarian Carcinoma | Data_Zhang2022_Ovarian | test | 2026-07-31 03:15 | 2026-07-31 13:56 | Success | Failure | Reviewer | Linear-pSom/Crest | −0.006 | +0.051 | −0.012 | GO | GO | — | — | 1 |
-| Zhou et al. 2020 † | Sarcoma | Osteosarcoma | Data_Zhou2020_Sarcoma | test | 2026-07-31 14:00 | 2026-07-31 16:14 | Success | Success | Reviewer | Linear-pSom/Crest | −0.039 | +0.083 | −0.046 | GO | GO | — | — | 1 |
+| Bi et al. 2021 | Kidney | Renal Cell Carcinoma | Data_Bi2021_Kidney | test | 2026-07-30 05:04 | 2026-07-30 05:48 | Success | Failure | Judge | Linear-pSom/Crest | −0.012 | +0.030 | −0.029 | GO | GO | — | — | 1 |
+| Jansky et al. 2021 | Neuroendocrine | Neuroblastoma | Data_Jansky2021_Neuroendocrine | test | 2026-07-30 13:07 | 2026-07-30 15:08 | Success | Failure | Judge | Linear-pSom/Crest | +0.004 | +0.017 | −0.013 | GO | GO | — | — | 1 |
+| Tirosh et al. 2016 | Skin | Melanoma | Data_Tirosh2016_Skin | test | 2026-07-30 15:40 | 2026-07-30 17:04 | Failure | Failure | Judge | — | −0.507 | −0.068 | +0.149 | — | — | — | — | 1 |
+| Peng et al. 2019 | Pancreas | Pancreatic Ductal Adenocarcinoma | Data_Peng2019_Pancreas | test | 2026-07-30 17:06 | 2026-07-30 18:33 | Failure | Failure | Judge | — | −0.047 | +0.097 | −0.055 | — | — | — | — | 1 |
+| Chen et al. 2021 | Prostate | Prostate Cancer | Data_Chen2021_Prostate | test | 2026-07-30 18:48 | 2026-07-30 19:37 | Failure | Failure | Judge | — | +0.004 | +0.036 | −0.069 | — | — | — | — | 1 |
+| Lee et al. 2020 | Colorectal | Colorectal Carcinoma | Data_Lee2020_Colorectal | test | 2026-07-30 20:15 | 2026-07-30 21:51 | Success | Success | Judge | Linear-pSom/Crest | −0.025 | +0.091 | −0.021 | GO | GO | — | — | 1 |
+| Wang et al. 2019 | Brain | Glioblastoma | Data_Wang2019_Brain | test | 2026-07-30 21:57 | 2026-07-31 00:26 | Failure | Failure | Judge | — | −0.002 | +0.008 | −0.007 | — | — | — | — | 1 |
+| Wu et al. 2021 ‡ | Breast | Breast Cancer | Data_Wu2021_Breast | test | 2026-07-31 00:32 | 2026-07-31 03:03 | Success | Failure | Judge | Linear-pSom/Crest | −0.025 | +0.029 | −0.034 | GO | GO | — | — | 1 |
+| Zhang et al. 2022 | Ovarian | High-Grade Serous Ovarian Carcinoma | Data_Zhang2022_Ovarian | test | 2026-07-31 03:15 | 2026-07-31 13:56 | Success | Failure | Judge | Linear-pSom/Crest | −0.006 | +0.051 | −0.012 | GO | GO | — | — | 1 |
+| Zhou et al. 2020 † | Sarcoma | Osteosarcoma | Data_Zhou2020_Sarcoma | test | 2026-07-31 14:00 | 2026-07-31 16:14 | Success | Success | Judge | Linear-pSom/Crest | −0.039 | +0.083 | −0.046 | GO | GO | — | — | 1 |
+| Kim et al. 2020 | Lung | Lung Adenocarcinoma | Data_Kim2020_Lung | test | 2026-07-31 16:35 | 2026-07-31 17:32 | Failure | Success | Judge | — | −0.040 | +0.056 | −0.027 | — | — | — | — | 1 |
+| Steele et al. 2020 | Pancreas | Pancreatic Ductal Adenocarcinoma | Data_Steele2020_Pancreas | test | 2026-07-31 17:35 | 2026-07-31 18:33 | Success | Success | Judge | Linear-pSom/Crest | −0.042 | +0.077 | −0.047 | GO | GO | — | — | 1 |
+| Song et al. 2022 | Prostate | Prostate Cancer | Data_Song2022_Prostate | test | 2026-07-31 18:37 | 2026-07-31 19:43 | Success | Failure | Judge | Linear-pSom/Crest | −0.013 | +0.025 | −0.022 | GO | GO | — | — | 1 |
+| Ji et al. 2020 | Skin | Skin Squamous Cell Carcinoma | Data_Ji2020_Skin | test | 2026-07-31 20:16 | 2026-07-31 22:01 | Success | Failure | Judge | Linear-pSom/Crest | −0.032 | +0.042 | +0.023 | GO | GO | — | — | 1 |
+| Lin et al. 2020 | Pancreas | Pancreatic Ductal Adenocarcinoma | Data_Lin2020_Pancreas | test | 2026-08-01 15:13 | 2026-08-01 16:27 | Success | Failure | Judge | Linear-pSom/Crest | −0.008 | +0.046 | −0.006 | GO | GO | — | — | 1 |
+| Qian et al. 2020 | Lung | Lung Cancer | Data_Qian2020_Lung | test | 2026-08-01 17:17 | 2026-08-01 18:10 | Success | Success | Judge | Linear-pSom/Crest | −0.027 | +0.091 | −0.037 | GO | GO | — | — | 1 |
+| Obradovic et al. 2021 | Kidney | Renal Cell Carcinoma | Data_Obradovic2021_Kidney | test | 2026-08-01 18:14 | 2026-08-02 00:18 | Failure | Success | Judge | — | +0.024 | +0.099 | −0.075 | — | — | — | — | 1 |
+| Venteicher et al. 2017 | Brain | IDH-Mutant Astrocytoma | Data_Venteicher2017_Brain | test | 2026-08-02 00:23 | 2026-08-02 01:06 | Success | Success | Judge | Linear-pSom/Crest | −0.068 | +0.211 | −0.150 | GO | GO | — | — | 1 |
 
 **Legend.**
 - **Set** — train (calibration, HNSCC) · eval (supervised, HNSCC) · test (autonomous, other).
