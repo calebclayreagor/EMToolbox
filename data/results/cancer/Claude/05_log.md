@@ -24,7 +24,7 @@ params, subtypes, gate mechanics) lives in `analysis_log.csv`, joined on `JoinKe
 | Kim et al. 2020 | Lung | Lung Adenocarcinoma | Data_Kim2020_Lung | 2026-08-06 21:22 | 2026-08-06 21:56 | Judge | Linear | GO | GO | — | — | 3 |
 | Steele et al. 2020 | Pancreas | Pancreatic Ductal Adenocarcinoma | Data_Steele2020_Pancreas | 2026-07-31 17:35 | 2026-07-31 18:33 | Judge | Linear | GO | GO | — | — | 1 |
 | Song et al. 2022 | Prostate | Prostate Cancer | Data_Song2022_Prostate | 2026-07-31 18:37 | 2026-07-31 19:43 | Judge | Linear | GO | GO | — | — | 1 |
-| Ji et al. 2020 | Skin | Skin Squamous Cell Carcinoma | Data_Ji2020_Skin | 2026-07-31 20:16 | 2026-07-31 22:01 | Judge | Linear | GO | GO | — | — | 1 |
+| Ji et al. 2020 | Skin | Skin Squamous Cell Carcinoma | Data_Ji2020_Skin | 2026-07-31 20:16 | 2026-07-31 22:01 | Judge | Branching | GO | GO | GO | −0.41 | 10 |
 | Lin et al. 2020 | Pancreas | Pancreatic Ductal Adenocarcinoma | Data_Lin2020_Pancreas | 2026-08-01 15:13 | 2026-08-01 16:27 | Judge | Linear | GO | GO | — | — | 1 |
 | Qian et al. 2020 | Lung | Lung Cancer | Data_Qian2020_Lung | 2026-08-01 17:17 | 2026-08-01 18:10 | Judge | Linear | GO | GO | — | — | 1 |
 | Obradovic et al. 2021 | Kidney | Renal Cell Carcinoma | Data_Obradovic2021_Kidney | 2026-08-08 15:20 | 2026-08-08 17:51 | Judge | Linear | GO | GO | — | — | 1 |
@@ -61,7 +61,7 @@ params, subtypes, gate mechanics) lives in `analysis_log.csv`, joined on `JoinKe
 | Cohen et al. 2021 | Hematologic | Multiple Myeloma | Data_Cohen2021_Hematologic | 2026-08-06 21:22 | 2026-08-06 23:17 | Judge | Linear | GO | GO | — | — | 3 |
 | Dong et al. 2020 | Neuroendocrine | Neuroblastoma | Data_Dong2020_Neuroendocrine | 2026-08-03 19:57 | 2026-08-03 21:10 | Judge | Linear | GO | GO | — | — | 1 |
 | Couturier et al. 2020⁸ | Brain | Glioblastoma | Data_Couturier2020_Brain | 2026-08-04 14:02 | 2026-08-04 15:51 | Judge | Linear | GO | GO | — | — | 1 |
-| Filbin et al. 2018¹² | Brain | Pediatric H3-K27M Mutant Glioma | Data_Filbin2018_Brain | 2026-08-09 00:54 | 2026-08-09 02:09 | Judge | Branching | GO | GO | GO | −0.34 | 10 |
+| Filbin et al. 2018 | Brain | Pediatric H3-K27M Mutant Glioma | Data_Filbin2018_Brain | 2026-08-09 00:54 | 2026-08-09 02:09 | Judge | Branching | GO | GO | GO | −0.34 | 10 |
 | Gaiti et al. 2019 | Hematologic | Chronic Lymphocytic Leukemia | Data_Gaiti2019_Hematologic | 2026-08-04 14:02 | 2026-08-04 15:29 | Judge | Linear | GO | GO | — | — | 1 |
 | Liu et al. 2021 | Hematologic | Multiple Myeloma | Data_Liu2021_Hematologic | 2026-08-05 15:19 | 2026-08-05 16:20 | Judge | — | NO-GO | — | — | — | 2 |
 | Nath et al. 2021 | Ovarian | High-Grade Serous Ovarian Carcinoma | Data_Nath2021_Ovarian | 2026-08-04 14:02 | 2026-08-04 15:36 | Judge | Linear | GO | GO | — | — | 1 |
@@ -115,7 +115,7 @@ rows + all deliverables), dropping the atlas from 87 to 86 rows. It is a cross-s
 RPM GEM time-course + human sample), so it is not validly in scope.
 
 **Prompt Evolution.** The autonomous **Judge** runs shared one initiating prompt that
-set only the regime — scientific instruction stayed in the spec files. Its substantive edits are
+set only the regime — scientific instruction stayed in the spec files (except the branching re-runs, item 12, which carried scientific steering in the prompt and via debrief). Its substantive edits are
 numbered below; each carries a superscript on the table row where it first appears (re-run waves
 overwrite existing rows, so carry none). Operational
 guardrails (do-not-interrupt, no new packages/environments) are omitted.
@@ -146,8 +146,5 @@ guardrails (do-not-interrupt, no new packages/environments) are omitted.
    to which region the trajectory is scoped on. Several Gate 2 GOs flipped to NO-GO. This exposed a gap in
    the protocol order: `02_manifold` fits the pseudotime before Gate 2 tests the modules, so the fitted
    trajectory does not depend on the embryonic modules being present.
-12. **Targeted content steer (`-8`/`-9`)** — item-11 regime narrowed to the single remaining science-fail dataset,
-   seeding the expected outcome (a branching example) and naming the failure mode: topology read from metrics, not
-   the visually-obvious branches in smoothed signatures. `-9` made the branching call binding and added step
-   directions (scope out the cycling lobe, root at a non-Crest tip, judge the re-embedded fork visually); the
-   pattern reproduced.
+12. **Targeted content steer** — for the last runs of the bifurcating datasets (Filbin, Ji), the item-11 regime
+   was narrowed with scientific steering toward a branching outcome (in-prompt and via debrief; see header).
