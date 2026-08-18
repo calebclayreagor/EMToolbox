@@ -6,7 +6,7 @@ from itertools import combinations
 
 pth = os.path.join('..', '..', 'data')
 pth_in = os.path.join(pth, 'ref', 'CELLxGENE')
-pth_out = os.path.join(pth, 'results', 'tx', 'discovery', 'safety')
+pth_out = os.path.join(pth, 'results', 'emtarget', 'safety')
 
 # load CZ CELLxGENE pseudobulk -> cell type max expression
 fn = os.path.join(pth_in, 'pbulk.csv')
