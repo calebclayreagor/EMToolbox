@@ -1,6 +1,6 @@
 import os, numpy as np, scanpy as sc, matplotlib.pyplot as plt
-D="/home/caleb/MesenCoder/data/cancer/vertebrate/CCCA/Claude/Pancreas/Hwang2022_Pancreas-3"
-F_="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Pancreas/Hwang2022_Pancreas-3"
+D="/home/caleb/EMToolbox/data/cancer/vertebrate/CCCA/claude/Pancreas/Hwang2022_Pancreas-3"
+F_="/home/caleb/EMToolbox/figures/mesencontext/claude/Pancreas/Hwang2022_Pancreas-3"
 a=sc.read_h5ad(os.path.join(D,"signatures.h5ad"))
 t=a.obs['t'].values
 # original panels: raw scatter + invert_xaxis, raw corr(x,t)=+0.677 -> displayed origin-RIGHT.

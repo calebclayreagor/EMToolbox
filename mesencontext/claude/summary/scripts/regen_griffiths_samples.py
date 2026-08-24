@@ -1,6 +1,6 @@
 import os, scanpy as sc, matplotlib.pyplot as plt
-D="/home/caleb/MesenCoder/data/cancer/vertebrate/CCCA/Claude/Breast/Griffiths2021_Breast-5"
-F="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Breast/Griffiths2021_Breast-5"
+D="/home/caleb/EMToolbox/data/cancer/vertebrate/CCCA/claude/Breast/Griffiths2021_Breast-5"
+F="/home/caleb/EMToolbox/figures/mesencontext/claude/Breast/Griffiths2021_Breast-5"
 proc=sc.read_h5ad(os.path.join(D,"processed.h5ad"))
 fig,ax=plt.subplots(1,1,figsize=(5,5))
 sc.pl.umap(proc,color='sample',size=20,frameon=False,show=False,ax=ax)

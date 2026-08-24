@@ -1,7 +1,7 @@
 import os, numpy as np, scanpy as sc, matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
-D="/home/caleb/MesenCoder/data/cancer/vertebrate/CCCA/Claude/Neuroendocrine/Kildisiute2021_Neuroendocrine-1"
-F="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Neuroendocrine/Kildisiute2021_Neuroendocrine-1"
+D="/home/caleb/EMToolbox/data/cancer/vertebrate/CCCA/claude/Neuroendocrine/Kildisiute2021_Neuroendocrine-1"
+F="/home/caleb/EMToolbox/figures/mesencontext/claude/Neuroendocrine/Kildisiute2021_Neuroendocrine-1"
 a=sc.read_h5ad(os.path.join(D,"processed.h5ad"))
 xy=a.obsm['X_umap']; xlo,xhi=np.percentile(xy[:,0],[0.3,99.7]); ylo,yhi=np.percentile(xy[:,1],[0.3,99.7])
 px=(xhi-xlo)*.05; py=(yhi-ylo)*.06

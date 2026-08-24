@@ -1,9 +1,9 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
 RED="#c0392b"
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Breast/Qian2020_Breast-2"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Breast/Qian2020_Breast-2"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Breast/Qian2020_Breast-2"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Breast/Qian2020_Breast-2"
 gates=[
  ("Gate 1 — mixing & continuity","NO-GO",RED,
   "Harmony on sample cannot integrate the compartment. Across \u03b8 2\u201320 (confirmatory to 50) \u00d7 n_pcs 20\u201340 the "

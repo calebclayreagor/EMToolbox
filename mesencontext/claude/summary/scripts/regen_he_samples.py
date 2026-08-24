@@ -1,6 +1,6 @@
 import os, numpy as np, scanpy as sc, matplotlib.pyplot as plt
-D="/home/caleb/MesenCoder/data/cancer/vertebrate/CCCA/Claude/Prostate/He2021_Prostate"
-F="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Prostate/He2021_Prostate"
+D="/home/caleb/EMToolbox/data/cancer/vertebrate/CCCA/claude/Prostate/He2021_Prostate"
+F="/home/caleb/EMToolbox/figures/mesencontext/claude/Prostate/He2021_Prostate"
 a=sc.read_h5ad(os.path.join(D,"signatures.h5ad"))
 a.obsm['X_umap']=a.obsm['X_umap_lin']
 xl=a.obsm['X_umap']; xlo,xhi=np.percentile(xl[:,0],[0.3,99.7]); ylo,yhi=np.percentile(xl[:,1],[0.3,99.7])

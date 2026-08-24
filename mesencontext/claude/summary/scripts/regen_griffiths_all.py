@@ -1,7 +1,7 @@
 import os, numpy as np, scanpy as sc, matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
-D="/home/caleb/MesenCoder/data/cancer/vertebrate/CCCA/Claude/Breast/Griffiths2021_Breast-5"
-F_="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Breast/Griffiths2021_Breast-5"
+D="/home/caleb/EMToolbox/data/cancer/vertebrate/CCCA/claude/Breast/Griffiths2021_Breast-5"
+F_="/home/caleb/EMToolbox/figures/mesencontext/claude/Breast/Griffiths2021_Breast-5"
 CB=os.path.join(F_,"colorbars")
 a=sc.read_h5ad(os.path.join(D,"signatures.h5ad"))
 proc=sc.read_h5ad(os.path.join(D,"processed.h5ad"))

@@ -1,6 +1,6 @@
 import os, numpy as np, scanpy as sc, matplotlib.pyplot as plt
-D="/home/caleb/MesenCoder/data/cancer/vertebrate/CCCA/Claude/Colorectal/Li2017_Colorectal"
-F="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Colorectal/Li2017_Colorectal"
+D="/home/caleb/EMToolbox/data/cancer/vertebrate/CCCA/claude/Colorectal/Li2017_Colorectal"
+F="/home/caleb/EMToolbox/figures/mesencontext/claude/Colorectal/Li2017_Colorectal"
 a=sc.read_h5ad(os.path.join(D,"signatures.h5ad"))
 a.obsm['X_umap']=a.obsm['X_umap_lin']   # raw==lin identity; use lin for consistency
 xl=a.obsm['X_umap']; xlo,xhi=np.percentile(xl[:,0],[0.3,99.7]); ylo,yhi=np.percentile(xl[:,1],[0.3,99.7])

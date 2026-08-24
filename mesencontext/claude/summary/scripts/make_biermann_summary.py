@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Skin/Biermann2022_Skin"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Skin/Biermann2022_Skin"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Skin/Biermann2022_Skin"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Skin/Biermann2022_Skin"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "30 samples (brain-met MBM + peripheral-met MPM, sn/sc) with private melanoma CNV: pre-Harmony same-sample "

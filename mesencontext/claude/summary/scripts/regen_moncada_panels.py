@@ -1,7 +1,7 @@
 import os, numpy as np, scanpy as sc, matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
-D="/home/caleb/MesenCoder/data/cancer/vertebrate/CCCA/Claude/Pancreas/Moncada2020_Pancreas"
-F="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Pancreas/Moncada2020_Pancreas"
+D="/home/caleb/EMToolbox/data/cancer/vertebrate/CCCA/claude/Pancreas/Moncada2020_Pancreas"
+F="/home/caleb/EMToolbox/figures/mesencontext/claude/Pancreas/Moncada2020_Pancreas"
 a=sc.read_h5ad(os.path.join(D,"signatures.h5ad"))
 a.obsm['X_umap']=a.obsm['X_umap_lin']
 xl=a.obsm['X_umap']; xlo,xhi=np.percentile(xl[:,0],[0.3,99.7]); ylo,yhi=np.percentile(xl[:,1],[0.3,99.7])

@@ -3,8 +3,8 @@ import matplotlib.patheffects as pe
 from scipy.stats import spearmanr
 import pandas as pd
 
-D5="/home/caleb/MesenCoder/data/cancer/vertebrate/CCCA/Claude/Head-and-Neck/Chen2020_Head-and-Neck-5"
-F5="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Head-and-Neck/Chen2020_Head-and-Neck-5"
+D5="/home/caleb/EMToolbox/data/cancer/vertebrate/CCCA/claude/Head-and-Neck/Chen2020_Head-and-Neck-5"
+F5="/home/caleb/EMToolbox/figures/mesencontext/claude/Head-and-Neck/Chen2020_Head-and-Neck-5"
 CB=os.path.join(F5,"colorbars"); os.makedirs(CB, exist_ok=True)
 CITE="Chen et al., 2020"
 a = sc.read_h5ad(os.path.join(D5,"signatures.h5ad"))

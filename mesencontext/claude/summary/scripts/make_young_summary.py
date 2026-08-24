@@ -1,9 +1,9 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
 RED="#c0392b"
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Kidney/Young2018_Kidney-1"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Kidney/Young2018_Kidney-1"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Kidney/Young2018_Kidney-1"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Kidney/Young2018_Kidney-1"
 gates=[
  ("Gate 1 — mixing & continuity","NO-GO",RED,
   "The malignant compartment is a composite of THREE biologically distinct kidney cancers \u2014 clear-cell RCC (1,373), "

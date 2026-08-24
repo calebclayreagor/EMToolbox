@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Neuroendocrine/Dong2020_Neuroendocrine"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Neuroendocrine/Dong2020_Neuroendocrine"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Neuroendocrine/Dong2020_Neuroendocrine"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Neuroendocrine/Dong2020_Neuroendocrine"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "13/13 tumours (\u2265100 cells) intermix on one continuous manifold (1 kNN component; iLISI source 1.00\u21921.38, sample "

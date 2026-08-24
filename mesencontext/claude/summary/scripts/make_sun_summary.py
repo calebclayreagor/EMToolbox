@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Liver-Biliary/Sun2021_Liver-Biliary"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Liver-Biliary/Sun2021_Liver-Biliary"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Liver-Biliary/Sun2021_Liver-Biliary"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Liver-Biliary/Sun2021_Liver-Biliary"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "6 patients (P04, P05, P09, P10, P16, P18) intermix on one connected component; a cycling-enriched lobe "

@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Brain/Hovestadt2019_Brain"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Brain/Hovestadt2019_Brain"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Brain/Hovestadt2019_Brain"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Brain/Hovestadt2019_Brain"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "25 samples intermix per-neighbourhood on one continuous manifold (iLISI 1.17\u21927.67; 0 islands removed). Judged on "

@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Skin/Jerby-Arnon2018_Skin"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Skin/Jerby-Arnon2018_Skin"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Skin/Jerby-Arnon2018_Skin"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Skin/Jerby-Arnon2018_Skin"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "\u03b8 derived by connectivity (\u03b8=2 fragments the manifold into 2 components / 185 detached; \u03b8=5 = one component, "

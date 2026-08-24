@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Hematologic/Steen2021_Hematologic"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Hematologic/Steen2021_Hematologic"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Hematologic/Steen2021_Hematologic"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Hematologic/Steen2021_Hematologic"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "Whole malignant manifold (2,478 cells, 3 tumours) is one connected component (0 islands). Harmony (\u03b8=10) lifts "

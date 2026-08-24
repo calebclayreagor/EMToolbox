@@ -1,8 +1,8 @@
 import os, numpy as np, scanpy as sc, matplotlib.pyplot as plt
 from scipy.stats import spearmanr
 import pandas as pd
-D="/home/caleb/MesenCoder/data/cancer/vertebrate/CCCA/Claude/Liver-Biliary/Sun2021_Liver-Biliary"
-F="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Liver-Biliary/Sun2021_Liver-Biliary"
+D="/home/caleb/EMToolbox/data/cancer/vertebrate/CCCA/claude/Liver-Biliary/Sun2021_Liver-Biliary"
+F="/home/caleb/EMToolbox/figures/mesencontext/claude/Liver-Biliary/Sun2021_Liver-Biliary"
 a=sc.read_h5ad(os.path.join(D,"signatures.h5ad"))
 a.obsm['X_umap']=a.obsm['X_umap_lin']
 t=a.obs['t'].values; tn=(t-t.min())/(t.max()-t.min())

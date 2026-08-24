@@ -1,9 +1,9 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
 RED="#c0392b"
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Brain/Wang2019_Brain-7"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Brain/Wang2019_Brain-7"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Brain/Wang2019_Brain-7"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Brain/Wang2019_Brain-7"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "7/10 samples (\u2265237 cells; mult-gap 396\u2192143) on one connected component; sample iLISI 2.60/7 across "

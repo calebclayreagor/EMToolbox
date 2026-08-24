@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Ovarian/Qian2020_Ovarian-1"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Ovarian/Qian2020_Ovarian-1"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Ovarian/Qian2020_Ovarian-1"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Ovarian/Qian2020_Ovarian-1"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "4/4 tumours (920\u20133345 malignant cells) intermix on one continuous manifold at Harmony \u03b8=10 (per-neighbourhood "

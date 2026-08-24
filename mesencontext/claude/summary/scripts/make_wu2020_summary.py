@@ -1,9 +1,9 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
 RED="#c0392b"
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Hematologic/Wu2020_Hematologic-3"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Hematologic/Wu2020_Hematologic-3"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Hematologic/Wu2020_Hematologic-3"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Hematologic/Wu2020_Hematologic-3"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "One connected kNN component at every \u03b8 (2/10/20); 488 cells (0.5%) in tiny detached specks, removed. Harmony \u03b8=10 "

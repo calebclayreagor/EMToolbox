@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Pancreas/Moncada2020_Pancreas"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Pancreas/Moncada2020_Pancreas"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Pancreas/Moncada2020_Pancreas"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Pancreas/Moncada2020_Pancreas"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "Both patients intermix on one continuous manifold \u2014 no per-patient islands. Single connected component "

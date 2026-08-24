@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Hematologic/Roider2020_Hematologic"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Hematologic/Roider2020_Hematologic"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Hematologic/Roider2020_Hematologic"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Hematologic/Roider2020_Hematologic"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "Harmony (\u03b8=10) integrates 9 patients despite a severe clonal batch effect: same-sample neighbour fraction "

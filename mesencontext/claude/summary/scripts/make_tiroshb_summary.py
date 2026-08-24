@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Brain/Tirosh2016_Brain"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Brain/Tirosh2016_Brain"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Brain/Tirosh2016_Brain"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Brain/Tirosh2016_Brain"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "All 6 tumours intermix per-neighbourhood (iLISI 1.02\u21924.30 of 6 under Harmony \u03b8=10) on ONE continuous manifold "

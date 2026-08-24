@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Head-and-Neck/Kürten2021_Head-and-Neck"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Head-and-Neck/Kürten2021_Head-and-Neck"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Head-and-Neck/Kürten2021_Head-and-Neck"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Head-and-Neck/Kürten2021_Head-and-Neck"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "9/20 samples (\u2265182 cells) intermix on one continuous manifold with no per-patient islands (radius-graph: 0 "

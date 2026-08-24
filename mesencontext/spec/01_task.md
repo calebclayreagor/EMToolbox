@@ -87,12 +87,12 @@ notebook, so its number depends on how far the analysis ran (§6).
 
 ## 4. Data & code assets (source of truth)
 
-- **Loader** `.../CCCA/scripts/load.py` — `load_CCCA_adata(datadir)` reads the matrix/gene/cell files
+- **Loader** `.../mesencontext/scripts/load.py` — `load_CCCA_adata(datadir)` reads the matrix/gene/cell files
   in `datadir`, auto-detects normalization from the matrix filename (TPM/normalized pass through;
   counts normalized), always `log1p`, sets `celltype` (default 'Malignant'). **Point it at a
   bottom-level (leaf) dataset directory**, as `merge.py` does — it does not walk nested subdirs.
   `merge.py` also defines the folder-naming convention mapping summary rows → on-disk folders.
-- **Scope list** `.../CCCA/Claude/CCCA_summary.csv` — TAB-sep; `Title, Category, Disease, Technology,
+- **Scope list** `.../mesencontext/claude/CCCA_summary.csv` — TAB-sep; `Title, Category, Disease, Technology,
   Samples, Cells`; one row per in-scope dataset. **Authoritative.**
 - **Input data** `.../data/unzip/CCCA/` — one folder per dataset (superset of scope). Layout varies
   (some datasets nest by technology; expression is a mix of counts and TPM). Resolve each dataset to
@@ -107,14 +107,14 @@ Grant **narrowly, one at a time**; grants apply to **new kernels only** — rest
 | Directory | Access | Role |
 |---|---|---|
 | `.../data/unzip/CCCA/` | **ro** | input dataset folders |
-| `.../CCCA/scripts/` | **ro** | `load.py`, `merge.py` |
-| `.../CCCA/Puram2017_Head-and-Neck/` | **ro** | ground-truth reference notebooks 01–06 |
+| `.../mesencontext/scripts/` | **ro** | `load.py`, `merge.py` |
+| `.../mesencontext/Puram2017_Head-and-Neck/` | **ro** | ground-truth reference notebooks 01–06 |
 | `.../data/features/biomart/` | **ro** | gene sets |
-| `.../CCCA/Claude/` | **rw** | notebooks, summary-CSV (copy), cumulative log |
-| `.../data/cancer/vertebrate/CCCA/Claude/` | **rw** | output h5ads |
-| `.../figures/cancer/vertebrate/CCCA/Claude/` | **rw** | output figures (+ `colorbars/`) |
+| `.../mesencontext/claude/` | **rw** | notebooks, summary-CSV (copy), cumulative log |
+| `.../data/cancer/vertebrate/CCCA/claude/` | **rw** | output h5ads |
+| `.../figures/mesencontext/claude/` | **rw** | output figures (+ `colorbars/`) |
 
-Not granted: `MesenCoder` root, `data` root — hence the summary CSV lives in the rw `Claude/`.
+Not granted: `EMToolbox` root, `data` root — hence the summary CSV lives in the rw `claude/`.
 
 **Environment:** use the existing **`scFates`** conda env — **no recreation needed**. (Stack: python
 3.11, r-base 4.3 + r-mgcv, rpy2, scanpy/scFates/harmonypy/leidenalg/anndata; scFates PPT → rpy2 →
@@ -123,7 +123,7 @@ r-mgcv, and notebook 01 sets `R_HOME` to the conda prefix.)
 ## 6. Deliverables & outputs
 
 **Layout:** one dataset per subdir, partitioned by `Category`, replicated across three roots
-(notebooks, h5ads, figures + `colorbars/`): `.../Claude/<Category>/<DatasetName>/NN_*.ipynb`
+(notebooks, h5ads, figures + `colorbars/`): `.../claude/<Category>/<DatasetName>/NN_*.ipynb`
 (`<DatasetName>` = folder name minus `Data_`). **Relative paths:** the `<Category>/` partition puts
 notebooks two levels deeper than Puram — adapt the path logic; notebooks must run in place. **Keep
 rw-directory outputs tidy and as brief as possible** — they live on the researcher's disk; don't
@@ -156,7 +156,7 @@ renumbered to follow whatever preceded it:
   (min-cell threshold, root node, geometry); **the gate outcomes with reasoning for each GO/NO-GO**;
   hub identity and r, where applicable; a one-line verdict on whether the pattern reproduces. **Embeds
   the step figures** (the produced `.pdf`s) so the decisions are visible at a glance. Format document to match the Puram2017 calibration-step output — this is **BINDING**.
-- **one row in `.../CCCA/Claude/analysis_log.csv`** (TAB-sep) — the six `CCCA_summary.csv` columns
+- **one row in `.../mesencontext/claude/analysis_log.csv`** (TAB-sep) — the six `CCCA_summary.csv` columns
   verbatim (joins 1:1 to the master), then provenance (join key, cell counts through filtering,
   expression type, key embedding/trajectory params, clusters removed, subtypes + annotation source,
   geometry) and the gate readout (`gate1/2/3`, Crest-arm flag, hub r, EMT-TFs shown, status, notes).

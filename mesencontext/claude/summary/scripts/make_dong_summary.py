@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Prostate/Dong2020_Prostate-5"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Prostate/Dong2020_Prostate-5"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Prostate/Dong2020_Prostate-5"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Prostate/Dong2020_Prostate-5"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "All 4 malignant-bearing samples (\u2265915 cells each) intermix in one connected manifold \u2014 single kNN component, 0 "

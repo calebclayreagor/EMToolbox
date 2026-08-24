@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Skin/Yost2019_Skin"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Skin/Yost2019_Skin"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Skin/Yost2019_Skin"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Skin/Yost2019_Skin"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "Harmony (\u03b8=5) integrates all 5 patients: same-sample neighbour fraction 0.94\u21920.41, iLISI median 1.02\u21923.21 of 5. "

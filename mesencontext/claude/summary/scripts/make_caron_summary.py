@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Hematologic/Caron2020_Hematologic-3"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Hematologic/Caron2020_Hematologic-3"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Hematologic/Caron2020_Hematologic-3"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Hematologic/Caron2020_Hematologic-3"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "Harmony (\u03b8=10) integrates all 8 samples; sample-iLISI rises 1.0\u21924.1 of a 6.85 ceiling (plateau \u03b8 5\u201310). The "

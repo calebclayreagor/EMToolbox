@@ -1,7 +1,7 @@
 import sys, os
-sys.path.insert(0, "/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0, "/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN
-F="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Brain/Filbin2018_Brain-9"
+F="/home/caleb/EMToolbox/figures/mesencontext/claude/Brain/Filbin2018_Brain-9"
 gates=[
  ("Gate 1 \u2014 mixing & continuity","GO",GREEN,
   "All 6 SmartSeq2 samples intermix on one connected kNN component (no per-patient archipelago); a coherent cycling lobe (261 cells) is scoped out so the fork resolves."),
@@ -20,5 +20,5 @@ params=[("Min-cell threshold","\u2265100 (no clean count gap; keeps all 6)"),("I
         ("Embedding","PCA50 \u2192 n_pcs=20, k=30, UMAP spread=1.3"),("Overdispersed genes","3,779"),
         ("Cycling lobe removed","Leiden clusters (>50% cyc), 261 cells"),("Trajectory","scFates PPT tree (Nodes=40, \u03bb=3000)"),
         ("Root","Gast/pSom-high, Crest-low tip (non-Crest, not the fork)"),("Hub / EMT-TFs","Mixed convergence cluster (n=761); PRRX1 / ZEB1 / ZEB2")]
-build_summary(os.path.join("/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Brain/Filbin2018_Brain-9","summary.pdf"),"Filbin 2018 pediatric H3-K27M glioma \u2014 analysis summary",gates,panels,dataset,verdict,params,branching=True)
+build_summary(os.path.join("/home/caleb/EMToolbox/mesencontext/claude/Brain/Filbin2018_Brain-9","summary.pdf"),"Filbin 2018 pediatric H3-K27M glioma \u2014 analysis summary",gates,panels,dataset,verdict,params,branching=True)
 print("built filbin")

@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Ovarian/Olbrecht2021_Ovarian-1"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Ovarian/Olbrecht2021_Ovarian-1"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Ovarian/Olbrecht2021_Ovarian-1"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Ovarian/Olbrecht2021_Ovarian-1"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "Harmony(sample) swept over \u03b8\u00d7n_pcs with per-neighbourhood iLISI; at \u03b8=10 iLISI plateaus at 3.34/6 and the 6 "

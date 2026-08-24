@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Breast/Bassez2021_Breast-5"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Breast/Bassez2021_Breast-5"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Breast/Bassez2021_Breast-5"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Breast/Bassez2021_Breast-5"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "Harmony (\u03b8=10) on sample: per-neighbourhood iLISI 1.6\u21927.8 of 34 samples (\u03b8 sweep 1/2/5/10, mixing rises to a "

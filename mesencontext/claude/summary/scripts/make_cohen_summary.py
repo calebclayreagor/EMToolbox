@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Hematologic/Cohen2021_Hematologic-2"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Hematologic/Cohen2021_Hematologic-2"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Hematologic/Cohen2021_Hematologic-2"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Hematologic/Cohen2021_Hematologic-2"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "Harmony (\u03b8=5) fuses the patient-private myeloma clones: iLISI median 1.0\u219212.5 / 54 samples, one connected kNN "

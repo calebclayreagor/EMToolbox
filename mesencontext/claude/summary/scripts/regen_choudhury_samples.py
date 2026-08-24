@@ -1,6 +1,6 @@
 import os, numpy as np, scanpy as sc, matplotlib.pyplot as plt
-D="/home/caleb/MesenCoder/data/cancer/vertebrate/CCCA/Claude/Brain/Choudhury2022_Brain"
-F="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Brain/Choudhury2022_Brain"
+D="/home/caleb/EMToolbox/data/cancer/vertebrate/CCCA/claude/Brain/Choudhury2022_Brain"
+F="/home/caleb/EMToolbox/figures/mesencontext/claude/Brain/Choudhury2022_Brain"
 a=sc.read_h5ad(os.path.join(D,"processed.h5ad"))   # Gate 1 NO-GO: raw X_umap only (no trajectory/lin)
 xy=a.obsm['X_umap']; xlo,xhi=np.percentile(xy[:,0],[0.3,99.7]); ylo,yhi=np.percentile(xy[:,1],[0.3,99.7])
 px=(xhi-xlo)*.05; py=(yhi-ylo)*.06

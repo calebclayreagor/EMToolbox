@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Lung/Laughney2020_Lung"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Lung/Laughney2020_Lung"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Lung/Laughney2020_Lung"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Lung/Laughney2020_Lung"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "\u03b8 derived by connectivity (\u03b8=5 fragments an 11% blob; \u03b8=10 = one component). One patient (RU680, 125 cells) "

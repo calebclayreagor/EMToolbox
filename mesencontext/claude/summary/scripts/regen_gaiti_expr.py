@@ -1,7 +1,7 @@
 import os, numpy as np, scanpy as sc, matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
-D="/home/caleb/MesenCoder/data/cancer/vertebrate/CCCA/Claude/Hematologic/Gaiti2019_Hematologic"
-F="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Hematologic/Gaiti2019_Hematologic"
+D="/home/caleb/EMToolbox/data/cancer/vertebrate/CCCA/claude/Hematologic/Gaiti2019_Hematologic"
+F="/home/caleb/EMToolbox/figures/mesencontext/claude/Hematologic/Gaiti2019_Hematologic"
 a=sc.read_h5ad(os.path.join(D,"signatures.h5ad"))
 a.obsm['X_umap']=a.obsm['X_umap_lin']
 other_tf, term_tf = 'PRRX1', 'ZEB2'   # least-terminal / terminus (from summary)

@@ -18,7 +18,7 @@ from matplotlib.lines import Line2D
 from matplotlib.patheffects import withStroke
 from scipy.stats import pearsonr
 
-FEAT = "/home/caleb/MesenCoder/data/features/biomart"
+FEAT = "/home/caleb/EMToolbox/data/features/biomart"
 
 
 def _bisector_rotation(a):

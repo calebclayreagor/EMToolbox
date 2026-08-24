@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Lung/Xing2021_Lung"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Lung/Xing2021_Lung"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Lung/Xing2021_Lung"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Lung/Xing2021_Lung"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "All 18 samples (\u2265100 malignant cells) intermix per-neighbourhood on one continuous manifold: iLISI 1.4\u21924.5 "

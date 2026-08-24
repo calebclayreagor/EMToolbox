@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Colorectal/Pelka2021_Colorectal"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Colorectal/Pelka2021_Colorectal"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Colorectal/Pelka2021_Colorectal"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Colorectal/Pelka2021_Colorectal"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "64 tumours integrate to one continuous manifold (same-sample neighbour fraction 0.71\u21920.10, robust across "

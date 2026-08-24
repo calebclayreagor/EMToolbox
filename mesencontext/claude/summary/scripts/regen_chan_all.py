@@ -1,7 +1,7 @@
 import os, numpy as np, scanpy as sc, matplotlib.pyplot as plt
 from scipy.stats import spearmanr
-D="/home/caleb/MesenCoder/data/cancer/vertebrate/CCCA/Claude/Lung/Chan2021_Lung-3"
-F_="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Lung/Chan2021_Lung-3"
+D="/home/caleb/EMToolbox/data/cancer/vertebrate/CCCA/claude/Lung/Chan2021_Lung-3"
+F_="/home/caleb/EMToolbox/figures/mesencontext/claude/Lung/Chan2021_Lung-3"
 a=sc.read_h5ad(os.path.join(D,"signatures.h5ad"))
 # stored X_umap(=lin) runs pseudotime right->left; negate x for house left->right (display only)
 a.obsm['X_umap']=a.obsm['X_umap'].copy(); a.obsm['X_umap'][:,0]*=-1

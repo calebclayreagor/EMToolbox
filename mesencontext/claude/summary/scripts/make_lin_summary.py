@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Pancreas/Lin2020_Pancreas"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Pancreas/Lin2020_Pancreas"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Pancreas/Lin2020_Pancreas"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Pancreas/Lin2020_Pancreas"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "Harmony (\u03b8=10) integrates 15 samples (iLISI 1.0\u21924.1, same-sample frac 0.94\u21920.45); one continuous "

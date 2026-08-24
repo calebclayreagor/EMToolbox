@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Brain/Couturier2020_Brain"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Brain/Couturier2020_Brain"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Brain/Couturier2020_Brain"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Brain/Couturier2020_Brain"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "Harmony (\u03b8=10) on sample integrates 10 patient tumours: sample iLISI 1.16\u21924.43 of 10 (plateau; peaks at "

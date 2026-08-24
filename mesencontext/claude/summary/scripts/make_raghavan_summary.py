@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Pancreas/Raghavan2021_Pancreas-4"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Pancreas/Raghavan2021_Pancreas-4"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Pancreas/Raghavan2021_Pancreas-4"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Pancreas/Raghavan2021_Pancreas-4"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "Harmony (sample, \u03b8=5): same-sample neighbour fraction 0.94\u21920.26 (plateau by \u03b8=2); samples intermix "

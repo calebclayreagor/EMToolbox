@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Kidney/Zhang2021_Kidney-3"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Kidney/Zhang2021_Kidney-3"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Kidney/Zhang2021_Kidney-3"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Kidney/Zhang2021_Kidney-3"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "1 connected component at all \u03b8; iLISI peak 3.12 @ \u03b8=10; the axis recurs within patients (not a between-patient "

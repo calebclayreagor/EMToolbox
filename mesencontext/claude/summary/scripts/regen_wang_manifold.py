@@ -1,6 +1,6 @@
 import os, numpy as np, scanpy as sc, matplotlib.pyplot as plt
-D="/home/caleb/MesenCoder/data/cancer/vertebrate/CCCA/Claude/Brain/Wang2019_Brain-7"
-F="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Brain/Wang2019_Brain-7"
+D="/home/caleb/EMToolbox/data/cancer/vertebrate/CCCA/claude/Brain/Wang2019_Brain-7"
+F="/home/caleb/EMToolbox/figures/mesencontext/claude/Brain/Wang2019_Brain-7"
 a=sc.read_h5ad(os.path.join(D,"signatures.h5ad"))
 xu=a.obsm['X_umap']; t=a.obs['t'].values
 G=a.uns['graph']; Fn=np.asarray(G['F']); Bc=np.asarray(G['B']); ii,jj=np.where(np.triu(Bc>0))

@@ -1,9 +1,9 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
 RED="#c0392b"
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Skin/Li2019_Skin-3"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Skin/Li2019_Skin-3"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Skin/Li2019_Skin-3"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Skin/Li2019_Skin-3"
 gates=[
  ("Gate 1 — mixing & continuity","NO-GO",RED,
   "Harmony reaches near-maximal sample mixing (iLISI 1.00\u21921.78 of 3), but the malignant structure resolves into TWO "

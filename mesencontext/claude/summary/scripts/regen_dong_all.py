@@ -1,7 +1,7 @@
 import os, numpy as np, scanpy as sc, matplotlib.pyplot as plt
 from scipy.stats import spearmanr
-D="/home/caleb/MesenCoder/data/cancer/vertebrate/CCCA/Claude/Prostate/Dong2020_Prostate-5"
-F="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Prostate/Dong2020_Prostate-5"
+D="/home/caleb/EMToolbox/data/cancer/vertebrate/CCCA/claude/Prostate/Dong2020_Prostate-5"
+F="/home/caleb/EMToolbox/figures/mesencontext/claude/Prostate/Dong2020_Prostate-5"
 a=sc.read_h5ad(os.path.join(D,"signatures.h5ad"))
 # --- display-only left->right orientation: negate X_umap x so pseudotime increases left->right ---
 a.obsm['X_umap']=a.obsm['X_umap'].copy(); a.obsm['X_umap'][:,0]*=-1

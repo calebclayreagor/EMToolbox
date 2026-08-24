@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Prostate/Chen2021_Prostate-1"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Prostate/Chen2021_Prostate-1"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Prostate/Chen2021_Prostate-1"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Prostate/Chen2021_Prostate-1"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "Integration + continuity: iLISI rises from a sample-segregated baseline (median 1.0) and plateaus by "

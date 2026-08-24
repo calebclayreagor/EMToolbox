@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Breast/Pal2021_Breast-2"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Breast/Pal2021_Breast-2"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Breast/Pal2021_Breast-2"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Breast/Pal2021_Breast-2"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "iLISI 1.00\u21924.95 of 22 samples (per-neighbourhood, \u03b8=10); one connected component on the independent "

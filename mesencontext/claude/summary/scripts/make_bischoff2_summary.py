@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Lung/Bischoff2021_Lung-2"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Lung/Bischoff2021_Lung-2"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Lung/Bischoff2021_Lung-2"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Lung/Bischoff2021_Lung-2"
 gates=[
  ("Gate 1 — integration & continuity","GO",GREEN,
   "Malignant structure is mixed and continuous on one manifold. Judged on the embedding + mixing metrics across an "

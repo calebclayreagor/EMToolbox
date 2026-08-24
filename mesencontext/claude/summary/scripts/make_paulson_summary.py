@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Skin/Paulson2020_Skin"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Skin/Paulson2020_Skin"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Skin/Paulson2020_Skin"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Skin/Paulson2020_Skin"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "Harmony (sample, \u03b8=10) collapses the 3 tumour samples onto ONE continuous component (100%, 0 detached); "

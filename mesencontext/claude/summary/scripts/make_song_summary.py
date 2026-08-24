@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Prostate/Song2022_Prostate"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Prostate/Song2022_Prostate"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Prostate/Song2022_Prostate"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Prostate/Song2022_Prostate"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "14/15 samples clear the \u2265100-cell floor and intermix per-neighbourhood (iLISI median 1.95 \u2192 7.12 of 14 "

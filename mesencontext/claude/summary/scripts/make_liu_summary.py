@@ -1,9 +1,9 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
 RED="#c0392b"
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Hematologic/Liu2021_Hematologic-1"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Hematologic/Liu2021_Hematologic-1"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Hematologic/Liu2021_Hematologic-1"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Hematologic/Liu2021_Hematologic-1"
 gates=[
  ("Gate 1 — mixing & continuity","NO-GO",RED,
   "Malignant plasma cells form a per-patient clonal archipelago. Across the full \u03b8\u00d7n_pcs Harmony sweep, 9/10 "

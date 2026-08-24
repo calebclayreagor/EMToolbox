@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Lung/Kim2020_Lung-2"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Lung/Kim2020_Lung-2"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Lung/Kim2020_Lung-2"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Lung/Kim2020_Lung-2"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "One connected manifold (0 detached islands). Dominant sample P1028 (40%) spread throughout, not an "

@@ -1,9 +1,9 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
 RED="#c0392b"
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Hematologic/Rendeiro2020_Hematologic-5"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Hematologic/Rendeiro2020_Hematologic-5"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Hematologic/Rendeiro2020_Hematologic-5"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Hematologic/Rendeiro2020_Hematologic-5"
 gates=[
  ("Gate 1 — mixing & continuity","NO-GO",RED,
   "Judged on the regenerated embedding across a \u03b8-sweep (1/2/3/5/10 \u00d7 n_pcs 20/30/40) with per-neighbourhood iLISI. "

@@ -1,9 +1,9 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
 RED="#c0392b"
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Hematologic/Zhang2019_Hematologic-5"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Hematologic/Zhang2019_Hematologic-5"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Hematologic/Zhang2019_Hematologic-5"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Hematologic/Zhang2019_Hematologic-5"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "4/4 samples (\u2265100 cells) intermix on one continuous manifold with no per-patient islands (iLISI 1.00\u21922.26 of 4 "

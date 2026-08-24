@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Sarcoma/Jerby-Arnon2021_Sarcoma-1"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Sarcoma/Jerby-Arnon2021_Sarcoma-1"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Sarcoma/Jerby-Arnon2021_Sarcoma-1"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Sarcoma/Jerby-Arnon2021_Sarcoma-1"
 gates=[
  ("Gate 1 — mixing & continuity","GO (scoped to SmartSeq2)",GREEN,
   "Two platforms (SmartSeq2 TPM, 12 pt; 10x UMI, 3 pt) are an irreducible batch \u2014 technology iLISI stays 1.0/2 "

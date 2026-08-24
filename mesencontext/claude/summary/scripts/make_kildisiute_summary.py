@@ -1,9 +1,9 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
 RED="#c0392b"
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Neuroendocrine/Kildisiute2021_Neuroendocrine-1"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Neuroendocrine/Kildisiute2021_Neuroendocrine-1"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Neuroendocrine/Kildisiute2021_Neuroendocrine-1"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Neuroendocrine/Kildisiute2021_Neuroendocrine-1"
 gates=[
  ("Gate 1 — mixing & continuity","NO-GO",RED,
   "Malignant cells form a per-platform / per-patient archipelago. At the best-mixing integration (\u03b8=10) the kNN "

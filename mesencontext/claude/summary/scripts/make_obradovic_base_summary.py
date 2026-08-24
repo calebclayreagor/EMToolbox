@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Kidney/Obradovic2021_Kidney"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Kidney/Obradovic2021_Kidney"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Kidney/Obradovic2021_Kidney"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Kidney/Obradovic2021_Kidney"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "6/8 samples (dominant 522\u2192153 cliff, cut at geo-mean 282) intermix on one continuous manifold with no "

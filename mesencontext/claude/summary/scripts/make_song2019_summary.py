@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Lung/Song2019_Lung"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Lung/Song2019_Lung"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Lung/Song2019_Lung"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Lung/Song2019_Lung"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "3 tumour samples (P4/P3/P1, \u2265100-cell floor after dropping the 3-cell P4_Normal spillover) intermix on one "

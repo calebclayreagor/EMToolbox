@@ -1,9 +1,9 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
 RED="#c0392b"
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Breast/Gao2021_Breast-3"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Breast/Gao2021_Breast-3"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Breast/Gao2021_Breast-3"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Breast/Gao2021_Breast-3"
 gates=[
  ("Gate 1 — mixing & continuity","NO-GO",RED,
   "Breast malignant cells form a per-patient archipelago. After best-effort Harmony (\u03b8=10) the per-neighbourhood "

@@ -1,9 +1,9 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
 RED="#c0392b"
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Brain/Choudhury2022_Brain"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Brain/Choudhury2022_Brain"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Brain/Choudhury2022_Brain"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Brain/Choudhury2022_Brain"
 gates=[
  ("Gate 1 — mixing & continuity","NO-GO",RED,
   "Malignant cells form a per-patient archipelago. At the best-mixing integration (\u03b8=10) the kNN graph is a single "

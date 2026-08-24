@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Pancreas/Peng2019_Pancreas-2"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Pancreas/Peng2019_Pancreas-2"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Pancreas/Peng2019_Pancreas-2"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Pancreas/Peng2019_Pancreas-2"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "Pre-Harmony the 16 tumours form a per-patient archipelago (iLISI median 1.0 of 16, many detached islands). "

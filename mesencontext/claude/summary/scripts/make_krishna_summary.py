@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Kidney/Krishna2021_Kidney"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Kidney/Krishna2021_Kidney"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Kidney/Krishna2021_Kidney"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Kidney/Krishna2021_Kidney"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "UT2_Center + UT2_Far intermix on one continuous manifold; 0 detached islands, single Leiden compartment "

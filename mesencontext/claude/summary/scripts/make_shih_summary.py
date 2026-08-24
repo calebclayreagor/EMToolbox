@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Ovarian/Shih2018_Ovarian"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Ovarian/Shih2018_Ovarian"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Ovarian/Shih2018_Ovarian"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Ovarian/Shih2018_Ovarian"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "Harmony (\u03b8=20) collapses the strong patient batch effect: same-sample neighbour fraction 0.73\u21920.20 "

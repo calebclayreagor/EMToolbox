@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Hematologic/Gaiti2019_Hematologic"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Hematologic/Gaiti2019_Hematologic"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Hematologic/Gaiti2019_Hematologic"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Hematologic/Gaiti2019_Hematologic"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "The 7 SmartSeq2 plates and 4 patients intermix per-neighbourhood on one continuous, low-cycling manifold (iLISI "

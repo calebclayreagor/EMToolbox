@@ -1,8 +1,8 @@
 import os, numpy as np, scanpy as sc, matplotlib.pyplot as plt
 from scipy.stats import spearmanr
 import pandas as pd
-D="/home/caleb/MesenCoder/data/cancer/vertebrate/CCCA/Claude/Lung/Bischoff2021_Lung-2"
-F="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Lung/Bischoff2021_Lung-2"
+D="/home/caleb/EMToolbox/data/cancer/vertebrate/CCCA/claude/Lung/Bischoff2021_Lung-2"
+F="/home/caleb/EMToolbox/figures/mesencontext/claude/Lung/Bischoff2021_Lung-2"
 CB=os.path.join(F,"colorbars"); os.makedirs(CB,exist_ok=True)
 CITE="Bischoff et al., 2021"
 a=sc.read_h5ad(os.path.join(D,"signatures.h5ad"))

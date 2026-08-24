@@ -1,8 +1,8 @@
 import sys, os
-sys.path.insert(0,"/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/summary")
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
 from build_summary import build_summary, GREEN, GREY
-NB="/home/caleb/MesenCoder/cancer/vertebrate/CCCA/Claude/Sarcoma/Zhou2020_Sarcoma"
-F ="/home/caleb/MesenCoder/figures/cancer/vertebrate/CCCA/Claude/Sarcoma/Zhou2020_Sarcoma"
+NB="/home/caleb/EMToolbox/mesencontext/claude/Sarcoma/Zhou2020_Sarcoma"
+F ="/home/caleb/EMToolbox/figures/mesencontext/claude/Sarcoma/Zhou2020_Sarcoma"
 gates=[
  ("Gate 1 — mixing & continuity","GO",GREEN,
   "9/11 samples (\u2265599 cells) intermix on one continuous manifold with no per-patient islands "
