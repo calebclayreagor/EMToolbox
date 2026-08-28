@@ -65,11 +65,11 @@ xy_hub = xy[msk]
 vlim = .3
 fig, ax = plt.subplots(figsize=C.FIGSIZE)
 ax.scatter(xy[:, 0], xy[:, 1], s=C.POINT_SIZE, linewidths=0, color='lightgrey',
-           alpha=.5, rasterized=True)
+           alpha=.5, rasterized=False)
 Rv = np.asarray(R_sm)
 o = C.zsort(Rv, negatives_on_top=True)   # strongest cross-repression (negative) on top
 sca = ax.scatter(xy_hub[o, 0], xy_hub[o, 1], c=Rv[o], cmap='Spectral',
-                 vmin=-vlim, vmax=vlim, s=C.POINT_SIZE, linewidths=0, alpha=.5, rasterized=True)
+                 vmin=-vlim, vmax=vlim, s=C.POINT_SIZE, linewidths=0, alpha=.5, rasterized=False)
 C.celltype_labels(ax, xy, adata, np.ones(adata.n_obs, bool))
 C.frame(ax, xy)
 fig.savefig(os.path.join(C.FIG, "correlation.pdf"), bbox_inches='tight', dpi=300)

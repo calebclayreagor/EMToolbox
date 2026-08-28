@@ -31,12 +31,12 @@ g_plt = {'SNAI2': ('tab:red', 1.05),
 
 fig, ax = plt.subplots(figsize=C.FIGSIZE)
 ax.scatter(xy[:, 0], xy[:, 1], s=C.POINT_SIZE, linewidths=0, color='lightgrey',
-           alpha=.5, rasterized=True)
+           alpha=.5, rasterized=False)
 for var, (col, thresh) in g_plt.items():
     v = np.asarray(raw[:, var].X.todense()).ravel()
     sel = v > thresh
     ax.scatter(xy[sel, 0], xy[sel, 1], s=C.POINT_SIZE, linewidths=0, color=col,
-               alpha=.5, rasterized=True)
+               alpha=.5, rasterized=False)
     print(f"{var}: {int(sel.sum())} expressers > {thresh}")
 C.celltype_labels(ax, xy, proc, np.ones(proc.n_obs, bool))
 C.frame(ax, xy)

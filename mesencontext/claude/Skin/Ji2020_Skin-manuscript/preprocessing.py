@@ -39,7 +39,7 @@ fig, ax = plt.subplots(figsize=C.FIGSIZE)
 for i, sm in enumerate(cats):
     m = (samp == sm).values
     ax.scatter(xy[m, 0], xy[m, 1], s=C.SAMPLES_POINT_SIZE, linewidths=0,
-               color=plt.cm.tab20(i % 20), rasterized=True)
+               color=plt.cm.tab20(i % 20), rasterized=False)
 ax.legend(handles=[Line2D([0], [0], marker='o', color='w',
           markerfacecolor=plt.cm.tab20(i % 20), markersize=7, label=sm)
           for i, sm in enumerate(cats)],

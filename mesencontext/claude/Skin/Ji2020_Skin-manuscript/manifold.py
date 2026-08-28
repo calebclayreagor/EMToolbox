@@ -89,7 +89,8 @@ PAD = 0.060 * np.ptp(adata.obsm['X_ori'][:, 1])                 # consistent ver
 
 fig, ax = plt.subplots(figsize=C.FIGSIZE)
 scf.pl.trajectory(adata, basis='ori', color_seg='t', cmap_seg='cividis',
-                  size=C.POINT_SIZE, alpha=.5, frameon=False, show=False, ax=ax)
+                  size=C.POINT_SIZE, alpha=.5, frameon=False, show=False, ax=ax,
+                  rasterized=False)
 ax.set_title(''); ax.set_aspect('equal')
 for t in tips:
     x, y = proj[t]

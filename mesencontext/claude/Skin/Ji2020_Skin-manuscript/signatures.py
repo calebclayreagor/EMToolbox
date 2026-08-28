@@ -58,7 +58,7 @@ for key, stem, lbl, ticks, vmin, vmax in panels:
     o = C.zsort(v)                                 # highest score on top (scanpy sort_order)
     fig, ax = plt.subplots(figsize=C.FIGSIZE)
     sca = ax.scatter(xy[o, 0], xy[o, 1], c=v[o], cmap='plasma', alpha=.5, vmin=vmin, vmax=vmax,
-                     s=C.POINT_SIZE, linewidths=0, rasterized=True)
+                     s=C.POINT_SIZE, linewidths=0, rasterized=False)
     C.celltype_labels(ax, xy, adata, mask)
     C.frame(ax, xy)
     fig.savefig(os.path.join(C.FIG, f"{stem}_signature.pdf"), bbox_inches='tight', dpi=300)
