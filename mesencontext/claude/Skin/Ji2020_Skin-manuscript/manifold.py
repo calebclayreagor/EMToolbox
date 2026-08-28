@@ -88,11 +88,11 @@ top_tip = tips[int(np.argmax([proj[t, 1] for t in tips]))]      # topmost tip ->
 PAD = 0.060 * np.ptp(adata.obsm['X_ori'][:, 1])                 # consistent vertical label pad
 
 fig, ax = plt.subplots(figsize=C.FIGSIZE)
-# grey base cells drawn with the IDENTICAL house scatter style as every other panel
-# (s=POINT_SIZE, lightgrey, alpha .5) — scf.pl.trajectory's own `size` scales via scanpy
-# and does not match ax.scatter, so we draw the cells and let scf draw only the spine.
+# grey base cells behind the spine — samples-panel marker size (smaller tier), so the
+# faint background doesn't compete with the spine. scf.pl.trajectory's own `size` scales
+# via scanpy and doesn't match ax.scatter, so we draw the cells and let scf draw the spine.
 xy = adata.obsm['X_ori']
-ax.scatter(xy[:, 0], xy[:, 1], s=C.POINT_SIZE, linewidths=0, color='lightgrey',
+ax.scatter(xy[:, 0], xy[:, 1], s=C.SAMPLES_POINT_SIZE, linewidths=0, color='lightgrey',
            alpha=.5, rasterized=False, zorder=0)
 scf.pl.trajectory(adata, basis='ori', color_seg='t', cmap_seg='cividis',
                   alpha=0, frameon=False, show=False, ax=ax, rasterized=False)  # spine only (cells hidden)
