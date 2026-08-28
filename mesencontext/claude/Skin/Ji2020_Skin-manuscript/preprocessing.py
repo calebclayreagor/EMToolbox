@@ -43,7 +43,7 @@ for i, sm in enumerate(cats):
 ax.legend(handles=[Line2D([0], [0], marker='o', color='w',
           markerfacecolor=plt.cm.tab20(i % 20), markersize=7, label=sm)
           for i, sm in enumerate(cats)],
-          frameon=False, loc='upper right', fontsize=8, ncol=2,
+          frameon=False, loc='upper right', bbox_to_anchor=(0.97, 0.97), fontsize=8, ncol=2,
           handletextpad=.2, columnspacing=.8, title='Samples', title_fontsize=9)
 C.frame(ax, xy)
 fig.savefig(os.path.join(C.FIG, "samples.pdf"), bbox_inches='tight', dpi=300)
