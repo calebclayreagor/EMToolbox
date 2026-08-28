@@ -91,7 +91,8 @@ fig, ax = plt.subplots(figsize=C.FIGSIZE)
 scf.pl.trajectory(adata, basis='ori', color_seg='t', cmap_seg='cividis',
                   size=C.POINT_SIZE, alpha=.5, frameon=False, show=False, ax=ax,
                   rasterized=False)
-ax.set_title(''); ax.set_aspect('equal')
+ax.set_title('')
+C.frame(ax, adata.obsm['X_ori'])   # identical framing to every other panel (aspect='auto', 5x5 box)
 for t in tips:
     x, y = proj[t]
     dy, va = (PAD, 'bottom') if t == top_tip else (-PAD, 'top')
