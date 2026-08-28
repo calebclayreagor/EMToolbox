@@ -11,7 +11,7 @@ Visualization/science decisions locked with the researcher (see running list):
     UMAP geometry — the researcher wants literal 5x5 axes, not equal data units).
   - per-cell point size: trajectory-stage panels s=30 (manifold/signatures/
     correlation/expression); samples panel s=15 (smaller tier, mirrors Puram 120 vs 180).
-  - celltype labels: size 9, bold, white outline.
+  - celltype labels: size 12, bold, white outline (matches the trajectory-spine leaf labels).
 
 All reads are from the FROZEN run-9 h5ads (read-only). Per-step artifacts are
 kept separate (processed.h5ad / manifold.h5ad / ...) — step boundaries are not
@@ -31,7 +31,7 @@ POINT_SIZE = 30          # per-cell scatter size for the trajectory-stage panels
                          # (manifold, signatures, correlation, expression)
 SAMPLES_POINT_SIZE = 15  # samples/integration panel — smaller tier (mirrors Puram's
                          # 120 vs 180 two-tier: samples smaller than trajectory panels)
-LABEL_SIZE = 9
+LABEL_SIZE = 12
 REMOVE_LEIDEN_R1 = "4"   # Basal-root spur (seeded res=1.0 label)
 REMOVE_CELLTYPE  = "TSK" # tumor-specific keratinocyte terminal readout
 

@@ -14,12 +14,13 @@ The tree is refit over the FROZEN run-9 X_umap (no re-embedding).
 
 Reads : DATA/processed.h5ad  (preprocessing-stage subset)
 Writes: DATA/manifold.h5ad   (subset + PPT tree + pseudotime + milestones; §6 schema)
-        FIG/manifold.pdf      (pseudotime, locked display config)
+        FIG/manifold.pdf      (scFates trajectory spine, pseudotime cividis)
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 os.environ['R_HOME'] = sys.exec_prefix + '/lib/R/'
 import numpy as np, pandas as pd, scanpy as sc, scFates as scf, matplotlib.pyplot as plt
+from matplotlib.patheffects import withStroke
 import _common as C
 
 os.makedirs(C.DATA, exist_ok=True); os.makedirs(C.FIG, exist_ok=True)
@@ -71,20 +72,30 @@ print('milestones:', list(adata.obs['milestones'].cat.categories))
 adata.write(os.path.join(C.DATA, "manifold.h5ad"))
 print(f"wrote {C.DATA}/manifold.h5ad  shape={adata.shape}")
 
-# ---- manifold.pdf: pseudotime, locked display config ----
-xy = C.oriented_umap(adata)     # frozen orientation carried from processed.h5ad
-# pseudotime is NOT value-sorted (sorting stacks late/bright cells at region
-# boundaries into hard bands). Instead SHUFFLE the draw order (fixed seed) so the
-# hub<->arm overlaps show an unbiased salt-and-pepper mix, free of any residual
-# ordering from the cell matrix.
-t = adata.obs['t'].values
-o = np.random.RandomState(1).permutation(adata.n_obs)
+# ---- manifold.pdf: scFates trajectory spine (per reference trajectories.pdf convention) ----
+# Grey cells + fitted PPT spine coloured by pseudotime (cividis) with node dots at the
+# tips/fork. scf.pl.trajectory places nodes by projecting the cell embedding through the
+# soft-assignment responsibility (proj = embT·R / sum R), so pointing the basis at our
+# frozen oriented coords makes the spine follow the locked orientation automatically.
+adata.obsm['X_ori'] = np.asarray(C.oriented_umap(adata))
+R = adata.obsm['X_R']
+proj = (np.dot(adata.obsm['X_ori'].T, R) / R.sum(axis=0)).T   # principal-node coords, oriented frame
+tips = list(adata.uns['graph']['tips'])
+ct = adata.obs['celltype']
+# leaf label = dominant celltype among each tip's highest-responsibility cells (data-driven)
+tip_lab = {t: ct.iloc[np.argsort(R[:, t])[::-1][:200]].value_counts().idxmax() for t in tips}
+top_tip = tips[int(np.argmax([proj[t, 1] for t in tips]))]      # topmost tip -> label ABOVE its leaf
+PAD = 0.060 * np.ptp(adata.obsm['X_ori'][:, 1])                 # consistent vertical label pad
+
 fig, ax = plt.subplots(figsize=C.FIGSIZE)
-ax.scatter(xy[o, 0], xy[o, 1], c=t[o], cmap='cividis',
-           s=C.POINT_SIZE, linewidths=0, rasterized=True)
-mask = np.ones(adata.n_obs, bool)
-C.celltype_labels(ax, xy, adata, mask)
-C.frame(ax, xy)
+scf.pl.trajectory(adata, basis='ori', color_seg='t', cmap_seg='cividis',
+                  size=C.POINT_SIZE, alpha=.5, frameon=False, show=False, ax=ax)
+ax.set_title(''); ax.set_aspect('equal')
+for t in tips:
+    x, y = proj[t]
+    dy, va = (PAD, 'bottom') if t == top_tip else (-PAD, 'top')
+    ax.text(x, y + dy, tip_lab[t], size=C.LABEL_SIZE, weight='bold', ha='center', va=va,
+            path_effects=[withStroke(linewidth=2, foreground='white')], zorder=1000)
 fig.savefig(os.path.join(C.FIG, "manifold.pdf"), bbox_inches='tight', dpi=300)
 plt.close(fig)
 print(f"wrote {C.FIG}/manifold.pdf")
