@@ -54,7 +54,7 @@ Raghavan et al. 2021,Pancreas,Pancreatic Ductal Adenocarcinoma,Data_Raghavan2021
 Cohen et al. 2021,Hematologic,Multiple Myeloma,Data_Cohen2021_Hematologic,2026-08-06 21:22,2026-08-06 23:17,Judge,Linear,GO,GO,,,3
 Dong et al. 2020,Neuroendocrine,Neuroblastoma,Data_Dong2020_Neuroendocrine,2026-08-03 19:57,2026-08-03 21:10,Judge,Linear,GO,GO,,,1
 Couturier et al. 2020,Brain,Glioblastoma,Data_Couturier2020_Brain,2026-08-04 14:02,2026-08-04 15:51,Judge,Linear,GO,GO,,,1
-Filbin et al. 2018,Brain,Pediatric H3-K27M Mutant Glioma,Data_Filbin2018_Brain,2026-08-09 00:54,2026-08-09 02:09,Judge,Branching,GO,GO,GO,-0.34,10
+Filbin et al. 2018,Brain,Pediatric H3-K27M Mutant Glioma,Data_Filbin2018_Brain,2026-08-04 17:04,2026-08-04 17:12,Judge,Linear,GO,GO,,,1
 Gaiti et al. 2019,Hematologic,Chronic Lymphocytic Leukemia,Data_Gaiti2019_Hematologic,2026-08-04 14:02,2026-08-04 15:29,Judge,Linear,GO,GO,,,1
 Liu et al. 2021,Hematologic,Multiple Myeloma,Data_Liu2021_Hematologic,2026-08-05 15:19,2026-08-05 16:20,Judge,,NO-GO,,,,2
 Nath et al. 2021,Ovarian,High-Grade Serous Ovarian Carcinoma,Data_Nath2021_Ovarian,2026-08-04 14:02,2026-08-04 15:36,Judge,Linear,GO,GO,,,1

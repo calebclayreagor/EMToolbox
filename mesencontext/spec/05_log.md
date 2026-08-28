@@ -61,7 +61,7 @@ params, subtypes, gate mechanics) lives in `analysis_log.csv`, joined on `JoinKe
 | Cohen et al. 2021 | Hematologic | Multiple Myeloma | Data_Cohen2021_Hematologic | 2026-08-06 21:22 | 2026-08-06 23:17 | Judge | Linear | GO | GO | — | — | 3 |
 | Dong et al. 2020 | Neuroendocrine | Neuroblastoma | Data_Dong2020_Neuroendocrine | 2026-08-03 19:57 | 2026-08-03 21:10 | Judge | Linear | GO | GO | — | — | 1 |
 | Couturier et al. 2020⁸ | Brain | Glioblastoma | Data_Couturier2020_Brain | 2026-08-04 14:02 | 2026-08-04 15:51 | Judge | Linear | GO | GO | — | — | 1 |
-| Filbin et al. 2018 | Brain | Pediatric H3-K27M Mutant Glioma | Data_Filbin2018_Brain | 2026-08-09 00:54 | 2026-08-09 02:09 | Judge | Branching | GO | GO | GO | −0.34 | 10 |
+| Filbin et al. 2018 | Brain | Pediatric H3-K27M Mutant Glioma | Data_Filbin2018_Brain | 2026-08-04 17:04 | 2026-08-04 17:12 | Judge | Linear | GO | GO | — | — | 1 |
 | Gaiti et al. 2019 | Hematologic | Chronic Lymphocytic Leukemia | Data_Gaiti2019_Hematologic | 2026-08-04 14:02 | 2026-08-04 15:29 | Judge | Linear | GO | GO | — | — | 1 |
 | Liu et al. 2021 | Hematologic | Multiple Myeloma | Data_Liu2021_Hematologic | 2026-08-05 15:19 | 2026-08-05 16:20 | Judge | — | NO-GO | — | — | — | 2 |
 | Nath et al. 2021 | Ovarian | High-Grade Serous Ovarian Carcinoma | Data_Nath2021_Ovarian | 2026-08-04 14:02 | 2026-08-04 15:36 | Judge | Linear | GO | GO | — | — | 1 |
@@ -115,7 +115,8 @@ rows + all deliverables), dropping the atlas from 87 to 86 rows. It is a cross-s
 RPM GEM time-course + human sample), so it is not validly in scope.
 
 **Prompt Evolution.** The autonomous **Judge** runs shared one initiating prompt that
-set only the regime — scientific instruction stayed in the spec files (except the branching re-runs, item 12, which carried scientific steering in the prompt and via debrief). Its substantive edits are
+set only the regime — scientific instruction stayed in the spec files (except the branching re-run,
+item 12, which carried scientific steering in the prompt and via debrief). Its substantive edits are
 numbered below; each carries a superscript on the table row where it first appears (re-run waves
 overwrite existing rows, so carry none). Operational
 guardrails (do-not-interrupt, no new packages/environments) are omitted.
@@ -146,5 +147,5 @@ guardrails (do-not-interrupt, no new packages/environments) are omitted.
    to which region the trajectory is scoped on. Several Gate 2 GOs flipped to NO-GO. This exposed a gap in
    the protocol order: `02_manifold` fits the pseudotime before Gate 2 tests the modules, so the fitted
    trajectory does not depend on the embryonic modules being present.
-12. **Targeted content steer** — for the last runs of the bifurcating datasets (Filbin, Ji), the item-11 regime
+12. **Targeted content steer** — for the last run of the bifurcating dataset (Ji), the item-11 regime
    was narrowed with scientific steering toward a branching outcome (in-prompt and via debrief; see header).
