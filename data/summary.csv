@@ -1,9 +1,9 @@
-Source,Name,Signature,Study,Species,Developmental,Age,Description
-GSE162534,Gastrulation,Gast,"Scheibner et al., 2021",mmusculus,True,E6.5-7.5,Streak stages dataset describing EMT programs during mesodermal and endodermal specification
-GSE229103,Posterior Somitogenesis,pSom,"Jin et al., 2025",mmusculus,True,E8.5,Axis elongation dataset comprising bipotent neuromesodermal progenitors in the caudal trunk
-rRNAModifications,Neural Crest Migration,Crest,"Poverennaya et al., 2026",mmusculus,True,E8.5-10.5,Cranial NC dataset describing the bifurcation between mesenchymal and neuroglial fates
-CCCA,Curated Cancer Cell Atlas,NA,"Tyler et al., 2025",hsapiens,False,NA,Curated meta-atlas containing >100 single-cell datasets (>1M cells) spanning >40 disease subtypes
-NMT,NOR-MES Transition,NA,"Thirant et al., 2023",hsapiens,False,NA,Snapshot dataset of mesenchymal transitions in the IC-pPDXC-63 neuroblastoma cell line
-GSE175435,Follicle Cell Tumorigenesis,NA,"Chatterjee et al., 2022",dmelanogaster,False,NA,Single-cell study of early tumorigenesis in polarity-disrupted Drosophila follicle cells
-MarBTN,Transmissible Neoplasia,NA,"Hart et al., 2025",marenaria,False,NA,Bulk RNA-seq dataset of soft-shell clam transmissible neoplasia following artificial seawater transfer
-GSE56287,Female Germline Tumors,NA,"Domazet-Loso et al., 2014",holigactis,False,NA,Microarray gene-expression dataset of naturally occurring tumors in the Hydra female germline
+Source,Name,Module,Study,Species,Age,Description
+GSE162534,Gastrulation,Gast,"Scheibner et al., 2021",mmusculus,E6.5-7.5,Streak stages dataset describing EMT programs during mesodermal and endodermal specification
+GSE229103,Posterior Somitogenesis,pSom,"Jin et al., 2025",mmusculus,E8.5,Axis elongation dataset comprising bipotent neuromesodermal progenitors in the caudal trunk
+rRNAModifications,Neural Crest Migration,Crest,"Poverennaya et al., 2026",mmusculus,E8.5-10.5,Cranial neural crest dataset describing the bifurcation between neuroglia and mesenchyme
+CCCA,Curated Cancer Cell Atlas,,"Tyler et al., 2025",hsapiens,,Curated meta-atlas containing >100 single-cell datasets (>1M cells) spanning >40 disease subtypes
+NB,Neuroblastoma,,"Thirant et al., 2023",hsapiens,,Single-cell dataset of mesenchymal transitions in the IC-pPDXC-63 neuroblastoma cell line
+GSE175435,Follicle Cell Tumorigenesis,,"Chatterjee et al., 2022",dmelanogaster,,Single-cell sequencing dataset of early tumorigenesis in polarity-disrupted follicle cells
+MarBTN,Transmissible Neoplasia,,"Hart et al., 2025",marenaria,,Bulk RNA-seq dataset of soft-shell clam transmissible neoplasia following artificial seawater transfer
+GSE56287,Female Germline Tumors,,"Domazet-Loso et al., 2014",holigactis,,Microarray expression dataset of naturally occurring tumors in the Hydra female germline
