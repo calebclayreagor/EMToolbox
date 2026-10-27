@@ -1,5 +1,5 @@
 Category,Disease,Datasets,Samples,Cells
-Brain,Glioblastoma,5,81,47585
+Brain,Glioblastoma,4,81,47585
 Brain,High-Grade Glioma,1,8,20080
 Brain,IDH-Mutant Astrocytoma,1,10,5097
 Brain,IDH-Mutant Oligodendroglioma,1,6,4089
@@ -7,36 +7,36 @@ Brain,Medulloblastoma,1,36,8691
 Brain,Meningioma,1,10,37449
 Brain,Pediatric Ependymoma,1,22,5551
 Brain,Pediatric H3-K27M Mutant Glioma,1,6,2259
-Breast,Breast Cancer,16,229,279753
+Breast,Breast Cancer,10,229,279753
 Breast,Triple-Negative Breast Cancer,1,16,2375
-Colorectal,Colorectal Cancer,4,64,108999
+Colorectal,Colorectal Cancer,1,64,108999
 Colorectal,Colorectal Carcinoma,2,25,11329
 Head and Neck,Head and Neck Squamous Cell Carcinoma,2,37,13939
 Head and Neck,Nasopharyngeal Carcinoma,1,14,3763
 Hematologic,Acute Lymphoblastic Leukemia,1,8,25788
-Hematologic,Acute Myeloid Leukemia,5,66,113199
+Hematologic,Acute Myeloid Leukemia,2,66,113199
 Hematologic,B-Cell Lymphoma,1,9,22600
 Hematologic,Chronic Lymphocytic Leukemia,2,19,19574
 Hematologic,Chronic Myeloid Leukemia,1,36,2055
 Hematologic,Diffuse Large B-Cell Lymphoma,1,4,2522
 Hematologic,Follicular Lymphoma,1,4,5645
 Hematologic,Multiple Myeloma,3,111,59139
-Hematologic,Myeloproliferative Neoplasms,2,10,22606
+Hematologic,Myeloproliferative Neoplasms,1,10,22606
 Kidney,Kidney Cancer,1,25,2055
 Kidney,Renal Cell Carcinoma,4,49,34534
 Liver/Biliary,Hepatocellular Carcinoma,1,18,2737
 Lung,Lung Adenocarcinoma,2,33,23977
 Lung,Lung Cancer,5,118,72057
 Lung,Non-Small Cell Lung Cancer,2,11,5142
-Lung,Small Cell Lung Cancer,2,12,31258
-Neuroendocrine,Neuroblastoma,5,41,78278
-Ovarian,High-Grade Serous Ovarian Carcinoma,7,59,52232
+Lung,Small Cell Lung Cancer,1,12,31258
+Neuroendocrine,Neuroblastoma,3,41,78278
+Ovarian,High-Grade Serous Ovarian Carcinoma,5,59,52232
 Ovarian,High-Grade Serous Tubo-Ovarian Cancer,1,10,4023
 Ovarian,Ovarian Cancer,3,26,11408
-Pancreas,Pancreatic Ductal Adenocarcinoma,8,97,99889
+Pancreas,Pancreatic Ductal Adenocarcinoma,6,97,99889
 Prostate,Metastatic Prostate Cancer,1,12,836
 Prostate,Prostate Cancer,3,32,28647
-Sarcoma,Synovial Sarcoma,2,12,12694
+Sarcoma,Synovial Sarcoma,1,12,12694
 Skin,Melanoma,3,58,4435
 Skin,Merkel Cell Carcinoma,1,3,12124
 Skin,Metastatic Melanoma,1,30,91525
