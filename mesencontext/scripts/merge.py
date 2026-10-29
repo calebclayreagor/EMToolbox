@@ -59,8 +59,11 @@ adata.obs_names_make_unique()
 adata.obs = adata.obs.astype(str)
 
 # save malignant, normal cells
-adata_cancer = adata[adata.obs.celltype == 'Malignant'].copy()
-adata_normal = adata[adata.obs.celltype != 'Malignant'].copy()
+msk_cancer = (adata.obs.malignant == 'yes') | \
+    (adata.obs.celltype == 'Malignant')
+adata_cancer = adata[msk_cancer].copy()
+adata_cancer.obs['celltype'] = 'Malignant'
+adata_normal = adata[~msk_cancer].copy()
 msk_blacklist = adata_normal.obs.celltype.isin(blacklist)
 adata_normal = adata_normal[~msk_blacklist].copy()
 adata_cancer.write(os.path.join(pth_out, 'malignant.h5ad'))
