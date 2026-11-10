@@ -1,0 +1,44 @@
+Category,Disease,Co-Option,Detection
+Brain,Glioblastoma,3,2
+Brain,High-Grade Glioma,1,1
+Brain,IDH-Mutant Astrocytoma,1,1
+Brain,IDH-Mutant Oligodendroglioma,1,1
+Brain,Medulloblastoma,1,1
+Brain,Meningioma,0,0
+Brain,Pediatric Ependymoma,1,1
+Brain,Pediatric H3-K27M Mutant Glioma,1,1
+Breast,Breast Cancer,4,2
+Breast,Triple-Negative Breast Cancer,1,1
+Colorectal,Colorectal Cancer,1,1
+Colorectal,Colorectal Carcinoma,2,2
+Head and Neck,Head and Neck Squamous Cell Carcinoma,2,2
+Head and Neck,Nasopharyngeal Carcinoma,1,0
+Hematologic,Acute Lymphoblastic Leukemia,1,0
+Hematologic,Acute Myeloid Leukemia,1,1
+Hematologic,B-Cell Lymphoma,1,1
+Hematologic,Chronic Lymphocytic Leukemia,1,1
+Hematologic,Chronic Myeloid Leukemia,1,0
+Hematologic,Diffuse Large B-Cell Lymphoma,1,1
+Hematologic,Follicular Lymphoma,0,0
+Hematologic,Multiple Myeloma,2,0
+Hematologic,Myeloproliferative Neoplasms,1,1
+Kidney,Kidney Cancer,0,0
+Kidney,Renal Cell Carcinoma,4,3
+Liver/Biliary,Hepatocellular Carcinoma,1,1
+Lung,Lung Adenocarcinoma,2,0
+Lung,Lung Cancer,5,4
+Lung,Non-Small Cell Lung Cancer,1,1
+Neuroendocrine,Neuroblastoma,2,2
+Ovarian,High-Grade Serous Ovarian Carcinoma,5,4
+Ovarian,High-Grade Serous Tubo-Ovarian Cancer,1,0
+Ovarian,Ovarian Cancer,3,2
+Pancreas,Pancreatic Ductal Adenocarcinoma,5,3
+Prostate,Metastatic Prostate Cancer,1,1
+Prostate,Prostate Cancer,3,1
+Sarcoma,Osteosarcoma,1,1
+Sarcoma,Synovial Sarcoma,1,0
+Skin,Melanoma,2,1
+Skin,Merkel Cell Carcinoma,1,1
+Skin,Metastatic Melanoma,1,1
+Skin,Skin Carcinoma,1,1
+Skin,Skin Squamous Cell Carcinoma,1,0

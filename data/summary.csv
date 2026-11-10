@@ -1,7 +1,7 @@
 Source,Name,Module,Study,Species,Age,Description
-GSE162534,Gastrulation,Gast,"Scheibner et al., 2021",mmusculus,E6.5-7.5,Streak stages dataset describing EMT programs during mesodermal and endodermal specification
-GSE229103,Posterior Somitogenesis,pSom,"Jin et al., 2025",mmusculus,E8.5,Axis elongation dataset comprising bipotent neuromesodermal progenitors in the caudal trunk
-rRNAModifications,Neural Crest Migration,Crest,"Poverennaya et al., 2026",mmusculus,E8.5-10.5,Cranial neural crest dataset describing the bifurcation between neuroglia and mesenchyme
+GSE162534,Gastrulation,Gast,"Scheibner et al., 2021",mmusculus,E6.5-7.5,Primitive streak dataset describing the bifurcation between mesodermal and endodermal fates
+GSE229103,Posterior Somitogenesis,pSom,"Jin et al., 2025",mmusculus,E8.5,Axis elongation dataset describing the bifurcation between mesodermal and neural fates
+rRNAModifications,Neural Crest Migration,Crest,"Poverennaya et al., 2026",mmusculus,E8.5-10.5,Cranial neural crest dataset describing the bifurcation between mesenchymal and neuroglial fates
 CCCA,Curated Cancer Cell Atlas,,"Tyler et al., 2025",hsapiens,,Curated meta-atlas containing >100 single-cell datasets (>1M cells) spanning >40 disease subtypes
 NB,Neuroblastoma,,"Thirant et al., 2023",hsapiens,,Single-cell dataset of mesenchymal transitions in the IC-pPDXC-63 neuroblastoma cell line
 GSE175435,Follicle Cell Tumorigenesis,,"Chatterjee et al., 2022",dmelanogaster,,Single-cell sequencing dataset of early tumorigenesis in polarity-disrupted follicle cells
