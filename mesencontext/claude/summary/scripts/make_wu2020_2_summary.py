@@ -1,0 +1,12 @@
+import sys, os
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
+from build_summary import build_summary, GREEN, RED, GREY
+NB='/home/caleb/EMToolbox/mesencontext/claude/Hematologic/Wu2020_Hematologic-2'
+F='/home/caleb/EMToolbox/figures/mesencontext/claude/Hematologic/Wu2020_Hematologic-2'
+gates=[('Gate 1 — mixing & continuity', 'GO', '#1a9641', 'iLISI 1.00 (fully patient-segregated) → 10.2 of 36 samples after Harmony (θ=10); kNN graph = 1 component. One continuous, uniformly low-cycling dome.'), ('Gate 2 — module geography', 'GO (non-branching)', '#1a9641', 'Organized Gast↔pSom cross-repression (r=−0.64) with a single terminal Crest gradient (Crest-high decile at pseudotime 0.86); no diverging arms.'), ('Gate 3 — hub cross-repression', 'NA', '#888888', 'Branching-only. Manifold is a fold-free curve (2 tips, 0 forks); no bifurcation to test.')]
+panels=[("Manifold — samples",os.path.join(F,"samples.pdf")),("Pseudotime",os.path.join(F,"manifold.pdf")),("Gastrulation",os.path.join(F,"Gast_signature.pdf")),("Somitogenesis",os.path.join(F,"pSom_signature.pdf")),("Neural Crest",os.path.join(F,"Crest_signature.pdf")),("EMT-TF expression",os.path.join(F,"expression.pdf"))]
+dataset='Acute Myeloid Leukemia (Wu et al., 2020), Microwell-seq — 96,875 malignant cells (36/38 samples); counts (log1p of normalize_total).'
+verdict='Pattern reproduces (non-branching). Single continuous gastrulation → neural-crest axis with organized Gast↔pSom cross-repression; no bifurcation. Crest-arm inversion flag: none (Crest opposes Gast). Geometry: Linear. Gate 1 GO / Gate 2 GO / Gate 3 NA. EMT-TFs ZEB2 (5.1%) + SNAI3 (0.9%) — canonical EMT-TF panel largely silent in this myeloid malignancy.'
+params=[('Min-cell threshold', '≥100 cells (floor) → drop P18/P13; no dominant multiplicative cliff (top/second 1.35)'), ('Integration', 'Harmony θ=10 (iLISI plateau; θ≥20 over-integrates); n_pcs=30, no sc.pp.scale'), ('Geometry', 'scFates curve N=20, fold-free (2 tips/0 forks); PPT tree overfits 5–10 spurious branches'), ('Root', 'Gast/pSom-high, Crest-low tip (origin; Crest late/terminal); cell-cycle-free axis'), ('Cross-repression', 'Gast↔pSom r=−0.64; Crest-arm inversion flag: none (Crest opposes Gast)'), ('EMT-TFs', 'ZEB2 (5.1%) + SNAI3 (0.9%) — canonical panel largely silent')]
+build_summary(os.path.join(NB,"summary.pdf"),'Wu 2020 Acute Myeloid Leukemia — analysis summary',gates,panels,dataset,verdict,params,run_label='run 3 of 4')
+print("built")

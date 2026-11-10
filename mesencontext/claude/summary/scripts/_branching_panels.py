@@ -35,7 +35,10 @@ def _bisector_rotation(a):
 
 
 def _dense(a, gene):
-    x = a[:, gene].X
+    src = a
+    if gene not in a.var_names and getattr(a, 'raw', None) is not None and gene in a.raw.var_names:
+        src = a.raw
+    x = src[:, gene].X
     return x.toarray().ravel() if hasattr(x, 'toarray') else np.asarray(x).ravel()
 
 
@@ -70,8 +73,10 @@ def regen_branching(D, F, samples_title, emt, emt_q=0.80, hub_celltype='Mixed'):
     strip("samples.pdf", _samp)
     strip("manifold.pdf", lambda ax: (ax.scatter(xy[:, 0], xy[:, 1], c=a.obs['t'].values,
                                                   cmap='cividis', s=4, linewidths=0, rasterized=True), lab(ax)))
-    for key, fn in [('GSE162534', 'Gast_signature.pdf'), ('GSE229103', 'pSom_signature.pdf'),
-                    ('rRNAModifications', 'Crest_signature.pdf')]:
+    _sigkey = (lambda gse, alt: gse if gse in a.obs else alt)
+    for key, fn in [(_sigkey('GSE162534','Gast'), 'Gast_signature.pdf'),
+                    (_sigkey('GSE229103','pSom'), 'pSom_signature.pdf'),
+                    (_sigkey('rRNAModifications','Crest'), 'Crest_signature.pdf')]:
         strip(fn, (lambda k: (lambda ax: (ax.scatter(xy[:, 0], xy[:, 1], c=a.obs[k].values,
               cmap='plasma', s=4, linewidths=0, alpha=.7, rasterized=True), lab(ax))))(key))
 

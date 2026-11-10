@@ -1,0 +1,12 @@
+import sys, os
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
+from build_summary import build_summary, GREEN, RED, GREY
+NB='/home/caleb/EMToolbox/mesencontext/claude/Pancreas/Hwang2022_Pancreas-1'
+F='/home/caleb/EMToolbox/figures/mesencontext/claude/Pancreas/Hwang2022_Pancreas-1'
+gates=[('Gate 1 — mixing & continuity', 'GO', '#1a9641', 'Samples mixed (iLISI 9.3/38 vs 1.0 raw; falls to 6.7 at θ=20) on one continuous connected manifold; density lobes are poles of one axis, not batch islands nor a cycling compartment.'), ('Gate 2 — module geography', 'GO (non-branching)', '#1a9641', 'Organized single-axis geography: Gast high at root, opposes pSom/Crest spatially (Gast↔pSom r=−0.33); Crest an inverse/terminal gradient. Non-branching case → GO.'), ('Gate 3 — hub cross-repression', 'NA', '#888888', 'No bifurcation (scFates curve, not tree) → cross-repression scatter N/A.')]
+panels=[("Manifold — samples",os.path.join(F,"samples.pdf")),("Pseudotime",os.path.join(F,"manifold.pdf")),("Gastrulation",os.path.join(F,"Gast_signature.pdf")),("Somitogenesis",os.path.join(F,"pSom_signature.pdf")),("Neural Crest",os.path.join(F,"Crest_signature.pdf")),("EMT-TF expression",os.path.join(F,"expression.pdf"))]
+dataset='Pancreatic ductal adenocarcinoma (Hwang et al., 2022), snRNA-seq / 10x — 64,401 malignant cells across 38 tumours after threshold + island removal.'
+verdict='Pattern reproduces as the NON-BRANCHING case: one continuous gastrulation → somitogenesis / neural-crest axis, rooted at the Gast/pSom-high developmental pole. No competing arms and no cross-repression bifurcation. Geometry = Linear-pSom/Crest. Gate 1 GO / Gate 2 GO / Gate 3 NA. Module means Gast −0.005 / pSom −0.002 / Crest +0.003 (weak, spatially organized). EMT-TFs PRRX2 (root) · FOXC1 (terminus); ZEB1 most expressed (~16%).'
+params=[('Malignant cells', '64,538 raw → 64,507 (thresh) → 64,401 (islands)'), ('Min-cell threshold', '14 (gap-finding; smooth tail, only 24→9 gap); 5 tiny samples dropped'), ('Integration', 'Harmony θ=10, n_pcs=20, spread=1.3'), ('Overdispersed genes', '1,664 (of 19,457 retained)'), ('Geometry', 'Linear-pSom/Crest (curve: 2 tips, 0 forks, fold-free 2.72)'), ('Root', 'Gast/pSom-high tip (cycling flat, ρ=−0.03)'), ('Module means', 'Gast −0.005 / pSom −0.002 / Crest +0.003'), ('EMT-TFs', 'PRRX2 (root) · FOXC1 (terminus); ZEB1 most expressed (~16%)')]
+build_summary(os.path.join(NB,"summary.pdf"),'Hwang 2022 PDAC — analysis summary',gates,panels,dataset,verdict,params,run_label='run 2 of 4')
+print("built")

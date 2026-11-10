@@ -1,0 +1,12 @@
+import sys, os
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
+from build_summary import build_summary, GREEN, RED, GREY
+NB='/home/caleb/EMToolbox/mesencontext/claude/Pancreas/Raghavan2021_Pancreas-3'
+F='/home/caleb/EMToolbox/figures/mesencontext/claude/Pancreas/Raghavan2021_Pancreas-3'
+gates=[('Gate 1 — mixing & continuity', 'GO', '#1a9641', 'Harmony θ-sweep resolves a per-patient archipelago (θ=0, iLISI 1) into one continuous well-mixed mass (θ=3, iLISI 4.8/21). Island-free (largest component 99.1%; 72-cell speck removed).'), ('Gate 2 — module geography', 'GO (non-branching)', '#1a9641', 'Single embryonic axis: Gast/pSom co-vary at the origin (r=+0.12), both oppose Crest toward the terminus (Gast↔Crest −0.50, pSom↔Crest −0.61; pSom&Crest joint-high enrichment 0.16). No two-arm hub.'), ('Gate 3 — hub cross-repression', 'NA', '#888888', 'Curve has 0 forks (PPT tree forks unstable 2→3 across N — round-blob overfit). No branch to test.')]
+panels=[("Manifold — samples",os.path.join(F,"samples.pdf")),("Pseudotime",os.path.join(F,"manifold.pdf")),("Gastrulation",os.path.join(F,"Gast_signature.pdf")),("Somitogenesis",os.path.join(F,"pSom_signature.pdf")),("Neural Crest",os.path.join(F,"Crest_signature.pdf")),("EMT-TF expression",os.path.join(F,"expression.pdf"))]
+dataset='Metastatic PDAC (Raghavan et al., 2021), Seq-Well — 7,904 malignant cells → 7,830 after 100/sample threshold (21/23 samples) → 7,758 after island removal. Subtypes: Classical 3,314 · Mixed 3,341 · Basal 1,103.'
+verdict='The embryonic pattern reproduces as the non-branching case — one continuous Gast/pSom-origin → Crest-terminus axis with pSom/Crest mutual exclusivity; developmental EMT-TF order FOXC1 → ZEB2. No bifurcation. Gate 1 GO / Gate 2 GO / Gate 3 NA. Module means Gast −0.011 / pSom +0.072 / Crest −0.024.'
+params=[('Min cells/sample', '100 (gap 45→120; 21/23 kept)'), ('Integration', 'Harmony θ=3 · n_pcs=30 · spread=1.3'), ('Gene selection', '1,497 overdispersed (find_overdispersed)'), ('Scope', 'whole manifold (cycling |ρ|≤0.19, orthog.)'), ('Trajectory', 'scFates curve Nodes=20, λ=0.3, μ=100; fold-free (SA 2.56); 0 forks'), ('Root', 'tip 0 = Gast/pSom-high, Crest-low (dev. origin)'), ('Subtype source', 'Raghavan 2021 · Moffitt basal/classical'), ('EMT-TFs', 'FOXC1 (early) · ZEB2 (late)')]
+build_summary(os.path.join(NB,"summary.pdf"),'Raghavan 2021 PDAC — analysis summary',gates,panels,dataset,verdict,params,run_label='run 4 of 5')
+print("built")

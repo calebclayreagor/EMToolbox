@@ -1,0 +1,12 @@
+import sys, os
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
+from build_summary import build_summary, GREEN, RED, GREY
+NB='/home/caleb/EMToolbox/mesencontext/claude/Breast/Bassez2021_Breast-3'
+F='/home/caleb/EMToolbox/figures/mesencontext/claude/Breast/Bassez2021_Breast-3'
+gates=[('Gate 1 — mixing & continuity', 'GO', '#1a9641', 'θ=10 Harmony on sample: iLISI 4.9→8.6/41 (p10 3.2). θ-sweep on the embedding: θ=2 fragments (45% main), θ=10 one continuous body (>99.9%). Lobes span all 41 patients (max 0.17). Complete island removal (0.17% specks). GO.'), ('Gate 2 — module geography', 'GO (non-branching)', '#1a9641', 'Gast~pSom co-vary (raw −0.10 / sm −0.21), both oppose Crest (sm −0.24 / −0.82). Along pseudotime Gast/pSom fall (ρ−0.12/−0.27), Crest rises (ρ+0.30); joint pSom&Crest 0.23<1 — inverse terminal gradient. One axis, no arms. No inversion.'), ('Gate 3 — hub cross-repression', 'NA', '#888888', 'Non-branching (curve 2 tips/0 forks; PPT 0 Gast-enriched tips). No bifurcation → NA.')]
+panels=[("Manifold — samples",os.path.join(F,"samples.pdf")),("Pseudotime",os.path.join(F,"manifold.pdf")),("Gastrulation",os.path.join(F,"Gast_signature.pdf")),("Somitogenesis",os.path.join(F,"pSom_signature.pdf")),("Neural Crest",os.path.join(F,"Crest_signature.pdf")),("EMT-TF expression",os.path.join(F,"expression.pdf"))]
+dataset='Breast Cancer (Bassez et al., 2021), 10x — 65,885 malignant cells; 65,615 analysed (41 samples, ≥20 cells).'
+verdict='The embryonic pattern reproduces as one continuous (Gast/pSom) → Crest axis — a linear (non-branching) manifold. Gate 1 GO / Gate 2 GO / Gate 3 NA. EMT-TFs ZEB2 (early/root) → PRRX1 (late/terminus).'
+params=[('Threshold', '20 cells/sample → 41/42 kept (gap-finding; anchor 100 drops 39 real samples)'), ('Embedding', 'n_pcs=30 (scree, centres 20–40); Harmony θ=10 (iLISI plateau + continuous embedding)'), ('Islands', 'single-pass radius-graph specks (0.17%); no re-embedding'), ('Trajectory', 'scFates curve, N=20 (2 tips, 0 forks, fold-free self-approach 2.6)'), ('Root', 'tip 2 = Gast/pSom-high, Crest-low (Crest is late, never root)'), ('Geometry', 'non-branching / linear (Gast/pSom → Crest single axis; corr x_lin~t = +0.94)'), ('EMT-TFs', 'ZEB2 (root) → PRRX1 (terminus), detection-gated')]
+build_summary(os.path.join(NB,"summary.pdf"),'Bassez 2021 Breast Cancer — analysis summary',gates,panels,dataset,verdict,params,run_label='run 4 of 6')
+print("built")

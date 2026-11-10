@@ -1,0 +1,12 @@
+import sys, os
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
+from build_summary import build_summary, GREEN, RED, GREY
+NB='/home/caleb/EMToolbox/mesencontext/claude/Breast/Gao2021_Breast-1'
+F='/home/caleb/EMToolbox/figures/mesencontext/claude/Breast/Gao2021_Breast-1'
+gates=[('Gate 1 — mixing & continuity', 'NO-GO', '#c0392b', "After Harmony on sample, a single connected kNN graph and iLISI 1.00→1.14 (of max 5) read as 'integrated' BUT the embedding is organised BY PATIENT: per-patient self-neighbour enrichment 2.3–5.6× at θ=10; the worst GROWS with θ (6.0/5.6/6.0/7.6× over θ 5/10/20/40, so Harmony over-corrects rather than merges) and is PC-count invariant (5.6× at n_pcs 20/30/40). Every patient carries the same embryonic modules — identity, not biology. Clusters by sample: do not force a trajectory."), ('Gate 2 — module geography', 'NA', '#888888', 'Not evaluated — Gate 1 NO-GO halts the chain before the trajectory / signature steps (a valid sample-integrated cell-state manifold is a precondition).'), ('Gate 3 — hub cross-repression', 'NA', '#888888', 'Not evaluated — branching-only, and no trajectory exists.')]
+panels=[("Manifold — samples",os.path.join(F,"samples.pdf")),("EMT-TF expression",os.path.join(F,"expression.pdf"))]
+dataset='Triple-negative breast carcinoma + DCIS (Gao et al., 2021), 10x — 6,411 breast malignant cells (5 patients after threshold), scoped out of an 11-sample breast+thyroid bundle.'
+verdict='The pattern does NOT reproduce. The breast malignant compartment is a per-patient archipelago (inter-patient clonal / CNV heterogeneity), not a sample-integrated cell-state continuum. Gate 1 NO-GO — no trajectory fit; downstream notebooks not produced. Global module means Gast −0.024 / pSom +0.016 / Crest −0.042. Descriptive EMT-TF overlay: FOXC1 (28.5%) / FOXC2 (16.5%).'
+params=[('Lineage scoping', 'scoped to breast on EPCAM/KRT8/18/19 high vs PAX8/TG~0 (bundle also had ATC thyroid)'), ('Sample threshold', '347 cells (gap 618→195, ratio 3.17); kept 5/6 breast samples → 6,411 cells (dropped TNBC3)'), ('n_pcs / integration', 'n_pcs=20 (PC1=31%, inter-patient/CNV axis); Harmony θ swept 5/10/20/40; θ=10 best'), ('Geometry', 'None — Gate 1 NO-GO, no manifold fit'), ('Module means', 'Gast −0.024 / pSom +0.016 / Crest −0.042'), ('EMT-TFs', 'FOXC1 (28.5%) + FOXC2 (16.5%); widened FOXC/PRRX; VIM excluded; descriptive')]
+build_summary(os.path.join(NB,"summary.pdf"),'Gao 2021 Breast Cancer — analysis summary',gates,panels,dataset,verdict,params,run_label='run 2 of 4')
+print("built")

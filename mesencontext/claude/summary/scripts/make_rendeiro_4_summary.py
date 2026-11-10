@@ -1,0 +1,12 @@
+import sys, os
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
+from build_summary import build_summary, GREEN, RED, GREY
+NB='/home/caleb/EMToolbox/mesencontext/claude/Hematologic/Rendeiro2020_Hematologic-4'
+F='/home/caleb/EMToolbox/figures/mesencontext/claude/Hematologic/Rendeiro2020_Hematologic-4'
+gates=[('Gate 1 — mixing & continuity', 'GO', '#1a9641', '4 CLL clones (CLL1/5/6/8, 7 samples) integrate to one continuous mass; sample iLISI 1.0→4.7/7, patient 1.0→2.6/4 at θ=5. Gast→Crest axis reproduces within every patient clone (r=−0.47..−0.59) — shared biology, not a per-patient archipelago.'), ('Gate 2 — module geography', 'GO (non-branching)', '#1a9641', 'Single Gast→Crest developmental axis: Gast opposes Crest (smoothed r=−0.74), Crest an inverse terminal readout (Crest-high decile pseudotime 0.75 vs Gast 0.29). No Gast/pSom co-expression hub (joint-high enrichment 0.34 < 1). Curve fold-free.'), ('Gate 3 — hub cross-repression', 'NA', '#888888', 'Single collapsed axis, no bifurcation — no two competing arms to test for mutual Gast↔pSom cross-repression.')]
+panels=[("Manifold — samples",os.path.join(F,"samples.pdf")),("Pseudotime",os.path.join(F,"manifold.pdf")),("Gastrulation",os.path.join(F,"Gast_signature.pdf")),("Somitogenesis",os.path.join(F,"pSom_signature.pdf")),("Neural Crest",os.path.join(F,"Crest_signature.pdf")),("EMT-TF expression",os.path.join(F,"expression.pdf"))]
+dataset='Chronic lymphocytic leukemia (Rendeiro et al., 2020), 10x, longitudinal ibrutinib time-course — 18,854 malignant raw → 18,657 (7 samples ≥100 cells) → 18,490 after island removal (167 detached-speck cells, 2 rounds). 4 patients; 43.8% cycling (axis-orthogonal).'
+verdict='Pattern reproduces as a non-branching embryonic axis: a Gast/pSom-high origin → Crest-high terminus; developmental order Gast ρ=−0.63, Crest terminal (decile 0.75) along pseudotime, confirmed on a diffusion embedding independent of the fitted UMAP (ρ=0.92). Linear geometry; Gate 3 NA. EMT-TFs near-silent (lymphoid malignancy). Gate 1 GO / Gate 2 GO / Gate 3 NA.'
+params=[('Min cells/sample', '100 (gap 1012→80, 12.65×)'), ('Integration', 'Harmony θ=5; PCA20; nn30; spread=1.3'), ('Scope', 'all 4 patients, one manifold'), ('Trajectory', 'scFates curve N=20 λ=0.3 μ=100 (2 tips/0 forks)'), ('Root node', 'Gast/pSom-high tip 0'), ('EMT-TFs', 'ZEB2, ZEB1 (both early; only TFs >3% detect)')]
+build_summary(os.path.join(NB,"summary.pdf"),'Rendeiro 2020 CLL — analysis summary',gates,panels,dataset,verdict,params,run_label='run 5 of 6')
+print("built")

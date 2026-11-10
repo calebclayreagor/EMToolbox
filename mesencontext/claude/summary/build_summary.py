@@ -2,19 +2,46 @@
 Renders title -> GO/NO-GO GATES -> STEP FIGURES grid -> Dataset/Verdict -> Parameter choices.
 Text is passed in verbatim (science unchanged); layout uses fixed margins + wrapping so nothing clips.
 """
-import os, textwrap
+import os, re, textwrap
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 import pypdfium2 as pdfium
 
-BLUE = "#1f5fa8"; GREEN = "#1a9641"; GREY = "#888888"
+BLUE = "#1f5fa8"; GREEN = "#1a9641"; GREY = "#888888"; RED = "#c0392b"
+
+_LEDGER = "/home/caleb/EMToolbox/mesencontext/spec/05_log.md"
+
+def _ledger_attempts(dataset):
+    """Total attempts (m) for a dataset from the ledger Attempts column (last col)."""
+    key = "Data_" + dataset
+    try:
+        for ln in open(_LEDGER, encoding="utf-8"):
+            if not ln.startswith("| "):
+                continue
+            cols = [c.strip() for c in ln.strip().strip("|").split("|")]
+            if len(cols) >= 13 and cols[3] == key:
+                return int(cols[-1])
+    except Exception:
+        pass
+    return None
+
+def run_label_for(dir_path):
+    """Dynamic 'run n of m' from the output dir + ledger. base dir -> first run (n=1);
+    -N adjudicated dir -> final run (n=m); single-attempt -> run 1 of 1. None if not found."""
+    name = os.path.basename(os.path.normpath(dir_path))
+    base = re.sub(r"-\d+$", "", name)
+    m = _ledger_attempts(base)
+    if not m:
+        return None
+    n = 1 if name == base else m
+    return f"run {n} of {m}"
 
 def _png(pdf_path, scale=6.0):
     d = pdfium.PdfDocument(pdf_path)
     img = d[0].render(scale=scale).to_pil()
     return img
 
-def build_summary(out_pdf, title, gates, panels, dataset, verdict, params, cite_absent=False, branching=False):
+def build_summary(out_pdf, title, gates, panels, dataset, verdict, params, cite_absent=False, branching=False, run_label=None):
     """
     gates: list of (name_html, decision, color, body)   e.g. ("Gate 1 — mixing & continuity","GO",GREEN,"...")
     panels: list of (caption, image_pdf_path)  length up to 6 (2 rows x 3)
@@ -23,15 +50,30 @@ def build_summary(out_pdf, title, gates, panels, dataset, verdict, params, cite_
                modules panel (last). Draws the 6 strips in a left 3-col x 2-row
                block with the square anchored in the right column spanning both rows.
     """
+    if run_label is None:
+        try: run_label = run_label_for(os.path.dirname(os.path.abspath(out_pdf)))
+        except Exception: run_label = None
     fig = plt.figure(figsize=(8.5, 11)); fig.subplots_adjust(0,0,1,1)
     ax = fig.add_axes([0,0,1,1]); ax.axis('off'); ax.set_xlim(0,1); ax.set_ylim(0,1)
     L, R = 0.07, 0.93; y = 0.965
     # ---- Title + rule ----
     fig.canvas.draw(); _rend0 = fig.canvas.get_renderer(); _inv0 = ax.transData.inverted()
+    # draw the run-label pill first (right-aligned), measure it, then shrink the title to clear it
+    _Rtitle = R
+    if run_label:
+        # pill colour encodes status: approved (final/accepted run, n==m) -> green; superseded (n<m) -> red
+        _mm = re.search(r'(\d+)\s+of\s+(\d+)', run_label.lower())
+        _approved = bool(_mm) and (_mm.group(1) == _mm.group(2))
+        _pc  = GREEN if _approved else RED
+        _pfc = '#e6f4ea' if _approved else '#fdecea'
+        _rl = ax.text(R, y, run_label.upper(), size=11, weight='bold', color=_pc, va='top', ha='right',
+                      bbox=dict(boxstyle='round,pad=0.3', fc=_pfc, ec=_pc, lw=0.8))
+        fig.canvas.draw()
+        _Rtitle = _inv0.transform((_rl.get_window_extent(renderer=_rend0).x0, 0))[0] - 0.03
     _tsz = 19.0
     _tt = ax.text(L, y, title, size=_tsz, weight='bold', va='top')
     _x1 = _inv0.transform((_tt.get_window_extent(renderer=_rend0).x1, 0))[0]
-    while _x1 > R and _tsz > 11.0:
+    while _x1 > _Rtitle and _tsz > 11.0:
         _tsz -= 0.5
         _tt.set_size(_tsz)
         fig.canvas.draw()

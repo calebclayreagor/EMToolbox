@@ -1,0 +1,12 @@
+import sys, os
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
+from build_summary import build_summary, GREEN, RED, GREY
+NB='/home/caleb/EMToolbox/mesencontext/claude/Hematologic/Zhang2019_Hematologic-1'
+F='/home/caleb/EMToolbox/figures/mesencontext/claude/Hematologic/Zhang2019_Hematologic-1'
+gates=[('Gate 1 — mixing & continuity', 'GO', '#1a9641', 'All 4 samples (2 patients) intermix on one continuous connected manifold at Harmony θ=10 (θ=2 = per-patient archipelago); 0 detached islands; iLISI 1.04→2.26 (max 4).'), ('Gate 2 — module geography', 'GO (non-branching)', '#1a9641', 'Gast/pSom weakly overlap at one pole (r=−0.16); Crest opposes both (r=−0.54 / −0.57) as an inverse terminal gradient rising along pseudotime (ρ=+0.33). No competing arms; no Crest inversion.'), ('Gate 3 — hub cross-repression', 'NA', '#888888', 'Non-branching manifold — single developmental axis, no bifurcation and no convergence hub, so the branching-only cross-repression test does not apply.')]
+panels=[("Manifold — samples",os.path.join(F,"samples.pdf")),("Pseudotime",os.path.join(F,"manifold.pdf")),("Gastrulation",os.path.join(F,"Gast_signature.pdf")),("Somitogenesis",os.path.join(F,"pSom_signature.pdf")),("Neural Crest",os.path.join(F,"Crest_signature.pdf")),("EMT-TF expression",os.path.join(F,"expression.pdf"))]
+dataset='Follicular lymphoma (Zhang et al., 2019), 10x — 4 tumour samples / 2 patients; 5,645 malignant B cells analysed.'
+verdict='The embryonic pattern reproduces in its non-branching form: a single continuous gastrulation/somitogenesis → neural-crest axis, rooted at the Gast/pSom-high pole, with EMT transcription factors ZEB2 (early) → ZEB1 (late). No bifurcation, so no hub / Gate 3 NA. Gate 1 GO / Gate 2 GO / Gate 3 NA.'
+params=[('Sample threshold', 'all 4 kept (min 680 >> floor; no gap cut — 2× cliff is the 2-large/2-small split)'), ('Integration', 'Harmony θ=10 on sample, PCA(50), n_pcs=15, spread=1.3 (θ from embedding + iLISI sweep)'), ('Island removal', 'radius graph 6× median-NN on UMAP; 0 cells removed (one connected component)'), ('Geometry', 'non-branching scFates curve (Nodes=20, λ=0.3, μ=100); PPT tree tested = folds, no arm split'), ('Root', 'curve tip 0 = Gast/pSom-high, Crest-low (origin; Crest late)'), ('EMT-TFs', 'ZEB2 (early/root) ↔ ZEB1 (late/terminus), detection-gated from a 10-factor panel')]
+build_summary(os.path.join(NB,"summary.pdf"),'Zhang 2019 Follicular Lymphoma — analysis summary',gates,panels,dataset,verdict,params,run_label='run 2 of 6')
+print("built")

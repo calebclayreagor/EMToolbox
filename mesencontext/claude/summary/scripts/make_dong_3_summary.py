@@ -1,0 +1,12 @@
+import sys, os
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
+from build_summary import build_summary, GREEN, RED, GREY
+NB='/home/caleb/EMToolbox/mesencontext/claude/Prostate/Dong2020_Prostate-3'
+F='/home/caleb/EMToolbox/figures/mesencontext/claude/Prostate/Dong2020_Prostate-3'
+gates=[('Gate 1 — mixing & continuity', 'NO-GO', '#c0392b', 'Malignant cells split into two disconnected lineage lobes — adenocarcinoma (patients #1/#2/#5) and small-cell neuroendocrine NEPC (patient #6) — and never sample-integrate. Judged on the regenerated embedding across a θ sweep with per-neighborhood iLISI (max 4): iLISI stays ~1.2 and each lobe is a per-patient archipelago; n_pcs-invariant (20/30/40). Mixing appears only at θ=8 by destroying the embedding. Not mixed, not continuous → do not force a trajectory.'), ('Gate 2 — module geography', 'NA', '#888888', 'Not evaluated: the gate chain stops at the Gate 1 NO-GO (no manifold/trajectory is fit).'), ('Gate 3 — hub cross-repression', 'NA', '#888888', 'Not evaluated (branching-only; requires a fitted tree, which Gate 1 precludes).')]
+panels=[("Manifold — samples",os.path.join(F,"samples.pdf")),("EMT-TF expression",os.path.join(F,"expression.pdf"))]
+dataset='Prostate cancer (Dong et al., 2020), 10x — 6 patients, 21,292 cells total; 9,698 malignant, of which 4,933 adenocarcinoma and 4,765 small-cell NEPC. Patients #3/#4 contribute no malignant cells.'
+verdict='The embryonic-program pattern does NOT reproduce. The malignant compartment is two distinct prostate-cancer lineages (adeno vs NEPC) that neither integrate nor form one continuous manifold; the adeno lobe alone is a per-patient archipelago. Gate 1 NO-GO — no trajectory fit. The EMT-TF program (TWIST1 dominant) is confined to the adeno lobe.'
+params=[('Min-cell threshold', '≥100 malignant/sample → keeps all 4 present samples (#3/#4 have 0)'), ('Overdispersed genes', '1,670 (scFates GAM)'), ('Integration', 'Harmony(sample); θ sweep 0/2/5/8; n_pcs=20 (grid-invariant 20/30/40)'), ('Gate-1 metric', 'per-neighborhood iLISI (k=90) + embedding read; mean iLISI 1.0/1.2/1.6/1.9 by θ (max 4)'), ('Lobe biology', 'adeno: Gast–pSom r=+0.55, both oppose Crest; NEPC: distinct AR+/CHGA+ lineage'), ('Geometry', 'none fit (Gate 1 NO-GO)'), ('EMT-TFs', 'TWIST1 (dominant), SNAI1, FOXC1; VIM excluded')]
+build_summary(os.path.join(NB,"summary.pdf"),'Dong 2020 Prostate Cancer — analysis summary',gates,panels,dataset,verdict,params,run_label='run 4 of 6')
+print("built")

@@ -1,0 +1,12 @@
+import sys, os
+sys.path.insert(0,"/home/caleb/EMToolbox/mesencontext/claude/summary")
+from build_summary import build_summary, GREEN, RED, GREY
+NB='/home/caleb/EMToolbox/mesencontext/claude/Brain/Wang2019_Brain-3'
+F='/home/caleb/EMToolbox/figures/mesencontext/claude/Brain/Wang2019_Brain-3'
+gates=[('Gate 1 — mixing & continuity', 'GO', '#1a9641', '7/10 samples (≥237 cells, gap-find) on one continuous 10x manifold; per-neighbourhood iLISI 1.03→2.60/7 across θ 2–10, plateaus (θ=20 → 2.59). θ=2 is a per-patient archipelago; θ=10 intermixes into one mass. 16 cells in 1 island removed → 9,634 cells, one component.'), ('Gate 2 — module geography', 'GO (non-branching)', '#1a9641', 'Shared Gast/pSom gradient (co-vary r=+0.16) with Crest an inverse terminal readout (Crest vs Gast r=−0.49, vs pSom r=−0.87). Crest-high decile at pseudotime 0.85 (terminal). No Gast/pSom competing arms; no Crest-on-Gast-arm inversion — no flag.'), ('Gate 3 — hub cross-repression', 'NA', '#888888', 'Gast/pSom co-vary (not compete) — single collapsed axis, no bifurcation to test.')]
+panels=[("Manifold — samples",os.path.join(F,"samples.pdf")),("Pseudotime",os.path.join(F,"manifold.pdf")),("Gastrulation",os.path.join(F,"Gast_signature.pdf")),("Somitogenesis",os.path.join(F,"pSom_signature.pdf")),("Neural Crest",os.path.join(F,"Crest_signature.pdf")),("EMT-TF expression",os.path.join(F,"expression.pdf"))]
+dataset='Glioblastoma (Wang et al., 2019); 10x scRNA-seq, single leaf; 9,916 malignant raw → 9,634 final after threshold + island removal. IDH-wildtype, 7 samples.'
+verdict='Pattern reproduces as a non-branching embryonic axis: a Gast/pSom-high origin grading to a Crest-high terminus (pSom ρ=−0.61, Crest ρ=+0.48 along pseudotime), continuity 0.98 checked on an independent diffusion embedding. Linear geometry → Gate 3 NA. EMT-TFs ZEB1 (early) → PRRX1 (late). Module means Gast −0.003 / pSom +0.008 / Crest −0.007. Gate 1 GO / Gate 2 GO / Gate 3 NA.'
+params=[('Min cells/sample', '237 (gap 396→143, ratio 2.77; 7/10)'), ('Integration', 'Harmony θ=10; PCA20; spread=1.3'), ('Overdispersed genes', '2,113 (scFates GAM)'), ('Trajectory', 'scFates curve N=20 λ=0.3 μ=100'), ('Island removal', '6×-median radius graph; 16 cells → 9,634'), ('Root node', 'Gast/pSom-high, Crest-low tip'), ('Geometry', 'Linear (non-branching); fold-free 2.83'), ('EMT-TFs', 'ZEB1 (early) → PRRX1 (late)')]
+build_summary(os.path.join(NB,"summary.pdf"),'Wang 2019 Glioblastoma — analysis summary',gates,panels,dataset,verdict,params,run_label='run 4 of 8')
+print("built")
