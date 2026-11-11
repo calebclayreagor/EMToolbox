@@ -67,6 +67,6 @@ adata_normal = adata[~msk_cancer].copy()
 msk_blacklist = adata_normal.obs.celltype.isin(blacklist)
 adata_normal = adata_normal[~msk_blacklist].copy()
 adata_cancer.write(os.path.join(pth_out, 'malignant.h5ad'))
-adata_normal.write(os.path.join(pth_out, 'normal.h5ad'))
+# adata_normal.write(os.path.join(pth_out, 'normal.h5ad'))
 
 #%%

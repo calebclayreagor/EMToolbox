@@ -17,6 +17,7 @@ data/cancer/
 data/development/
 data/ref/
 data/unzip/
+deposit/
 
 # === Autoencoder files ===
 mesencoder/checkpoints
