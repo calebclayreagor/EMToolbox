@@ -15,7 +15,6 @@ __pycache__/
 # === Data files ===
 data/cancer/
 data/development/
-data/raw/
 data/ref/
 data/unzip/
 
