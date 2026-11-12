@@ -1,0 +1,40 @@
+digraph G {
+  rankdir=LR; splines=spline;
+  graph [fontname="Helvetica", fontsize=13, nodesep=0.3, ranksep=1.1];
+  node [fontname="Helvetica", fontsize=11, style="filled", margin="0.12,0.07"];
+  edge [fontname="Helvetica", fontsize=9, color="#78909c", arrowsize=0.7];
+  subgraph cluster_1 {
+    label="data"; style="rounded"; color="#b0bec5"; fontsize=13; fontcolor="#37474f";
+    subgraph cluster_2 {
+      label="cancer/invertebrate/\n<dataset>"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
+      n000 [label="<malignant>.h5ad", shape=ellipse, fillcolor="#dcedc8", color="#558b2f", penwidth=1.6, style="filled,dashed"];
+    }
+    subgraph cluster_3 {
+      label="features"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
+      n004 [label="*.csv\n×8", shape=parallelogram, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    }
+    subgraph cluster_4 {
+      label="ref"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
+      n003 [label="flybase", shape=cylinder, fillcolor="#eceff1", color="#90a4ae", penwidth=1, style="filled"];
+    }
+    subgraph cluster_5 {
+      label="results"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
+      n005 [label="orthofinder", shape=parallelogram, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    }
+    subgraph cluster_6 {
+      label="unzip"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
+      n006 [label="<dataset>", shape=cylinder, fillcolor="#eceff1", color="#90a4ae", penwidth=1, style="filled"];
+    }
+  }
+  subgraph cluster_7 {
+    label="invertebrate/\n<dataset>/scripts"; style="rounded"; color="#b0bec5"; fontsize=13; fontcolor="#37474f";
+    n002 [label="merge.py", shape=box3d, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    n001 [label="homologs.py", shape=box3d, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+  }
+  n004 -> n001;
+  n003 -> n001;
+  n005 -> n001;
+  n001 -> n004;
+  n006 -> n002;
+  n002 -> n000;
+}

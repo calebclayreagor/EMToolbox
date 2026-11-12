@@ -22,7 +22,7 @@ digraph G {
     }
     subgraph cluster_5 {
       label="unzip"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
-      n006 [label="GSE56287\n×8", shape=cylinder, fillcolor="#eceff1", color="#90a4ae", penwidth=1, style="filled"];
+      n006 [label="GSE56287\n×17", shape=cylinder, fillcolor="#eceff1", color="#90a4ae", penwidth=1, style="filled"];
     }
   }
   n003 -> n001;

@@ -7,7 +7,7 @@ digraph G {
     label=".../claude/<category>/\n<dataset-run>"; style="rounded"; color="#b0bec5"; fontsize=13; fontcolor="#37474f";
     n001 [label="processed.h5ad\n×186", shape=ellipse, fillcolor="#c8e6c9", color="#2e7d32", penwidth=2.2, style="filled"];
     n000 [label="Puram2017_Head-and-Neck\n×187", shape=component, fillcolor="#ede7f6", color="#5e35b1", penwidth=1.6, style="filled"];
-    n004 [label="panels\n×176", shape=hexagon, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    n004 [label="panels\n×194", shape=hexagon, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
   }
   subgraph cluster_2 {
     label="<external>"; style="rounded"; color="#b0bec5"; fontsize=13; fontcolor="#37474f";
