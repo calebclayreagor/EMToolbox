@@ -1,0 +1,66 @@
+digraph G {
+  rankdir=LR; splines=spline;
+  graph [fontname="Helvetica", fontsize=13, nodesep=0.3, ranksep=1.1];
+  node [fontname="Helvetica", fontsize=11, style="filled", margin="0.12,0.07"];
+  edge [fontname="Helvetica", fontsize=9, color="#78909c", arrowsize=0.7];
+  subgraph cluster_1 {
+    label="data"; style="rounded"; color="#b0bec5"; fontsize=13; fontcolor="#37474f";
+    n002 [label="summary.csv", shape=parallelogram, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    subgraph cluster_2 {
+      label="cancer/vertebrate/\nCCCA/pancan"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
+      n000 [label="malignant.h5ad", shape=ellipse, fillcolor="#c8e6c9", color="#2e7d32", penwidth=2.2, style="filled"];
+      n001 [label="signatures.h5ad", shape=ellipse, fillcolor="#eceff1", color="#90a4ae", penwidth=1, style="filled"];
+    }
+    subgraph cluster_3 {
+      label="features/biomart"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
+      n010 [label="*.csv\n×4", shape=parallelogram, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    }
+    subgraph cluster_4 {
+      label="ref"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
+      n011 [label="*.csv\n×2", shape=cylinder, fillcolor="#c8e6c9", color="#2e7d32", penwidth=2.2, style="filled"];
+    }
+    subgraph cluster_5 {
+      label="results/emtarget"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
+      n012 [label="*.csv\n×13", shape=parallelogram, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    }
+  }
+  subgraph cluster_6 {
+    label="emtarget/notebooks"; style="rounded"; color="#b0bec5"; fontsize=13; fontcolor="#37474f";
+    n003 [label="01_targets.ipynb", shape=box, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    n005 [label="03_identify.ipynb", shape=box, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    n008 [label="06_expression.ipynb", shape=box, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    n009 [label="07_safety.ipynb", shape=box, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    n004 [label="02_pharos.ipynb", shape=box, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    n006 [label="04_nominate.ipynb", shape=box, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    n007 [label="05_prioritize.ipynb", shape=box, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+  }
+  subgraph cluster_fig {
+    label="figures/emtarget/"; style="rounded"; color="#b0bec5"; fontsize=13; fontcolor="#37474f";
+    FIG [label="panels ×8", shape=hexagon, style=filled, fillcolor="#e3f2fd", color="#1565c0"];
+  }
+  n010 -> n003;
+  n011 -> n003;
+  n003 -> n012;
+  n003 -> FIG;
+  n010 -> n004;
+  n012 -> n004;
+  n004 -> FIG;
+  n001 -> n005;
+  n010 -> n005;
+  n011 -> n005;
+  n002 -> n005;
+  n005 -> n012;
+  n005 -> FIG;
+  n000 -> n006;
+  n010 -> n006;
+  n012 -> n006;
+  n006 -> n012;
+  n006 -> FIG;
+  n012 -> n007;
+  n007 -> FIG;
+  n000 -> n008;
+  n008 -> FIG;
+  n011 -> n009;
+  n009 -> FIG;
+  n000 -> n001 [label="+3 obs", color="#7b1fa2", style=dashed, fontcolor="#7b1fa2", constraint=false];
+}

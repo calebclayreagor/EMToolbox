@@ -5,10 +5,10 @@
  -->
 <!-- Title: G Pages: 1 -->
 <svg width="735pt" height="502pt"
- viewBox="0.00 0.00 735.03 502.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ viewBox="0.00 0.00 735.11 502.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 498)">
 <title>G</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-498 731.03,-498 731.03,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-498 731.11,-498 731.11,4 -4,4"/>
 <g id="clust1" class="cluster">
 <title>cluster_1</title>
 <path fill="none" stroke="#b0bec5" d="M20,-8C20,-8 215,-8 215,-8 221,-8 227,-14 227,-20 227,-20 227,-474 227,-474 227,-480 221,-486 215,-486 215,-486 20,-486 20,-486 14,-486 8,-480 8,-474 8,-474 8,-20 8,-20 8,-14 14,-8 20,-8"/>
@@ -38,9 +38,9 @@
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_fig</title>
-<path fill="none" stroke="#b0bec5" d="M549,-251C549,-251 715.03,-251 715.03,-251 721.03,-251 727.03,-257 727.03,-263 727.03,-263 727.03,-327 727.03,-327 727.03,-333 721.03,-339 715.03,-339 715.03,-339 549,-339 549,-339 543,-339 537,-333 537,-327 537,-327 537,-263 537,-263 537,-257 543,-251 549,-251"/>
-<text text-anchor="middle" x="632.02" y="-324.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#37474f">figures/mesencontext/</text>
-<text text-anchor="middle" x="632.02" y="-310.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#37474f">Puram2017_Head&#45;and&#45;Neck/</text>
+<path fill="none" stroke="#b0bec5" d="M549,-241C549,-241 715.11,-241 715.11,-241 721.11,-241 727.11,-247 727.11,-253 727.11,-253 727.11,-337 727.11,-337 727.11,-343 721.11,-349 715.11,-349 715.11,-349 549,-349 549,-349 543,-349 537,-343 537,-337 537,-337 537,-253 537,-253 537,-247 543,-241 549,-241"/>
+<text text-anchor="middle" x="632.05" y="-334.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#37474f">figures/mesencontext/</text>
+<text text-anchor="middle" x="632.05" y="-320.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#37474f">Puram2017_Head&#45;and&#45;Neck/</text>
 </g>
 <!-- n001 -->
 <g id="node1" class="node">
@@ -175,14 +175,15 @@
 <!-- FIG -->
 <g id="node12" class="node">
 <title>FIG</title>
-<polygon fill="#e3f2fd" stroke="#1565c0" points="684.05,-277 657.78,-295 605.25,-295 578.98,-277 605.25,-259 657.78,-259 684.05,-277"/>
-<text text-anchor="middle" x="631.52" y="-274.2" font-family="Helvetica,sans-Serif" font-size="11.00">panels ×12</text>
+<polygon fill="#e3f2fd" stroke="#1565c0" points="694.16,-277 663.11,-304.52 601,-304.52 569.95,-277 601,-249.48 663.11,-249.48 694.16,-277"/>
+<text text-anchor="middle" x="632.05" y="-280.2" font-family="Helvetica,sans-Serif" font-size="11.00">panels ×12</text>
+<text text-anchor="middle" x="632.05" y="-268.2" font-family="Helvetica,sans-Serif" font-size="11.00">(2 subtrees)</text>
 </g>
 <!-- n003&#45;&gt;FIG -->
 <g id="edge3" class="edge">
 <title>n003&#45;&gt;FIG</title>
-<path fill="none" stroke="#78909c" d="M444.06,-256.28C486.07,-260.95 539.83,-266.92 578.82,-271.26"/>
-<polygon fill="#78909c" stroke="#78909c" points="578.7,-273.71 585.93,-272.05 579.24,-268.84 578.7,-273.71"/>
+<path fill="none" stroke="#78909c" d="M444.2,-256.28C482.7,-260.55 531.05,-265.91 568.92,-270.11"/>
+<polygon fill="#78909c" stroke="#78909c" points="569.12,-272.6 576.35,-270.93 569.66,-267.73 569.12,-272.6"/>
 </g>
 <!-- n004&#45;&gt;n000 -->
 <g id="edge5" class="edge">
@@ -193,14 +194,14 @@
 <!-- n004&#45;&gt;FIG -->
 <g id="edge6" class="edge">
 <title>n004&#45;&gt;FIG</title>
-<path fill="none" stroke="#78909c" d="M430.6,-349.4C444.13,-345.2 458.65,-340.55 472,-336 512.87,-322.07 559.09,-304.68 591.02,-292.39"/>
-<polygon fill="#78909c" stroke="#78909c" points="591.96,-294.66 597.62,-289.85 590.2,-290.09 591.96,-294.66"/>
+<path fill="none" stroke="#78909c" d="M430.59,-349.39C444.12,-345.19 458.65,-340.54 472,-336 508.94,-323.43 550.24,-308.07 581.5,-296.17"/>
+<polygon fill="#78909c" stroke="#78909c" points="582.75,-298.32 588.41,-293.54 581,-293.74 582.75,-298.32"/>
 </g>
 <!-- n008&#45;&gt;FIG -->
 <g id="edge16" class="edge">
 <title>n008&#45;&gt;FIG</title>
-<path fill="none" stroke="#78909c" d="M436.06,-408.48C448.23,-404.49 460.78,-399.68 472,-394 523.15,-368.13 575.25,-326 605.15,-299.98"/>
-<polygon fill="#78909c" stroke="#78909c" points="606.82,-301.77 610.47,-295.31 603.59,-298.09 606.82,-301.77"/>
+<path fill="none" stroke="#78909c" d="M436.06,-408.46C448.22,-404.48 460.77,-399.67 472,-394 517.66,-370.95 564.13,-335.02 594.95,-309.06"/>
+<polygon fill="#78909c" stroke="#78909c" points="596.77,-310.73 600.52,-304.33 593.6,-306.99 596.77,-310.73"/>
 </g>
 <!-- n005&#45;&gt;n002 -->
 <g id="edge9" class="edge">
@@ -211,20 +212,20 @@
 <!-- n005&#45;&gt;FIG -->
 <g id="edge10" class="edge">
 <title>n005&#45;&gt;FIG</title>
-<path fill="none" stroke="#78909c" d="M435.49,-208.23C447.58,-212.01 460.23,-216.06 472,-220 512.52,-233.56 558.42,-250.21 590.36,-262"/>
-<polygon fill="#78909c" stroke="#78909c" points="589.55,-264.31 596.96,-264.44 591.25,-259.72 589.55,-264.31"/>
+<path fill="none" stroke="#78909c" d="M435.49,-208.24C447.57,-212.02 460.23,-216.07 472,-220 508.6,-232.23 549.58,-246.94 580.78,-258.35"/>
+<polygon fill="#78909c" stroke="#78909c" points="580.27,-260.78 587.69,-260.89 581.96,-256.18 580.27,-260.78"/>
 </g>
 <!-- n006&#45;&gt;FIG -->
 <g id="edge12" class="edge">
 <title>n006&#45;&gt;FIG</title>
-<path fill="none" stroke="#78909c" d="M435.04,-147.27C447.52,-151.31 460.45,-156.22 472,-162 522.66,-187.36 574.53,-228.43 604.57,-254.01"/>
-<polygon fill="#78909c" stroke="#78909c" points="603.01,-255.9 609.92,-258.6 606.2,-252.18 603.01,-255.9"/>
+<path fill="none" stroke="#78909c" d="M435.03,-147.29C447.51,-151.33 460.45,-156.23 472,-162 517.34,-184.65 563.69,-219.81 594.57,-245.28"/>
+<polygon fill="#78909c" stroke="#78909c" points="593.2,-247.33 600.15,-249.92 596.33,-243.57 593.2,-247.33"/>
 </g>
 <!-- n007&#45;&gt;FIG -->
 <g id="edge14" class="edge">
 <title>n007&#45;&gt;FIG</title>
-<path fill="none" stroke="#78909c" d="M430.72,-300.78C474.28,-295.6 536.02,-288.25 579.3,-283.1"/>
-<polygon fill="#78909c" stroke="#78909c" points="579.69,-285.52 586.36,-282.26 579.11,-280.65 579.69,-285.52"/>
+<path fill="none" stroke="#78909c" d="M430.52,-300.82C471.01,-296.01 527.29,-289.33 569.93,-284.26"/>
+<polygon fill="#78909c" stroke="#78909c" points="570.26,-286.69 576.92,-283.43 569.68,-281.82 570.26,-286.69"/>
 </g>
 </g>
 </svg>

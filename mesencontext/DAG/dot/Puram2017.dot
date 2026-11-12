@@ -31,7 +31,7 @@ digraph G {
   }
   subgraph cluster_fig {
     label="figures/mesencontext/\nPuram2017_Head-and-Neck/"; style="rounded"; color="#b0bec5"; fontsize=13; fontcolor="#37474f";
-    FIG [label="panels ×12", shape=hexagon, style=filled, fillcolor="#e3f2fd", color="#1565c0"];
+    FIG [label="panels ×12\n(2 subtrees)", shape=hexagon, style=filled, fillcolor="#e3f2fd", color="#1565c0"];
   }
   n010 -> n003;
   n003 -> n001;

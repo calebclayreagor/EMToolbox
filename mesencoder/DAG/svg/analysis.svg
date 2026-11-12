@@ -202,7 +202,7 @@
 <title>FIG</title>
 <polygon fill="#e3f2fd" stroke="#1565c0" points="592.2,-208 561.15,-235.52 499.04,-235.52 467.98,-208 499.04,-180.48 561.15,-180.48 592.2,-208"/>
 <text text-anchor="middle" x="530.09" y="-211.2" font-family="Helvetica,sans-Serif" font-size="11.00">panels ×22</text>
-<text text-anchor="middle" x="530.09" y="-199.2" font-family="Helvetica,sans-Serif" font-size="11.00">(4 subtrees)</text>
+<text text-anchor="middle" x="530.09" y="-199.2" font-family="Helvetica,sans-Serif" font-size="11.00">(5 subtrees)</text>
 </g>
 <!-- n004&#45;&gt;FIG -->
 <g id="edge3" class="edge">

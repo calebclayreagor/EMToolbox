@@ -16,8 +16,8 @@ digraph G {
       n008 [label="*.csv\n×4", shape=parallelogram, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
     }
     subgraph cluster_4 {
-      label="results"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
-      n009 [label="CCCA\n×3", shape=parallelogram, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+      label="results/CCCA"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
+      n009 [label="*.csv\n×3", shape=parallelogram, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
     }
   }
   subgraph cluster_5 {
