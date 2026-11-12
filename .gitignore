@@ -18,6 +18,7 @@ data/development/
 data/ref/
 data/unzip/
 deposit/
+deposit.zip
 
 # === Autoencoder files ===
 mesencoder/checkpoints
