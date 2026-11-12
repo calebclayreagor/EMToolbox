@@ -1,0 +1,54 @@
+digraph G {
+  rankdir=LR; splines=spline;
+  graph [fontname="Helvetica", fontsize=13, nodesep=0.3, ranksep=1.1];
+  node [fontname="Helvetica", fontsize=11, style="filled", margin="0.12,0.07"];
+  edge [fontname="Helvetica", fontsize=9, color="#78909c", arrowsize=0.7];
+  subgraph cluster_1 {
+    label="data"; style="rounded"; color="#b0bec5"; fontsize=13; fontcolor="#37474f";
+    subgraph cluster_2 {
+      label="cancer/vertebrate/CCCA/\nPuram2017_Head-and-Neck"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
+      n001 [label="processed.h5ad", shape=ellipse, fillcolor="#dcedc8", color="#558b2f", penwidth=1.6, style="filled,dashed"];
+      n000 [label="manifold.h5ad", shape=ellipse, fillcolor="#dcedc8", color="#558b2f", penwidth=1.6, style="filled,dashed"];
+      n002 [label="signatures.h5ad", shape=ellipse, fillcolor="#c8e6c9", color="#2e7d32", penwidth=2.2, style="filled"];
+    }
+    subgraph cluster_3 {
+      label="features/biomart"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
+      n009 [label="*.csv\n×4", shape=parallelogram, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    }
+    subgraph cluster_4 {
+      label="unzip/CCCA"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
+      n010 [label="Data_Puram2017_Head-and-Neck", shape=cylinder, fillcolor="#eceff1", color="#90a4ae", penwidth=1, style="filled"];
+    }
+  }
+  subgraph cluster_5 {
+    label="mesencontext/\nPuram2017_Head-and-Neck"; style="rounded"; color="#b0bec5"; fontsize=13; fontcolor="#37474f";
+    n003 [label="01_preprocessing.ipynb", shape=box, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    n004 [label="02_manifold.ipynb", shape=box, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    n008 [label="06_expression.ipynb", shape=box, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    n005 [label="03_signatures.ipynb", shape=box, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    n006 [label="04_correlation.ipynb", shape=box, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    n007 [label="05_modules.ipynb", shape=box, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+  }
+  subgraph cluster_fig {
+    label="figures/mesencontext/\nPuram2017_Head-and-Neck/"; style="rounded"; color="#b0bec5"; fontsize=13; fontcolor="#37474f";
+    FIG [label="panels ×12", shape=hexagon, style=filled, fillcolor="#e3f2fd", color="#1565c0"];
+  }
+  n010 -> n003;
+  n003 -> n001;
+  n003 -> FIG;
+  n001 -> n004;
+  n004 -> n000;
+  n004 -> FIG;
+  n000 -> n005;
+  n009 -> n005;
+  n005 -> n002;
+  n005 -> FIG;
+  n002 -> n006;
+  n006 -> FIG;
+  n002 -> n007;
+  n007 -> FIG;
+  n001 -> n008;
+  n008 -> FIG;
+  n001 -> n000 [label="+gradient", color="#7b1fa2", style=dashed, fontcolor="#7b1fa2", constraint=false];
+  n000 -> n002 [label="+3 obs", color="#7b1fa2", style=dashed, fontcolor="#7b1fa2", constraint=false];
+}

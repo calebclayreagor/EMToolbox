@@ -1,0 +1,36 @@
+digraph G {
+  rankdir=LR; splines=spline;
+  graph [fontname="Helvetica", fontsize=13, nodesep=0.3, ranksep=1.1];
+  node [fontname="Helvetica", fontsize=11, style="filled", margin="0.12,0.07"];
+  edge [fontname="Helvetica", fontsize=9, color="#78909c", arrowsize=0.7];
+  subgraph cluster_1 {
+    label=".../claude/<category>/\n<dataset-run>"; style="rounded"; color="#b0bec5"; fontsize=13; fontcolor="#37474f";
+    n001 [label="processed.h5ad\n×187", shape=ellipse, fillcolor="#c8e6c9", color="#2e7d32", penwidth=2.2, style="filled"];
+    n000 [label="Puram2017_Head-and-Neck\n×187", shape=component, fillcolor="#ede7f6", color="#5e35b1", penwidth=1.6, style="filled"];
+    n004 [label="panels\n×176", shape=hexagon, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+  }
+  subgraph cluster_2 {
+    label="<external>"; style="rounded"; color="#b0bec5"; fontsize=13; fontcolor="#37474f";
+    n003 [label="Claude Science", shape=trapezium, fillcolor="#fff3e0", color="#ef6c00", penwidth=1.4, style="filled"];
+  }
+  subgraph cluster_3 {
+    label="mesencontext"; style="rounded"; color="#b0bec5"; fontsize=13; fontcolor="#37474f";
+    subgraph cluster_4 {
+      label="claude/summary"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
+      n002 [label="*.py\n×304", shape=box3d, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
+    }
+    subgraph cluster_5 {
+      label="spec"; style="rounded"; color="#b0bec5"; fontsize=12; fontcolor="#37474f";
+      n005 [label="spec/*\n×6", shape=box, fillcolor="#fafafa", color="#bdbdbd", penwidth=1, style="filled"];
+    }
+  }
+  n000 -> n001;
+  n000 -> n004;
+  n001 -> n000;
+  n000 -> n002;
+  n002 -> n004;
+  n001 -> n002;
+  n005 -> n003;
+  n003 -> n005;
+  n003 -> n000;
+}
