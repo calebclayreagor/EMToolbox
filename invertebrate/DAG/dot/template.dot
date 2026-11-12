@@ -21,7 +21,7 @@ digraph G {
     }
   }
   subgraph cluster_5 {
-    label="invertebrate/<dataset>/\nnotebooks"; style="rounded"; color="#b0bec5"; fontsize=13; fontcolor="#37474f";
+    label="invertebrate/\n<dataset>/notebooks"; style="rounded"; color="#b0bec5"; fontsize=13; fontcolor="#37474f";
     n003 [label="01_expression.ipynb", shape=box, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
     n004 [label="02_signatures.ipynb", shape=box, fillcolor="#e3f2fd", color="#1565c0", penwidth=1, style="filled"];
   }
