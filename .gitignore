@@ -20,6 +20,9 @@ data/unzip/
 deposit/
 deposit.zip
 
+# === Manuscript ===
+manuscript/
+
 # === Autoencoder files ===
 mesencoder/checkpoints
 mesencoder/lightning_logs
