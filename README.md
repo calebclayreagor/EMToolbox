@@ -1,29 +1,41 @@
-# Welcome to the repository for `MesenCoder`
+<img src="logo.png" alt="EMToolbox" width="110" align="right">
 
-This project contains scripts and models for the curated analysis of mesenchymal cell states across development and disease.
+# EMToolbox
 
-`MesenCoder` is under active development, so please stay tuned for new results!
+A suite of computational tools for studying mesenchymal genes, modules, programs and cell
+states in development and cancer. This repository holds the code and figures behind the
+manuscript; the data is distributed separately in the
+[Zenodo archive](https://doi.org/10.5281/zenodo.24182286).
 
-The repository is organized into the following directories:
+## Tools
 
-- `data`: 
-    - `download.sh`: Bash script for downloading datasets from GEO and atlases
-    - `summary.csv`: Summary and short descriptions for each dataset
-    - `CCCA_summary.csv`: Additional descriptions for curated cancer cell atlas datasets
-    - `logs`: Output logs from `download.sh` script
-    - `features`: Curated gene lists from single-cell trajectories and gene-set databases
-        - `biomart`: Lists of mouse/human homologs for each curated gene list
-            - `union.csv`: Combined table of mouse/human homologs from all curated gene lists
-- `envs`: Conda environment files for preprocessing, modeling, and analysis scripts/notebooks
-- `modeling`: Scripts for modeling, training, and inference with `MesenCoder` conditional autoencoder
-    - `dataset.py`: Contains custom class for `pytorch` mesenchyme datasets
-    - `model.py`: Contains `pytorch` class for `MesenCoder` conditional autoencoder model
-    - `lit_module.py`: Contains `lightning` module for training, validation, and prediction
-    - `training`/`prediction.py`: CLI scripts for training, validation, and prediction
-- `notebooks`: Jupyter notebooks for interactive analysis of preprocessing, modeling, and validation
-- `preprocessing`: Utilities, scripts, and subdirectories for manual preprocessing of datasets:
-    - Dataset subdirectories:
-        - `preprocessing.ipynb`: QC, counts normalization, feature selection, dataset integration, dimensionality reduction, and cell-type assignment
-        - `trajectory.ipynb`: trajectory analysis with `scfates` to select mesenchymization features (genes)
-    - `scripts`: Contains scripts for gene homology and training dataset collation
-    - `utils`: Contains utilities for loading and preprocessing datasets
+| directory | tool | description |
+|---|---|---|
+| `mesencoder/` | MesenCoder | conditional autoencoder that generates integrated, low-dimensional embeddings across embryonic EMT (e-EMT) trajectories, resolving full and partial e-EMT programs and cell states |
+| `mesencontext/` | MesenContext | context engineering approach that indirectly steers AI agents during their autonomous analyses of Curated Cancer Cell Atlas (3CA) datasets |
+| `emtarget/` | EMTarget | antigen discovery pipeline that uses coexpression in e-EMT modules to assemble a candidate vaccine panel targeting these programs and cell states |
+
+## Analyses
+
+| directory | description |
+|---|---|
+| `development/` | primary e-EMT in three mouse developmental lineages; defines the Gast, pSom and Crest modules |
+| `neuroblastoma/` | co-option of the partial e-EMT program during *in vitro* noradrenergic–mesenchymal transitions |
+| `invertebrate/` | co-option of the partial e-EMT program in *Drosophila*, *Hydra oligactis*, and *Mya arenaria* malignancies |
+
+Each directory carries its own `README.md` and a `DAG/` subdirectory.
+
+## Reading the diagrams
+
+`<directory>/DAG/` holds a Graphviz source and render per workflow chain, linking the
+repository's code and data assets. Every edge is a read, write, or import. Each node's shape
+indicates the type of asset, and its fill colour indicates the asset's availability.
+
+![Legend for the asset diagrams](DAG/legend.svg)
+
+## Data and environments
+
+`data/` holds everything the tools and analyses read and write. Source data and derived objects
+are documented in [`data/unzip/README.md`](data/unzip/README.md) and
+[`README_data.md`](README_data.md), respectively. Each notebook's kernel metadata names the
+`envs/` environment in which it was run.
