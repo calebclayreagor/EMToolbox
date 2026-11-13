@@ -1,4 +1,4 @@
-name: base
+name: gseapy
 channels:
   - defaults
   - https://repo.anaconda.com/pkgs/main
