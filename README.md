@@ -1,8 +1,8 @@
-<img src="logo.png" alt="EMToolbox" width="110" align="right">
+<p align="center"><img src="logo.png" alt="EMToolbox" width="140"></p>
 
 # EMToolbox
 
-A suite of computational tools for studying mesenchymal genes, modules, programs and cell
+A suite of computational tools for studying mesenchymal genes, modules, programs, and cell
 states in development and cancer. This repository holds the code and figures behind the
 manuscript; the data is distributed separately in the
 [Zenodo archive](https://doi.org/10.5281/zenodo.24182286).
